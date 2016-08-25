@@ -1,61 +1,55 @@
 (function() {
   'use strict';
 
-  angular
-    .module('viteee')
-    .controller('MainController', MainController);
+ 
 
-  /** @ngInject */
-  function MainController() {
-    var vm = this;
+  var app = angular.module('viteee');
+  app.controller('NavbarController', function($scope){
+    
+  });
+  /*CArousel*/
+  /*  app.controller('CarouselCtrl', function($scope){
+      $scope.myInterval = 3000;
+      $scope.captionInterval = 4000;
+      $scope.slides = [
+    {
+      image: 'http://lorempixel.com/1920/700/sports',
+      caption: 'The University For Leaders'
+    },
+    {
+      image: 'http://lorempixel.com/1920/700/food',
+       caption: 'The University For Leaders'
+    },
+    {
+      image: 'http://lorempixel.com/1920/700/sports',
+       caption: 'The University For Leaders'
+    },
+    {
+      image: 'http://lorempixel.com/1920/700/food',
+       caption: 'The University For Leaders'
+    }
+  ];
+});*/
+app.controller('NoticeCtrl', function($scope){
+  $scope.notices = [
+  {
+    type : "Notice",
+    title : "VITEEE 2016",
+    date : "31 December 2016",
+    class : "blue"
+  },
+  {
+    type : "Announcement",
+    title : "VITEEE 2016",
+    date : "31 December 2016",
+    class : "green"
+  },
+  {
+    type : "Notice",
+    title : "VITEEE 2016",
+    date : "31 December 2016",
+    class : "pink"
+  }];
 
-    vm.awesomeThings = [
-      {
-        'title': 'AngularJS',
-        'url': 'https://angularjs.org/',
-        'description': 'HTML enhanced for web apps!',
-        'logo': 'angular.png'
-      },
-      {
-        'title': 'BrowserSync',
-        'url': 'http://browsersync.io/',
-        'description': 'Time-saving synchronised browser testing.',
-        'logo': 'browsersync.png'
-      },
-      {
-        'title': 'GulpJS',
-        'url': 'http://gulpjs.com/',
-        'description': 'The streaming build system.',
-        'logo': 'gulp.png'
-      },
-      {
-        'title': 'Jasmine',
-        'url': 'http://jasmine.github.io/',
-        'description': 'Behavior-Driven JavaScript.',
-        'logo': 'jasmine.png'
-      },
-      {
-        'title': 'Karma',
-        'url': 'http://karma-runner.github.io/',
-        'description': 'Spectacular Test Runner for JavaScript.',
-        'logo': 'karma.png'
-      },
-      {
-        'title': 'Protractor',
-        'url': 'https://github.com/angular/protractor',
-        'description': 'End to end test framework for AngularJS applications built on top of WebDriverJS.',
-        'logo': 'protractor.png'
-      },
-      {
-        'title': 'Bootstrap',
-        'url': 'http://getbootstrap.com/',
-        'description': 'Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.',
-        'logo': 'bootstrap.png'
-      }
-    ];
-
-    angular.forEach(vm.awesomeThings, function(awesomeThing) {
-      awesomeThing.rank = Math.random();
-    });
-  }
+});
 })();

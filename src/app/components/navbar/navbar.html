@@ -1,21 +1,23 @@
-<nav class="navbar navbar-static-top navbar-inverse" ng-controller="NavbarController as navbar">
-  <div class="container-fluid">
+
+<nav class="navbar navbar-static-top navbar-inverse" id="nav-new" ng-controller="NavbarController as navbar">
+  <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="https://github.com/Swiip/generator-gulp-angular">
-        <span class="glyphicon glyphicon-home"></span> Gulp Angular
+      <a class="navbar-brand" href="#">
+        VIT EEE
       </a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-      <ul class="nav navbar-nav">
-        <li class="active"><a ng-href="#">Home</a></li>
-        <li><a ng-href="#">About</a></li>
-        <li><a ng-href="#">Contact</a></li>
+      <ul class="nav navbar-nav pull-right">
+        <li><a ng-href="#">About Us</a></li>
+        <li><a ng-href="#">Admissions</a></li>
+        <li><a ng-href="#">Campus</a></li>
+        <li><a ng-href="#">Placements</a></li>
+        <li><a ng-href="#">Events</a></li>
+        <li><a ng-href="#">Contact Us</a></li>
       </ul>
 
-      <ul class="nav navbar-nav navbar-right">
-        <li>Current date: {{ navbar.date | date:'yyyy-MM-dd' }}</li>
-      </ul>
     </div>
   </div>
 </nav>
+

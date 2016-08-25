@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 describe('controllers', function(){
   var scope;
@@ -16,3 +16,25 @@ describe('controllers', function(){
     expect(vm.awesomeThings.length > 5).toBeTruthy();
   }));
 });
+
+*/
+(function() {
+  'use strict';
+
+  angular
+    .module('viteee', ['ui.router'])
+    .config(config);
+
+  function config($stateProvider, $urlRouterProvider) {
+    $stateProvider
+      .state('home', {
+
+        url: '/',
+        templateUrl: 'app/main/main.html'
+      });
+
+
+    $urlRouterProvider.otherwise('/');
+  }
+
+})();
