@@ -4,13 +4,17 @@
      <div class="noticecontainer">
                <div ng-controller="NoticeCtrl">
               <ul class="notice" >
-              <marquee direction="up">
+              
                 <li  ng-repeat="notice in notices">
-              <h5>{{notice.type}}</h5>
-              <h3>{{notice.title}}</h3>
-                  <h5>{{notice.date}}</h5>
+                <div class="{{notice.class}}"></div>
+                <div class="notice-text">
+                    <h5>{{notice.type}}</h5>
+                    <h3>{{notice.title}}</h3>
+                        <h5>{{notice.date}}</h5>
+                        <p class="notice-description">{{notice.description}}</p>
+                </div>
+              
               </li>
-              </marquee>
               
           </ul>
           </div>
@@ -41,9 +45,7 @@
                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p><br>
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit</p><br>
                 <a href="#" class="hvr-blob link-theme">Read More</a>
             </div>
             <div class="row">
@@ -54,8 +56,7 @@
                     </div>
                     <div class="text-container">
                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
                     </div>
                     
                     
@@ -68,8 +69,7 @@
                     </div>
                     <div class="text-container">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                     </div>
                     
                     
@@ -120,7 +120,38 @@
 </div>
  </div>
 <div class="courses-offered">
-    
+    <div class="container-fluid">
+        <h2 class="col-lg-offset-1 ">Courses Offered</h2>
+
+        <div class="courses col-md-offset-1">
+             <div ng-controller="CourseModalCtrl" >
+    <script type="text/ng-template"  id="myModalContent.html">
+        <div class="modal-header">
+            <a href="#" ng-click="cancel()"><i class="fa fa-times fa-2x white" ></i></a>
+        </div>
+        <div class="modal-body">
+           xxxxxxxxxxxxxxxxx
+        </div> 
+    </script>
+    <div ng-repeat="course in courses">
+         <a href="{{course.link}}" target="_blank">
+        <div class="course col-sm-12 col-lg-4 col-md-4">
+        <div class="{{course.class}}"></div>
+        <div class="text-container">
+            
+            <h4  class="hvr-float">{{course.name}}</h4>
+            <h5>{{course.school}}</h5>
+        </div>
+           
+        </div>
+    </a>
+    </div>
+   
+
+    <button type="button" class="btn hvr-shutter-out-horizontal btn-theme col-lg-offset-5"  ng-click="open('lg')">See All Courses</button>
+</div>
+        </div>
+    </div>
 </div>
           
-   
+   <div ng-include="'app/components/footer/footer.html'"></div>
