@@ -4,32 +4,21 @@
  
 
   var app = angular.module('viteee');
-  app.controller('NavbarController', function($scope){
-    
-  });
+  
   /*CArousel*/
-  /*  app.controller('CarouselCtrl', function($scope){
+    app.controller('CarouselCtrl', function($scope){
       $scope.myInterval = 3000;
-      $scope.captionInterval = 4000;
       $scope.slides = [
     {
-      image: 'http://lorempixel.com/1920/700/sports',
+      image: 'http://lorempixel.com/1920/900/',
       caption: 'The University For Leaders'
     },
     {
-      image: 'http://lorempixel.com/1920/700/food',
-       caption: 'The University For Leaders'
-    },
-    {
-      image: 'http://lorempixel.com/1920/700/sports',
-       caption: 'The University For Leaders'
-    },
-    {
-      image: 'http://lorempixel.com/1920/700/food',
-       caption: 'The University For Leaders'
+      image: 'http://lorempixel.com/1920/900/',
+      caption: 'The University For Leaders'
     }
   ];
-});*/
+});
 app.controller('NoticeCtrl', function($scope){
   $scope.notices = [
   {

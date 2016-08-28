@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('viteee', ['ui.router'])
+    .module('viteee', ['ui.bootstrap', 'ui.router', 'ngAnimate' ])
     .config(config);
 
   function config($stateProvider, $urlRouterProvider) {
