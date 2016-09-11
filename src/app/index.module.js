@@ -5,7 +5,8 @@
     .module('viteee', ['ui.bootstrap', 'ui.router', 'ngAnimate' ])
     .config(config);
 
-  function config($stateProvider, $urlRouterProvider) {
+  function config($stateProvider, $locationProvider) {
+    
     $stateProvider
       .state('home', {
 
@@ -13,8 +14,7 @@
         templateUrl: 'app/main/main.html'
       });
 
-
-    $urlRouterProvider.otherwise('/');
+      $locationProvider.html5Mode(true);
   }
 
 })();

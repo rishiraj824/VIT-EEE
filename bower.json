@@ -9,7 +9,9 @@
     "angular-bootstrap": "0.14.3",
     "hover": "Hover#^2.0.2",
     "angular-animate": "^1.5.8",
-    "angular-marquee": "*"
+    "angular-marquee": "*",
+    "font-awesome": "fontawesome#^4.6.3",
+    "components-font-awesome": "^4.6.3"
   },
   "overrides": {
     "bootstrap": {

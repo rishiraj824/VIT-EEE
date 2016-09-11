@@ -34,11 +34,60 @@
   </div> 
  
   </div>
-  
+  <div class="col-lg-12 col-sm-12 col-md-12 padding-lr-0">
+            <div class="side-stats">
+                    
+                    <div class="col-lg-4 col-sm-12 col-md-4  padding-lr-0">
+                    <div class="stats-container dark-blue">
+                        <h4>From Placement Cell</h4>
+                        <div class="stats-number">
+                            3277
+                        </div>
+                        <div class="stats-text">
+                            Offers from Wipro, Cognizant, TCS.
+                        </div>
+                        <div>
+                            
+                        <a href="#">Know More ></a>
+                        </div>
+                    </div>
+                    </div>
+                     <div class="col-lg-4 col-sm-12 col-md-4 padding-lr-0">
+                     <div class="stats-container normal-blue">
+                         <h4>From our Students</h4>
+                        <div class="student-img">
+                            <img src="http://lorempixel.com/300/300/people" class="img-circle">
+                        </div>
+                        <div class="stats-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        </div>
+                        <div>
+                            
+                         <a href="#">Know More ></a>
+                        </div>
+                     </div>
+                    </div>
+                     <div class="col-lg-4 col-sm-12 col-md-4 padding-lr-0">
+                     <div class="stats-container dark-blue">
+                         <h4>Our Achievements</h4>
+                        <div class="stats-number">
+                            40
+                        </div>
+                        <div class="stats-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        </div>
+                        <div>
+                            
+                         <a href="#">Know More ></a>
+                        </div>
+                     </div>
+                    </div>
+            </div>
+        </div>
  <div class="introduction">
      <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-8 col-sm-12 col-md-8 col-lg-offset-1">
+        <div class="col-lg-9 col-sm-12 col-md-9">
             <div class="about-section-home " >
             <br>
                <h2 >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</h2><br>
@@ -78,52 +127,12 @@
             </div>
             
         </div>
-        <div class="col-lg-3 col-sm-12 col-md-4 padding-lr-0">
-            <div class="side-stats">
-                    
-                    <div class="col-lg-12 col-sm-12 col-md-12  padding-lr-0">
-                    <div class="stats-container dark-blue">
-                        
-                        <div class="stats-number">
-                            55
-                        </div>
-                        <div class="stats-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        </div>
-                    </div>
-                    </div>
-                     <div class="col-lg-12 col-sm-12 col-md-12 padding-lr-0">
-                     <div class="stats-container normal-blue">
-                         
-                        <div class="stats-number">
-                            103
-                        </div>
-                        <div class="stats-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        </div>
-                     </div>
-                    </div>
-                     <div class="col-lg-12 col-sm-12 col-md-12 padding-lr-0">
-                     <div class="stats-container dark-blue">
-                         
-                        <div class="stats-number">
-                            8
-                        </div>
-                        <div class="stats-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        </div>
-                     </div>
-                    </div>
-            </div>
-        </div>
-    </div>
-</div>
- </div>
-<div class="courses-offered">
+        <div class="col-lg-3 col-sm-12 col-xs-12 col-md-3 padding-lr-0" >
+            <div class="courses-offered"> 
     <div class="container-fluid">
         <h2 class="col-lg-offset-1 ">Courses Offered</h2>
 
-        <div class="courses col-md-offset-1">
+        <div class="courses ">
              <div ng-controller="CourseModalCtrl" >
     <script type="text/ng-template"  id="myModalContent.html">
         <div class="modal-header">
@@ -135,7 +144,7 @@
     </script>
     <div ng-repeat="course in courses">
          <a href="{{course.link}}" target="_blank">
-        <div class="course col-sm-12 col-lg-4 col-md-4">
+        <div class="course col-sm-12 col-lg-12 col-md-12">
         <div class="{{course.class}}"></div>
         <div class="text-container">
             
@@ -148,10 +157,16 @@
     </div>
    
 
-    <button type="button" class="btn hvr-shutter-out-horizontal btn-theme col-lg-offset-5"  ng-click="open('lg')">See All Courses</button>
+    <button type="button" class="btn hvr-shutter-out-horizontal btn-theme col-lg-8 col-lg-offset-1"  ng-click="open('lg')">See All Courses</button>
 </div>
         </div>
     </div>
 </div>
           
+        </div>
+        
+    </div>
+</div>
+ </div>
+
    <div ng-include="'app/components/footer/footer.html'"></div>

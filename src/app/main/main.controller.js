@@ -41,6 +41,13 @@ app.controller('NoticeCtrl', function($scope){
     date : "31 December 2016",
     class : "yellow",
     description: " quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+  },
+  {
+    type : "Notice",
+    title : "VITEEE 2016",
+    date : "31 December 2016",
+    class : "yellow",
+    description: " quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
   }];
 
 });
