@@ -1,8 +1,5 @@
 @media screen and (max-width: 1280px) and (min-width: 768px){
-	#slides{
-	min-height: 100vh;
-	background: #333333;
-}
+	
 	.carousel-caption h1{
 	font-weight: 700;
 	font-size: 2.6em;
@@ -34,6 +31,9 @@
 		margin-top: 10px;
 		margin-bottom: 10px;
 		font-size: 1.17em;
+	}
+	.noticecontainer{
+		top: 15%;
 	}
 	.pink , .blue, .yellow{
 		height: 70px;
@@ -77,12 +77,17 @@
 	.text-container{
 		margin-bottom: 20px;
 	}
+	#slides{
+		min-height: 100vh;
+	}
 	.carousel-caption h1{
 	font-weight: 700;
 	font-size: 2.6em;
 	letter-spacing: 2px;
 	color: #fff;
 	text-transform: uppercase;
+}	.noticecontainer{
+	top:15% !important;
 }
 	.notice a li {
     position: relative;
@@ -92,11 +97,11 @@
     cursor: pointer;
     background: rgba(0,0,0,0.4);
     color: #f2f2f2;
-    height: 90px;
-    width: auto;
-    padding: 10px;
+    height: 80px !important;
+    width: auto !important;
+    padding: 8px;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     border-radius: 4px;
 }
 	.notice h5{
@@ -109,8 +114,16 @@
 		margin-bottom: 10px;
 		font-size: 1.17em;
 	}
+	.carousel-students{
+		min-height: 430px;
+	}
+	.student-img,.stats-text-carousel{
+		text-align: center;
+		margin: 5px;
+	}
+
 	.pink , .blue, .yellow{
-		height: 70px;
+		height: 60px;
 	}
 	.thumbnail a > img,
 	.carousel-inner > .item > img,

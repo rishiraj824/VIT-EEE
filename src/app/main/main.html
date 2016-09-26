@@ -107,17 +107,17 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
                      </div>
                     </div>
                     <div class="col-lg-12 col-sm-12 col-md-12 padding-lr-0">
-                     <div class="stats-container dark-blue">
+                     <div class="stats-container dark-blue carousel-students">
                          <h4>From our Students</h4>
                      <div ng-controller="CarouselCtrl" >
                            <div>
                              <uib-carousel interval="myInterval">
                                <uib-slide ng-repeat="slide in slides" active="slide.active">
                                 <div class="row">
-                                  <div class="student-img col-sm-4">
+                                  <div class="student-img col-sm-12 col-lg-4">
                                        <img src="{{slide.image}}" class="img-circle">
                                    </div>
-                                   <div class="stats-text-carousel col-sm-8">
+                                   <div class="stats-text-carousel col-sm-12 col-lg-8">
                                       "{{slide.testimonial}}"<br><br><em>-{{slide.name}}</em>
                                    </div>
                                 </div>
