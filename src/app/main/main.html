@@ -4,169 +4,264 @@
      <div class="noticecontainer">
                <div ng-controller="NoticeCtrl">
               <ul class="notice" >
-              
-                <li  ng-repeat="notice in notices">
+                <a ng-repeat="notice in notices" href="{{notice.link}}" target="_blank">
+                  <li  >
                 <div class="{{notice.class}}"></div>
                 <div class="notice-text">
                     <h5>{{notice.type}}</h5>
                     <h3>{{notice.title}}</h3>
                         <h5>{{notice.date}}</h5>
-                        <p class="notice-description">{{notice.description}}</p>
                 </div>
               
               </li>
               
+                </a>
+                
           </ul>
           </div>
-  </div>
-    <div ng-controller="CarouselCtrl" >
-    <div>
-      <uib-carousel interval="myInterval">
-        <uib-slide ng-repeat="slide in slides" active="slide.active">
-          <img ng-src="{{slide.image}}">
-          <div class="overlay"></div>
-          <div class="carousel-caption" >
-            <h1>{{slide.caption}}</h1>
-          </div>
-        </uib-slide>
-      </uib-carousel>
     </div>
-  </div> 
- 
+    <div ng-controller="VideoCtrl">
+
+      <vid-bg resources="resources" poster="poster" full-screen="fullScreen" muted="muted" z-index="zIndex" play-info="playInfo" pause-play="pausePlay"></vid-bg>
+      <div class="overlay"></div>
+    </div>
+    
+    <!-- <div ng-controller="CarouselCtrl" >
+      <div>
+        <uib-carousel interval="myInterval">
+          <uib-slide ng-repeat="slide in slides" active="slide.active">
+            
+            <div class="overlay"></div>
+            <div class="carousel-caption" >
+              <h1>{{slide.caption}}</h1>
+            </div>
+          </uib-slide>
+        </uib-carousel>
+      </div>
+    </div>  -->
   </div>
-  <div class="col-lg-12 col-sm-12 col-md-12 padding-lr-0">
-            <div class="side-stats">
+ <div class="introduction">
+     <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-8 col-sm-12 col-md-8 ">
+            <div class="about-section-home " >
+            <br>
+               <h2 >About VIT University</h2><br>
+               <p>VIT university is a progressive educational institution that is dedicated to the pursuit of excellence. Students here are encouraged on this journey by our committed faculty, world-class facilities and student-friendly educational systems. 
+VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentarian and minister in the Tamil Nadu Government, as a self-financing institution called the ‘Vellore Engineering College’. Since then the institution has grown from strength to strength. </p><br>
+                <a ng-href="#/about-us" class="hvr-blob link-theme">Read More</a>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12 " style="border-right: 1px solid #ddd;">
+                
+               <div ng-controller="ModalCtrl" >
+                  <div class="information-center" >
+                    <div class="img-container"  ng-click="open('lg')" >
+                        <img src="assets/images/video-image.jpg"  />
+                    </div>
                     
-                    <div class="col-lg-4 col-sm-12 col-md-4  padding-lr-0">
-                    <div class="stats-container dark-blue">
+                    <div class="play" ng-click="open('lg')"><i class="fa fa-play"></i></div>
+                </div>
+                    <script type="text/ng-template"  id="myModalContent.html">
+                        <div class="modal-header modal-header-new">
+                            <a style="position: absolute;right: 0;" href="#" ng-click="cancel()"><i class="fa fa-times fa-2x white" ></i></a>
+                        </div>
+                        <div class="modal-body modal-body-new">
+                           <iframe width="760" height="760" src="https://www.youtube.com/embed/IcK3uck76J0?enablejsapi=1&amp;iv_load_policy=3&amp;playerapiid=v1_youtube_api&amp;disablekb=1&amp;wmode=transparent&amp;controls=0&amp;showinfo=0&amp;modestbranding=0&amp;rel=0&amp;loop=0&amp;cc_load_policy=1&amp;fs=0&amp;html5=1&amp;autoplay=0" frameborder="0" allowfullscreen></iframe>
+                        </div> 
+                    </script>
+                
+
+              </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12 ">
+                <div class="information-center">
+                  <a href="https://www.google.co.in/maps/@12.9682339,79.1557941,3a,75y,64.03h,107.02t/data=!3m7!1e1!3m5!1sVPqerQbHD_EAAAQfDn4XfQ!2e0!3e2!7i13312!8i6656" target="_blank">
+                      <div class="img-container">
+                        <img src="assets/images/360-image.jpg"/>
+                    </div>
+                  </a>
+                  
+                    <div onclick="window.open('https://www.google.co.in/maps/@12.9682339,79.1557941,3a,75y,64.03h,107.02t/data=!3m7!1e1!3m5!1sVPqerQbHD_EAAAQfDn4XfQ!2e0!3e2!7i13312!8i6656','_blank')" class="play"><img src="assets/images/360-icon.png" class="img-responsive"></div>
+                    
+                </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-lg-4 col-sm-12 col-md-4 padding-lr-0">
+          <div class="side-stats">
+          <div class="col-lg-12 col-sm-12 col-md-12 padding-lr-0">
+                     <div class="stats-container normal-blue">
+                         <h4>Our Achievements</h4>
+                        <div class="stats-number">
+                            1st
+                        </div>
+                        <div class="stats-text">
+                            Ranked 1st in Private Engineering Colleges in India.
+                        </div>
+                        <div>
+                            
+                         <a href="http://www.vit.ac.in/about/raac">Know More ></a>
+                        </div>
+                     </div>
+                    </div>
+                    <div class="col-lg-12 col-sm-12 col-md-12 padding-lr-0">
+                     <div class="stats-container dark-blue">
+                         <h4>From our Students</h4>
+                     <div ng-controller="CarouselCtrl" >
+                           <div>
+                             <uib-carousel interval="myInterval">
+                               <uib-slide ng-repeat="slide in slides" active="slide.active">
+                                <div class="row">
+                                  <div class="student-img col-sm-4">
+                                       <img src="{{slide.image}}" class="img-circle">
+                                   </div>
+                                   <div class="stats-text-carousel col-sm-8">
+                                      "{{slide.testimonial}}"<br><br><em>-{{slide.name}}</em>
+                                   </div>
+                                </div>
+                                 
+                                   
+                               </uib-slide>
+                             </uib-carousel>
+                           </div>
+                         </div> 
+                        <div>
+                                       
+                                    <a href="http://www.vit.ac.in/academics/internationalRelations/partnerUniversities/irtestimonial">Know More ></a>
+                                  </div>
+                     </div>
+                    </div>
+                    <div class="col-lg-12 col-sm-12 col-md-12  padding-lr-0">
+                    <div class="stats-container normal-blue">
                         <h4>From Placement Cell</h4>
                         <div class="stats-number">
                             3277
                         </div>
                         <div class="stats-text">
-                            Offers from Wipro, Cognizant, TCS.
+                            Offers from Wipro, Cognizant, TCS, Accenture and many more.
                         </div>
                         <div>
                             
-                        <a href="#">Know More ></a>
+                        <a href="http://www.vit.ac.in/placement">Know More ></a>
                         </div>
                     </div>
                     </div>
-                     <div class="col-lg-4 col-sm-12 col-md-4 padding-lr-0">
-                     <div class="stats-container normal-blue">
-                         <h4>From our Students</h4>
-                        <div class="student-img">
-                            <img src="http://lorempixel.com/300/300/people" class="img-circle">
-                        </div>
-                        <div class="stats-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        </div>
-                        <div>
-                            
-                         <a href="#">Know More ></a>
-                        </div>
-                     </div>
-                    </div>
-                     <div class="col-lg-4 col-sm-12 col-md-4 padding-lr-0">
-                     <div class="stats-container dark-blue">
-                         <h4>Our Achievements</h4>
-                        <div class="stats-number">
-                            40
-                        </div>
-                        <div class="stats-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        </div>
-                        <div>
-                            
-                         <a href="#">Know More ></a>
-                        </div>
-                     </div>
-                    </div>
+                     
+                     
             </div>
-        </div>
- <div class="introduction">
-     <div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-8 col-sm-12 col-md-8">
-            <div class="about-section-home " >
-            <br>
-               <h2 >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</h2><br>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit</p><br>
-                <a href="#" class="hvr-blob link-theme">Read More</a>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="information-center">
-                    <div class="img-container">
-                        <img src="http://lorempixel.com/900/600/" class="img-responsive" />
-                    </div>
-                    <div class="text-container">
-                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                    </div>
-                    
-                    
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="information-center">
-                    <div class="img-container">
-                        <img src="http://lorempixel.com/900/600/" class="img-responsive" />
-                    </div>
-                    <div class="text-container">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    </div>
-                    
-                    
-                </div>
-            </div>
-            </div>
-            
-        </div>
-        <div class="col-lg-4 col-sm-12 col-xs-12 col-md-4 padding-lr-0" >
-            <div class="courses-offered"> 
-    <div class="container-fluid">
-        <h2 class="col-lg-offset-1 ">Courses Offered</h2>
-
-        <div class="courses ">
-             <div ng-controller="CourseModalCtrl" >
-    <script type="text/ng-template"  id="myModalContent.html">
-        <div class="modal-header">
-            <a href="#" ng-click="cancel()"><i class="fa fa-times fa-2x white" ></i></a>
-        </div>
-        <div class="modal-body">
-           xxxxxxxxxxxxxxxxx
-        </div> 
-    </script>
-    <div ng-repeat="course in courses">
-         <a href="{{course.link}}" target="_blank">
-        <div class="course col-sm-12 col-lg-12 col-md-12">
-        <div class="{{course.class}}"></div>
-        <div class="text-container">
-            
-            <h4  class="hvr-float">{{course.name}}</h4>
-            <h5>{{course.school}}</h5>
-        </div>
-           
-        </div>
-    </a>
-    </div>
-   
-
-    <button type="button" class="btn hvr-shutter-out-horizontal btn-theme col-lg-8 col-lg-offset-1"  ng-click="open('lg')">See All Courses</button>
-</div>
-        </div>
-    </div>
-</div>
-          
         </div>
         
     </div>
+    <div class="row">
+        <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12 padding-lr-0" >
+            <div class="courses-offered" ng-controller="CourseModalCtrl" > 
+    <div class="container-fluid">
+    <div class="col-md-4 col-lg-4 col-sm-12">
+     
+          <div ng-repeat="course in courses.slice(0, 2)">
+        <div class="course col-sm-12 col-lg-12 col-md-12">
+        <div class="course-title">
+          <div class="{{course.class}}"></div>
+            <div class="text-container">
+            <p>Course</p>
+            <h4  class="hvr-float">{{course.name}}</h4><!-- 
+            <h5>{{course.school}}</h5> -->
+            </div>
+          </div>
+        
+        <div class="course-short-description">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...
+        </div>
+         <button type="button" class="btn hvr-shutter-out-horizontal btn-theme"  >Apply Now</button>
+           
+      </div>
+    </div>  
+    </div>
+    <div class="col-md-4 col-lg-4 col-sm-12">
+       <div class="qa-message-list" id="wallmessages">
+             
+                
+                <div class="message-item" id="m9">
+                  <div class="message-inner">
+                   
+                    <div class="qa-message-content">
+                      Nice theme . Excellent one .
+                    </div>
+                </div></div>
+                
+                <div class="message-item" id="m7">
+                  <div class="message-inner">
+                    
+                    <div class="qa-message-content">
+                      Nullam porta leo vitae ipsum feugiat viverra. In sed placerat mi. Nullam euismod, quam in euismod rhoncus, tellus velit posuere tortor, non cursus nunc velit et lacus.
+                    </div>
+                </div></div>
+                
+                <div class="message-item" id="m6">
+                  <div class="message-inner">
+                    
+                    <div class="qa-message-content">
+                      Integer vitae arcu vitae ligula Cras vestibulum suscipit odio ac dapibus. In hac habitasse platea dictumst. Cras pulvinar erat et nunc fringilla, quis molestie
+                    </div>
+                </div></div>
+                
+                <div class="message-item" id="m5">
+                  <div class="message-inner">
+                    
+                    <div class="qa-message-content">
+                      Nulla dui ante, pulvinar ac auctor vitae, sollicitudin et tortor. Cras vestibulum suscipit odio ac dapibus. In hac habitasse platea dictumst. Cras pulvinar erat et nunc fringilla, quis molestie diam pulvinar.
+                    </div>
+                </div></div>
+                
+                <div class="message-item" id="m4">
+                  <div class="message-inner">
+                    
+                    <div class="qa-message-content">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fermentum iaculis mi, non dapibus nulla eleifend sed. Etiam ac commodo leo. <br>
+       Donec non sem id tellus mattis convallis. Morbi dapibus nulla ac dui lacinia,
+                    </div>
+                </div></div>
+                
+                <div class="message-item" id="m3">
+                  <div class="message-inner">
+                    
+                    <div class="qa-message-content">
+                      Suspendisse varius mi consectetur nulla volutpat, nec fermentum turpis vehicula. Curabitur dapibus odio mauris, vitae accumsan sapien auctor non. Duis tempus ante id nulla vestibulum mattis.
+                    </div>
+                </div></div>
+                
+              </div>
+    </div>     
+     <div class="col-md-4 col-lg-4 col-sm-12">
+     
+          <div ng-repeat="course in courses.slice(0, 2)">
+        <div class="course col-sm-12 col-lg-12 col-md-12">
+        <div class="course-title">
+          <div class="{{course.class}}"></div>
+            <div class="text-container">
+            <p>Course</p>
+            <h4  class="hvr-float">{{course.name}}</h4><!-- 
+            <h5>{{course.school}}</h5> -->
+            </div>
+          </div>
+        
+        <div class="course-short-description">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...
+        </div>
+         <button type="button" class="btn hvr-shutter-out-horizontal btn-theme"  >Apply Now</button>
+           
+      </div>
+    </div>  
+    </div>          
+    </div>
 </div>
  </div>
-
+</div>
+</div>
    <div ng-include="'app/components/footer/footer.html'"></div>
+
+ 

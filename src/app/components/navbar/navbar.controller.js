@@ -1,13 +1,16 @@
 (function() {
   'use strict';
 
-  angular
-    .module('viteee')
-    .controller('NavbarController', NavbarController);
-
-  /** @ngInject */
-  function NavbarController() {
- 
-
-  }
+  var app = angular.module('viteee');
+  /* app.controller('NavbarCtrl', function($scope){
+     $scope.logo = "assets/images/logo-blue.png";
+     $scope.menu = function(){
+        $scope.myStyle = [{
+          'color': '#333333'
+        }];
+        $scope.myStyle2 = [{
+          "background: white"
+        }];
+     };
+   });*/
 })();
