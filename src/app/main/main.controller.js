@@ -144,11 +144,70 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
   });
   
    app.controller('CourseModalCtrl',  function ($scope, $uibModal, $log) {
-
+    $scope.programs = [{
+      name: "B.Tech ",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
+      class : "blue-small",
+      programtype : "Undergraduate",
+      language: "English",
+      duration: "4 Years",
+      image : "assets/images/vectors-01.png",
+      link : "http://www.vit.ac.in/admissions/ug"
+    },
+    {
+      name: "B.Arch",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
+      class : "orange-small",
+      programtype : "Undergraduate",
+      language: "English",
+      duration: "4 Years",
+      image : "assets/images/vectors-02.png",
+      link : "http://www.vit.ac.in/admissions/ug"
+    },
+    {
+      name: "Law School ",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
+      class : "blue-small",
+      programtype : "Undergraduate",
+      language: "English",
+      duration: "4 Years",
+      image : "assets/images/vectors-08.png",
+      link : "http://www.vit.ac.in/admissions/ug"
+    },
+    {
+      name: "Hotel Management ",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
+      class : "pink-small",
+      programtype : "Undergraduate",
+      language: "English",
+      duration: "4 Years",
+      image : "assets/images/vectors-05.png",
+      link : "http://www.vit.ac.in/admissions/ug"
+    },
+    {
+      name: "Fashion Technology ",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
+      class : "green-small",
+      programtype : "Undergraduate",
+      language: "English",
+      duration: "4 Years",
+      image : "assets/images/vectors-04.png",
+      link : "http://www.vit.ac.in/admissions/ug"
+    },
+    {
+      name: "Arts & Science",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
+      class : "pink-small",
+      programtype : "Undergraduate",
+      language: "English",
+      duration: "4 Years",
+      image : "assets/images/vectors-09.png",
+      link : "http://www.vit.ac.in/admissions/ug"
+    }];
     $scope.courses = [{
       name: "B.Tech ",
       school: "School of Copmuter Science & Engineering",
-      class : "blue-small",
+      class : "purple-small",
       link : "http://vit.ac.in/scope"
     },
     {

@@ -44,9 +44,12 @@ body{
   border:none !important;
   margin-bottom: 0px !important;
 }
-.navbar-dark ul li a {
-  background: #fff !important;
-  color: #333;
+.navbar-dark > li > a{
+  margin-top: 20px;
+  color: #333 !important;
+  font-weight: 600 !important;
+  background: #fff;
+  text-transform: uppercase;
 }
 .dropdown-menu{
   transition: all ease-in 0.5s;
@@ -57,10 +60,16 @@ body{
   font-weight: 600 !important;
   text-transform: uppercase;
 }
-.navbar-brand{
-  margin-top: 50px;
-  color: #fff !important;
+
+.navbar-brand-new {
+  padding: 0px;
 }
+.navbar-brand-new>img {
+  height: 100px;
+  width: auto;
+}
+
+
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
     color: #fff;
     background-color: transparent;
@@ -302,6 +311,33 @@ body{
   background: #ffad5c;
  
 }
+.green-small{
+   position: absolute;
+      left: 11px;
+      top: 14%;
+      bottom: 0;
+      width: 4px;
+  background: #38b64a;
+  
+}
+.orange-small{
+   position: absolute;
+      left: 11px;
+      top: 14%;
+      bottom: 0;
+      width: 4px;
+  background: #ed9a1a;
+  
+}
+.purple-small{
+  position: absolute;
+      left: 11px;
+      top: 14%;
+      bottom: 0;
+      width: 4px;
+  background: #5b3976;
+
+}
 .courses-offered{
   background: #00457c;
   padding-top: 40px;
@@ -324,15 +360,22 @@ body{
     margin-bottom: 40px;
 }
 
-.hvr-shutter-out-horizontal:before{
+#nav-new .navbar-brand {
+  height: 60px;
+}
 
+#nav-new .nav >li >a {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#nav-new .navbar-toggle {
+  padding: 10px;
+  margin: 25px 15px 25px 0;
 }
 .navbar-brand-new {
-    margin-top: 14px;
-    padding: 10px;
-    margin-left: -20px;
-    max-width: 70%;
+  height: 80px;
 }
+
 .course-title{
   position: relative;
   height: 52px;
@@ -368,6 +411,32 @@ body{
   margin-bottom: 5px;
 }
 .course h5{
+  color: #b3b3b3;
+  font-weight: 400;
+  text-align: left;
+  line-height: 0.8;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.course-main .text-container{
+  margin-left: 25px;
+}
+.course-main .text-container p {
+    color: #b3b3b3;
+    font-size: 0.94em;
+    font-weight: 400;
+    margin-bottom: 0px;
+    line-height: 2.3;
+}
+.course-main h3{
+  color: #666666;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.3;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.course-main h5{
   color: #b3b3b3;
   font-weight: 400;
   text-align: left;
@@ -746,8 +815,69 @@ line-height: 22px;
 }
 .course-intro{
   background: #e6e6e6;
+  min-height: 200px;
+  padding-top: 100px;
 }
 .course-intro h2{
   font-weight: 700;
   color: #303030;
+}
+.course-intrp h5{
+  font-size: 16px;
+  font-weight: 400;
+}
+.courses{
+  position: relative;
+}
+.course-list h2{
+  font-weight: 700;
+  font-size: 2.1em;
+}
+.course-title{
+  cursor: pointer;
+}
+.vector-main{
+  position: absolute;
+  max-width: 30% !important;
+  height: auto;
+  right: 5%;
+  top: 5%;
+  z-index: -5;
+  opacity: 0.3;
+}
+.flex{
+  display: flex;
+
+}
+.undergrad-icon{
+  height: 200px;
+}
+.padding-r-0{
+  padding-right: 0px !important;
+}
+.vectors-sidelined{
+  max-width: 5%;
+  display: inline-block;
+}
+.main-header{
+  margin-top: 35px;
+}
+.section-header{
+  font-weight: 700;
+}
+.inline{
+  display: inline-block;
+  margin: 5px 20px 5px 0;
+}
+.inline h4{
+  font-weight: 700;
+}
+.inline h5{
+  font-size: 400;
+}
+.more-description{
+  margin-top: 20px;
+}
+.program{
+  position: relative;
 }

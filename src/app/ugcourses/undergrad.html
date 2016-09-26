@@ -1,14 +1,96 @@
   
 <div ng-include="'app/components/navbar/navbar-dark.html'"></div>
-  <div class="container-fluid">
+  
   <div class="course-intro">
-  		<div class="col-lg-4 col-md-4 col-sm-4">
-  			<img src="assets/images/vector-11.png" class="img-responsive vector-main">
+  <div class="container-fluid">
+  	<div class="row">
+  		<div class=" col-lg-offset-1 col-md-offset-1 col-lg-2 col-md-2 col-sm-2">
+  			<img src="assets/images/vectors-12.png" class="img-responsive undergrad-icon">
   		</div>
   		<div class="col-lg-8 col-md-8 col-sm-8">
-  			<h2 class="main-header">UNDERGRAD COURSES</h2>
-  			<h5>The most highly sought after B.Tech degrees from VIT University are achieved by successfully getting through the VITEEE examination conducted every year. The students based on their merit are given a range of options to pursue their under graduation degree. The university currently offers 25 undergraduate programmes, and in addition to this has recently launched the B.Arch degree for students willing to pursue Architecture. The admission into the B.Arch degree is procured through a successful NATA score. Many research centres are also part of the schools, which promote inter-departmental collaboration and provide a platform for students to delve into new research projects.</h5>
+  		<div class="main-header">
+  			<h2 class="main-header">UNDERGRADUATE DEGREES</h2>
+  			<h4>The most highly sought after B.Tech degrees from VIT University are achieved by successfully getting through the VITEEE examination conducted every year. The students based on their merit are given a range of options to pursue their under graduation degree. The university currently offers 25 undergraduate programmes, and in addition to this has recently launched the B.Arch degree for students willing to pursue Architecture. </h4>
   		</div>
+  			
+  		</div>
+  	</div>
+  </div>
+  		
+  </div>
+  <div class="container-fluid">
+  <div class="courses" ng-controller="CourseModalCtrl">
+  	<div class="row">
+  		<div class="col-lg-7  col-sm-12">
+  			 
+		      <div ng-repeat="program in programs" class="program">
+  			    <div class="course-main ">
+  			    <div class="course-title">
+  			      <div class="{{program.class}}"></div>
+  			        <div class="text-container">
+  			        <p >Programme</p>
+  			       
+  			        	<h4  class="hvr-float">{{program.name}}</h4>
+  			        	
+		        	</div>
+  			        	
+  			        
+
+  			        <!-- 
+  			        <h5>{{course.school}}</h5> -->
+		        </div>
+		        </div>
+		        
+  			    <div class="course-short-description">
+  			       {{program.description}}
+  			    </div>
+  			    <div class="more-description">
+		        <div class="inline">
+		        	<h4 >Program</h4>
+		        	<h5>{{program.programtype}}</h5>
+		        </div>
+		        <div class="inline">
+		        	<h4>Language</h4>
+		        	<h5>{{program.language}}</h5>
+		        </div>
+		        <div class="inline">
+		        	<h4>Duration</h4>
+		        	<h5>{{program.duration}}</h5>
+		        	
+		        </div>
+		        	
+
+		        </div>
+  			     <button type="button" class="btn hvr-shutter-out-horizontal btn-theme"  >Apply Now</button>
+  			       <img src="{{program.image}}" class="img-responsive vector-main">
+  			  </div>
+
+  			</div>
+  			
+  		
+  		
+  		<div class="col-lg-5 col-sm-12 padding-r-0" style="background: #f2f2f2;padding: 10px 0px 20px 15px;">
+  		<h2 class="section-header">Offered Courses</h2>
+  		<div class="courses">
+  			<div ng-repeat="course in courses">
+  			    <div class="course-main col-sm-12 col-lg-12 col-md-12">
+  			    <div class="course-title">
+  			      <div class="{{course.class}}"></div>
+  			        <div class="text-container">
+  			        <h4  class="hvr-float">{{course.name}}</h4>
+  			        
+  			        <h5>{{course.school}}</h5>
+  			        </div>
+  			      </div>
+  			       
+  			  </div>
+  			</div>  
+  		</div>
+  			 
+  	
+  			 
+  		</div>
+  	</div>
   </div>
   </div>
 
