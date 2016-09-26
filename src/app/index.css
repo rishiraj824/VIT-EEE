@@ -34,6 +34,20 @@ body{
   border:none !important;
   margin-bottom: 0px !important;
 }
+#nav-dark{
+  z-index: 45;
+  background: #fff !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: 0 auto !important;
+  border:none !important;
+  margin-bottom: 0px !important;
+}
+.navbar-dark ul li a {
+  background: #fff !important;
+  color: #333;
+}
 .dropdown-menu{
   transition: all ease-in 0.5s;
 }
@@ -729,4 +743,11 @@ line-height: 22px;
   color: #00457c;
   padding: 5px 60px 5px 5px;
   line-height: 30px;
+}
+.course-intro{
+  background: #e6e6e6;
+}
+.course-intro h2{
+  font-weight: 700;
+  color: #303030;
 }
