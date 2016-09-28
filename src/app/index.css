@@ -161,6 +161,7 @@ body{
 
 .about-section-home{
   min-height: 260px;
+  margin-bottom: 20px;
 }
 .about-section-home h2{
   font-weight: 900;
