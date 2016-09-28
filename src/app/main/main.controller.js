@@ -12,7 +12,7 @@
             '*.mp4',
             '*.swf'
         ];
-        $scope.poster = 'assets/images/video-image.jpg';
+        $scope.poster = 'assets/images/placeholder.jpg';
         $scope.fullScreen = true;
         $scope.muted = true;
         $scope.zIndex = '22';
@@ -29,6 +29,26 @@
   /*CArousel*/
     app.controller('CarouselCtrl', function($scope){
       $scope.myInterval = 3000;
+      $scope.achievements = [{
+        number: "1st",
+        text: "Among all Private Engineering Institutions of India by MHRD, Govt. of India Ranking 2016"
+      },
+      {
+        number: "17th",
+        text: "Among all B – Schools of India"
+      },
+      {
+        number: "1st",
+        text: "Among all Private Engineering Institutes of India by CAREERS360 - 2014/2015/2016"
+      },
+      {
+        number: "201-250",
+        text: "BRICS Ranking"
+      },
+      {
+        number: "201-250",
+        text: "BRICS Ranking"
+      }]
       $scope.slides = [
     {
       image: 'assets/images/bernhard.jpg',

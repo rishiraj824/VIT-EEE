@@ -1,11 +1,13 @@
 @media screen and (max-width: 1280px) and (min-width: 768px){
 	
-	.carousel-caption h1{
+	.hero-caption{
 	font-weight: 700;
-	font-size: 2.6em;
+	font-size: 5em;
 	letter-spacing: 2px;
 	color: #fff;
 	text-transform: uppercase;
+	margin: 0 auto;
+	text-align: center;
 	}
 	.course{
 		height: 220px;
@@ -36,7 +38,7 @@
     background: rgba(0,0,0,0.4);
     color: #f2f2f2;
     height: 100px;
-    width: 400px;
+    width: 250px;
     padding: 10px;
     display: block;
     margin-bottom: 10px;
@@ -58,15 +60,6 @@
 	.pink , .blue, .yellow{
 		height: 70px;
 	}
-	.carousel-caption {
-    position: absolute;
-    left: 5% !important;
-    top: 140px;
-    z-index: 10;
-    padding-bottom: 20px;
-    text-align: left;
-    text-shadow: none !important; 
-}
 	.text-container{
 		margin-bottom: 10px;
 	}
@@ -100,12 +93,14 @@
 	#slides{
 		min-height: 100vh;
 	}
-	.carousel-caption h1{
+	.hero-caption{
 	font-weight: 700;
 	font-size: 2.6em;
 	letter-spacing: 2px;
 	color: #fff;
 	text-transform: uppercase;
+	margin: 0 auto;
+	text-align: center;
 }	.noticecontainer{
 	top:15% !important;
 }
