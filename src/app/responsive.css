@@ -6,7 +6,27 @@
 	letter-spacing: 2px;
 	color: #fff;
 	text-transform: uppercase;
+	}
+	.course{
+		height: 220px;
+	}
+.course-img img{
+
+  height: 220px;
+  
 }
+.course-img{
+  width: 40%;
+}
+.course-details{
+  width: 60%;
+}
+	.course-details{
+		font-size: 0.84em;
+	}
+	.vector-main-home{
+		max-width: 35% !important;
+	}
 	.notice a li {
     position: relative;
     list-style-type: none;
@@ -15,8 +35,8 @@
     cursor: pointer;
     background: rgba(0,0,0,0.4);
     color: #f2f2f2;
-    height: 90px;
-    width: auto;
+    height: 100px;
+    width: 400px;
     padding: 10px;
     display: block;
     margin-bottom: 10px;
@@ -25,15 +45,15 @@
 	.notice h5{
 		margin-top: 5px;
     	margin-bottom: 5px;
-    	font-size: 0.83em;
+    	font-size: 0.93em;
 	}
 	.notice  h3{
 		margin-top: 10px;
-		margin-bottom: 10px;
-		font-size: 1.17em;
+		margin-bottom: 10px;	
+		font-size: 1.27em;
 	}
 	.noticecontainer{
-		top: 15%;
+		top: 20%;
 	}
 	.pink , .blue, .yellow{
 		height: 70px;
@@ -119,7 +139,8 @@
 	}
 	.student-img,.stats-text-carousel{
 		text-align: center;
-		margin: 5px;
+		margin: auto;
+		margin-bottom: 10px;
 	}
 
 	.pink , .blue, .yellow{
@@ -144,7 +165,7 @@
 
 }
 	.navbar-nav{
-		background: #2098d1;
+		background:#03558c;
 	    border-radius: 0px 0px 10px 10px;
 	}
 	.navbar-inverse .navbar-nav > li > a {
@@ -161,8 +182,8 @@
      border-color: transparent !important; 
      background: none !important; 
 }
-	.img-container{
-		height: auto;
+	.information-center{
+		margin-bottom: 10px;
 	}
 	.course h5 {
 	font-size: 0.67em;

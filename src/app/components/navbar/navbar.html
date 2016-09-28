@@ -15,60 +15,52 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav pull-right">
-        <li class="dropdown mega-dropdown"><a role="button" data-toggle="dropdown"  ng-style="myStyle"  class="dropdown-toggle"  class="hvr-underline-from-center">About Us</a>
-        <ul class="dropdown-menu mega-dropdown-menu">
+        <li class="dropdown "><a role="button" data-toggle="dropdown"  ng-style="myStyle"  class="dropdown-toggle">About Us</a>
+        <ul class="dropdown-menu ">
          
-        <li class="col-lg-3 col-sm-12">
-            <ul>
-              <li class="dropdown-header">About Us</li>
-              <li><a ng-href="#/about/infrastructure" class="hvr-float">    Infrastructure</a></li>
-              <li><a ng-href="#/about/placements" class="hvr-float">   Placements</a></li>
-              <li><a ng-href="#/about/international-relations/" class="hvr-float">   International Relations</a></li>
-              <li><a ng-href="#/about/campus-life" class="hvr-float">   Campus Life</a></li>
-            </ul>
-          </li>
-          <li class="col-lg-3 col-sm-12">
-            <ul>
-              <li class="dropdown-header">UG Admissions</li>
-              <li><a ng-href="#/undergrad/viteee" class="hvr-float">   VITEEE</a></li>
-              <li><a ng-href="#/undergrad" class="hvr-float">   Architecture</a></li>
-              <li><a ng-href="#/undergrad" class="hvr-float">   Law</a></li>
-              <li><a ng-href="#/undergrad" class="hvr-float">   Hotel Management</a></li>
-              <li><a ng-href="#/undergrad" class="hvr-float">   Fashion Technology</a></li>
-              <li><a ng-href="#/undergrad" class="hvr-float">   Arts & Science</a></li>   
-            </ul>
-          </li>
-          <li class="col-lg-3 col-sm-12">
-            <ul>
-              <li class="dropdown-header">PG Admissions</li>
-              <li><a ng-href="#/postgrad" class="hvr-float" >M Tech/MSc/MCA</a></li>
-              <li><a ng-href="#/postgrad" class="hvr-float" >Integrated Programs</a></li>
-              <li><a ng-href="#/postgrad" class="hvr-float" >Management</a></li>
-
-            </ul>
-          </li>
-          <li class="col-lg-3 col-sm-12">
-            <ul>
-              <li class="dropdown-header">Research</li>
-              <li><a ng-href="#/research" class="hvr-float" >M.Phil </a></l
-              <li><a ng-href="#/research" class="hvr-float" >M tech </a></li>
-              <li><a ng-href="#/research" class="hvr-float" >Reasearch</a></li>
-              <li><a ng-href="#/research" class="hvr-float" >Phd.</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Foreign/NRI</li>
-              <li><a ng-href="#/foreign" class="hvr-float">Undergrad</a></li>
-              <li><a ng-href="#/foreign" class="hvr-float">Postgraduate</a></li>
-              <li><a ng-href="#/foreign" class="hvr-float">Research</a></li>                      
-            </ul>
-          </li>
+              <li><a ng-href="#/about/infrastructure" >    Infrastructure</a></li>
+              <li><a ng-href="#/about/placements" >   Placements</a></li>
+              <li><a ng-href="#/about/international-relations/" >   International Relations</a></li>
+              <li><a ng-href="#/about/campus-life" >   Campus Life</a></li>
+            
           </ul>
           </li>
-        <li><a ng-href="#" ng-click="menu()" ng-style="myStyle" class="hvr-underline-from-center" >   UG Admissions</a></li>
-        <li><a ng-href="#" ng-click="menu()" ng-style="myStyle" class="hvr-underline-from-center" >   PG Admissions</a></li>
-        <li><a ng-href="#" ng-click="menu()" ng-style="myStyle" class="hvr-underline-from-center" >   Research</a></li>
-        <li><a ng-href="#" ng-click="menu()" ng-style="myStyle" class="hvr-underline-from-center" >   Foreign/NRI</a></li>
-        <li><a ng-href="#" ng-click="menu()" ng-style="myStyle" class="hvr-underline-from-center" >   Contact Us</a></li>
+        <li class="dropdown "><a ng-href="#/undergrad" role="button" data-toggle="dropdown"  ng-style="myStyle"  class="dropdown-toggle" >   UG Admissions</a>
+          <ul  class="dropdown-menu">
+              <li><a ng-href="#/undergrad/viteee" >   VITEEE</a></li>
+              <li><a ng-href="#/undergrad" >   Architecture</a></li>
+              <li><a ng-href="#/undergrad" >   Law</a></li>
+              <li><a ng-href="#/undergrad" >   Hotel Management</a></li>
+              <li><a ng-href="#/undergrad" >   Fashion Technology</a></li>
+              <li><a ng-href="#/undergrad" >   Arts & Science</a></li>   
+            </ul>
+        </li>
+        <li class="dropdown "><a ng-href="#/postgrad" role="button" data-toggle="dropdown"  ng-style="myStyle"  class="dropdown-toggle" >   PG Admissions</a>
+          <ul class="dropdown-menu">
+              <li><a ng-href="#/postgrad"  >M.Tech/MSc/MCA</a></li>
+              <li><a ng-href="#/postgrad"  >Integrated Programs</a></li>
+              <li><a ng-href="#/postgrad"  >Management</a></li>
 
+            </ul>
+        </li>
+        <li class="dropdown "><a ng-href="#/research" role="button" data-toggle="dropdown"  ng-style="myStyle"  class="dropdown-toggle" >   Research</a>
+          <ul class="dropdown-menu">
+              <li><a ng-href="#/research"  >M.Phil </a></li>
+              <li><a ng-href="#/research"  >M.Tech by Research </a></li>
+              <li><a ng-href="#/research"  >Phd.</a></li>
+              </ul>
+        </li>
+        <li class="dropdown "><a ng-href="#/international" role="button" data-toggle="dropdown"  ng-style="myStyle"  class="dropdown-toggle" >International</a>
+          <ul class="dropdown-menu">
+              <li><a ng-href="#/international" >Undergrad</a></li>
+              <li><a ng-href="#/international" >Postgraduate</a></li>
+              <li><a ng-href="#/international" >Integrated Programs</a></li>    
+              <li><a ng-href="#/international/sap" >S.A.P.</a></li>                   
+            </ul>
+        </li>
+        <li><a ng-href="#/#contact-us" role="button" data-toggle="dropdown"  ng-style="myStyle"  class="dropdown-toggle" >   Contact Us</a>
+          
+        </li>
       </ul>
 
     </div>

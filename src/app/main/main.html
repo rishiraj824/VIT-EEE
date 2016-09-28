@@ -4,7 +4,7 @@
      <div class="noticecontainer">
                <div ng-controller="NoticeCtrl">
               <ul class="notice" >
-                <a ng-repeat="notice in notices" href="{{notice.link}}" target="_blank">
+                <a ng-repeat="notice in notices" href="{{notice.link}}">
                   <li  >
                 <div class="{{notice.class}}"></div>
                 <div class="notice-text">
@@ -154,33 +154,87 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
         </div>
         
     </div>
-    <div class="row">
-        <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12 padding-lr-0" >
-            <div class="courses-offered" ng-controller="CourseModalCtrl" > 
+    </div>
+    </div>
+    <div class="courses-offered">
     <div class="container-fluid">
-    <div class="col-md-4 col-lg-4 col-sm-12">
+    <div class="row">
+    <div  ng-controller="CourseModalCtrl" > 
      
-          <div ng-repeat="course in courses.slice(0, 2)">
-        <div class="course col-sm-12 col-lg-12 col-md-12">
-        <div class="course-title">
-          <div class="{{course.class}}"></div>
+    <div ng-repeat="program in programs">
+        <div class=" col-sm-12 col-lg-4 col-md-4">
+        <div class="course">
+        <div class="course-img"> 
+          <img src="{{program.imagehome}}" >
+        </div>
+        <div class="course-details">
+          <div class="course-title">
+          <div class="{{program.class}}"></div>
             <div class="text-container">
             <p>Course</p>
-            <h4  class="hvr-float">{{course.name}}</h4><!-- 
-            <h5>{{course.school}}</h5> -->
+            <h4  class="hvr-float">{{program.name}}</h4>
             </div>
           </div>
         
         <div class="course-short-description">
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...
+            {{program.shortdescription}}
         </div>
          <button type="button" class="btn hvr-shutter-out-horizontal btn-theme"  >Apply Now</button>
-           
+           <img src="{{program.image}}" class="img-responsive vector-main-home">
+        </div>
+        
+      </div>
       </div>
     </div>  
+     <div ng-repeat="postgrad in postgrads">
+        <div class=" col-sm-12 col-lg-4 col-md-4">
+        <div class="course">
+        <div class="course-img"> 
+          <img src="{{postgrad.imagehome}}">
+        </div>
+        <div class="course-details">
+        <div class="course-title">
+          <div class="{{postgrad.class}}"></div>
+            <div class="text-container">
+            <p>Course</p>
+            <h4  class="hvr-float">{{postgrad.name}}</h4>
+            </div>
+          </div>
+        <div class="course-short-description">
+            {{postgrad.shortdescription}}
+        </div>
+         <button type="button" class="btn hvr-shutter-out-horizontal btn-theme"  >Apply Now</button>
+           <img src="{{postgrad.image}}" class="img-responsive vector-main-home">
+           </div>
+      </div>
+    </div> 
     </div>
-    <div class="col-md-4 col-lg-4 col-sm-12">
+     <div ng-repeat="research in researches">
+        <div class=" col-sm-12 col-lg-4 col-md-4">
+        <div class="course">
+        <div class="course-img"> 
+          <img src="{{research.imagehome}}">
+        </div>
+        <div class="course-details">
+        <div class="course-title">
+          <div class="{{research.class}}"></div>
+            <div class="text-container">
+            <p>Course</p>
+            <h4  class="hvr-float">{{research.name}}</h4>
+            </div>
+          </div>
+        
+        <div class="course-short-description">
+            {{research.shortdescription}}
+        </div>
+         <button type="button" class="btn hvr-shutter-out-horizontal btn-theme"  >Apply Now</button>
+           <img src="{{research.image}}" class="img-responsive vector-main-home">
+           </div>
+      </div>
+    </div> 
+    </div> 
+    </div>
+   <!--  <div class="col-md-4 col-lg-4 col-sm-12">
        <div class="qa-message-list" id="wallmessages">
              
                 
@@ -234,31 +288,8 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
                 </div></div>
                 
               </div>
-    </div>     
-     <div class="col-md-4 col-lg-4 col-sm-12">
-     
-          <div ng-repeat="course in courses.slice(0, 2)">
-        <div class="course col-sm-12 col-lg-12 col-md-12">
-        <div class="course-title">
-          <div class="{{course.class}}"></div>
-            <div class="text-container">
-            <p>Course</p>
-            <h4  class="hvr-float">{{course.name}}</h4><!-- 
-            <h5>{{course.school}}</h5> -->
-            </div>
-          </div>
-        
-        <div class="course-short-description">
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...
-        </div>
-         <button type="button" class="btn hvr-shutter-out-horizontal btn-theme"  >Apply Now</button>
-           
-      </div>
-    </div>  
-    </div>          
+    </div>      -->        
     </div>
-</div>
  </div>
 </div>
 </div>

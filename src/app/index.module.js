@@ -53,15 +53,20 @@
         url: '/postgrad',
         templateUrl: 'app/pgcourses/postgrad.html'
       })
-      .state('reasearch', {
+      .state('research', {
 
-        url: '/reasearch',
-        templateUrl: 'app/research/reasearch.html'
+        url: '/research',
+        templateUrl: 'app/research/research.html'
       })
-      .state('foreign', {
+      .state('international', {
 
-        url: '/foreign',
+        url: '/international',
         templateUrl: 'app/foreign/foreign.html'
+      })
+      .state('sap', {
+
+        url: '/international/sap',
+        templateUrl: 'app/foreign/sap.html'
       });
     $urlRouterProvider.otherwise('/');
 /*

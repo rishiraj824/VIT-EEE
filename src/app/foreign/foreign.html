@@ -1,1 +1,113 @@
-postgrad
+  
+<div ng-include="'app/components/navbar/navbar-dark.html'"></div>
+  
+  <div class="course-intro">
+  <div class="container-fluid">
+  	<div class="row">
+  		<div class=" col-lg-offset-1  col-lg-2 col-md-3 col-sm-12">
+  		<div class="main-header-section">
+        <img src="assets/images/vectors-12.png" class="img-responsive undergrad-icon">
+      </div>
+  		</div>
+  		<div class="col-lg-8 col-md-9 col-sm-12">
+  		<div class="main-header-section">
+  			<h2 class="main-header">International Admissions</h2>
+  			<h4>VIT University prides itself in the ability to provide an education that is coveted not only within in India but abroad as well. Proof of this is seen in the increasing number of international students pursuing their higher education in the university. There are currently students from over 54 different countries studying in the university. VIT also has over 200 MoUs with foreign universities.  </h4>
+  		</div>
+  			
+  		</div>
+  	</div>
+  </div>
+  		
+  </div>
+  <div class="container-fluid">
+  <div class="courses" ng-controller="CourseModalCtrl">
+  	<div class="row">
+  		<div class="col-lg-8  col-sm-12">
+  			 
+		      <div ng-repeat="international in internationals" class="program" id="#{{international.anchor}}">
+  			    <div class="course-main ">
+  			    <div class="course-title">
+  			      <div class="{{international.class}}"></div>
+  			        <div class="text-container">
+  			        <p >Programme</p>
+  			       
+  			        	<h4  class="hvr-float">{{international.name}}</h4>
+  			        	
+		        	</div>
+  			        	
+  			        
+
+  			        <!-- 
+  			        <h5>{{course.school}}</h5> -->
+		        </div>
+		        </div>
+		        
+  			    <div class="course-short-description">
+  			       {{international.description}}
+  			    </div>
+  			    <div class="more-description">
+		        <div class="inline">
+		        	<h4 ><i class="fa fa-graduation-cap"></i>&nbsp;Program</h4>
+		        	<h5>{{international.programtype}}</h5>
+		        </div>
+		        <div class="inline">
+		        	<h4><i class="fa fa-globe"></i>&nbsp;Language</h4>
+		        	<h5>{{international.language}}</h5>
+		        </div>
+		        <div class="inline">
+		        	<h4><i class="fa fa-clock-o"></i>&nbsp;Duration</h4>
+		        	<h5>{{international.duration}}</h5>
+		        	
+		        </div>
+		        	
+
+		        </div>
+  			     <a href="{{international.link}}" target="_blank" type="button" class="btn hvr-shutter-out-horizontal btn-theme"  >Apply Now</a>
+  			       <img src="{{international.image}}" class="img-responsive vector-main">
+  			  </div>
+
+  			</div>
+  			
+  		
+  		
+  		<div class="col-lg-4 col-sm-12 padding-r-0" style="background: #f2f2f2;padding: 10px 0px 20px 35px;">
+  		<h2 class="section-header">Know More</h2>
+  		<div class="contact-us-links">
+  		  <ul>
+          <li ><a href="http://www.vit.ac.in/admissions/international/" target="_blank">International Admissions</a></li>
+          <ul>
+          <li ><a href="http://www.vit.ac.in/admissions/international/eligibilityAndProcedure" target="_blank">Eligibility & Procedure(B.Tech)</a></li>
+          <li ><a href="http://www.vit.ac.in/admissions/international/ug" target="_blank">UG Science</a></li>
+          <li ><a href="http://www.vit.ac.in/admissions/international/fee" target="_blank">Fee Structure</a></li>
+          <li ><a href="http://www.vit.ac.in/admissions/international/pg" target="_blank">PG Programmes</a></li>
+          <li ><a href="http://www.vit.ac.in/admissions/international/integrated" target="_blank">Integrated Programmes</a></li>
+          <li ><a href="http://www.vit.ac.in/academics/internationalRelations/partnerUniversities/irtestimonial" target="_blank">Testimonials</a></li>
+          <li ><a href="http://www.vit.ac.in/admissions/international/meetus" target="_blank">Meet Us</a></li>
+          </ul>
+          <li ><a href="http://www.vit.ac.in/admissions/viteee" target="_blank">VITEEE  </a></li>
+        </ul>
+        <div class="address">
+          <h2 class="section-header">International Programmes</h2>
+          <h3><b>Dr. C. Vijayakumar</b></h3> <br>
+          Director, International Relations<br><br>
+          <address>
+          <i class="fa fa-map-marker"></i>&nbsp;VIT University<br>
+          Vellore - 632014<br>
+          Tamil Nadu, India<br><br>
+          </address>
+          <i class="fa fa-phone"></i>&nbsp;Contact No. : +91-416-220 2131<br>
+          <i class="fa fa-envelope"></i>&nbsp;Email: global@vit.ac.in<br>
+        </div>
+  		</div>
+  			 
+  	
+  			 
+  		</div>
+  	</div>
+  </div>
+  </div>
+
+   <div ng-include="'app/components/footer/footer.html'"></div>
+
+ 

@@ -3,94 +3,110 @@
   
   <div class="course-intro">
   <div class="container-fluid">
-  	<div class="row">
-  		<div class=" col-lg-offset-1 col-md-offset-1 col-lg-2 col-md-2 col-sm-2">
-  			<img src="assets/images/vectors-12.png" class="img-responsive undergrad-icon">
-  		</div>
-  		<div class="col-lg-8 col-md-8 col-sm-8">
-  		<div class="main-header">
-  			<h2 class="main-header">UNDERGRADUATE DEGREES</h2>
-  			<h4>The most highly sought after B.Tech degrees from VIT University are achieved by successfully getting through the VITEEE examination conducted every year. The students based on their merit are given a range of options to pursue their under graduation degree. The university currently offers 25 undergraduate programmes, and in addition to this has recently launched the B.Arch degree for students willing to pursue Architecture. </h4>
-  		</div>
-  			
-  		</div>
-  	</div>
+    <div class="row">
+      <div class=" col-lg-offset-1 col-lg-2 col-md-3 col-sm-12">
+        <div class="main-header-section">
+        <img src="assets/images/vectors-12.png" class="img-responsive undergrad-icon">
+      </div>
+      </div>
+      <div class="col-lg-8 col-md-9 col-sm-9">
+      <div class="main-header-section">
+        <h2 class="main-header">Undergraduate Admissions</h2>
+        <h4>VIT University prides itself in the ability to provide an education that is coveted not only within in India but abroad as well. Proof of this is seen in the increasing number of international students pursuing their higher education in the university. There are currently students from over 54 different countries studying in the university. VIT also has over 200 MoUs with foreign universities.  </h4>
+      </div>
+        
+      </div>
+    </div>
   </div>
-  		
+      
   </div>
   <div class="container-fluid">
   <div class="courses" ng-controller="CourseModalCtrl">
-  	<div class="row">
-  		<div class="col-lg-7  col-sm-12">
-  			 
-		      <div ng-repeat="program in programs" class="program">
-  			    <div class="course-main ">
-  			    <div class="course-title">
-  			      <div class="{{program.class}}"></div>
-  			        <div class="text-container">
-  			        <p >Programme</p>
-  			       
-  			        	<h4  class="hvr-float">{{program.name}}</h4>
-  			        	
-		        	</div>
-  			        	
-  			        
+    <div class="row">
+      <div class="col-lg-8  col-sm-12">
+         
+          <div ng-repeat="program in programs" class="program" d="#{{program.anchor}}">
+            <div class="course-main ">
+            <div class="course-title">
+              <div class="{{program.class}}"></div>
+                <div class="text-container">
+                <p >Programme</p>
+               
+                  <h4  class="hvr-float">{{program.name}}</h4>
+                  
+              </div>
+                  
+                
 
-  			        <!-- 
-  			        <h5>{{course.school}}</h5> -->
-		        </div>
-		        </div>
-		        
-  			    <div class="course-short-description">
-  			       {{program.description}}
-  			    </div>
-  			    <div class="more-description">
-		        <div class="inline">
-		        	<h4 >Program</h4>
-		        	<h5>{{program.programtype}}</h5>
-		        </div>
-		        <div class="inline">
-		        	<h4>Language</h4>
-		        	<h5>{{program.language}}</h5>
-		        </div>
-		        <div class="inline">
-		        	<h4>Duration</h4>
-		        	<h5>{{program.duration}}</h5>
-		        	
-		        </div>
-		        	
+                <!-- 
+                <h5>{{course.school}}</h5> -->
+            </div>
+            </div>
+            
+            <div class="course-short-description">
+               {{program.description}}
+            </div>
+            <div class="more-description">
+            <div class="inline">
+              <h4 ><i class="fa fa-graduation-cap"></i>&nbsp;Program</h4>
+              <h5>{{program.programtype}}</h5>
+            </div>
+            <div class="inline">
+              <h4><i class="fa fa-globe"></i>&nbsp;Language</h4>
+              <h5>{{program.language}}</h5>
+            </div>
+            <div class="inline">
+              <h4><i class="fa fa-clock-o"></i>&nbsp;Duration</h4>
+              <h5>{{program.duration}}</h5>
+              
+            </div>
+              
 
-		        </div>
-  			     <button type="button" class="btn hvr-shutter-out-horizontal btn-theme"  >Apply Now</button>
-  			       <img src="{{program.image}}" class="img-responsive vector-main">
-  			  </div>
+            </div>
+             <a href="{{program.link}}" target="_blank" type="button" class="btn hvr-shutter-out-horizontal btn-theme"  >Apply Now</a>
+               <img src="{{program.image}}" class="img-responsive vector-main">
+          </div>
 
-  			</div>
-  			
-  		
-  		
-  		<div class="col-lg-5 col-sm-12 padding-r-0" style="background: #f2f2f2;padding: 10px 0px 20px 15px;">
-  		<h2 class="section-header">Offered Courses</h2>
-  		<div class="courses">
-  			<div ng-repeat="course in courses">
-  			    <div class="course-main col-sm-12 col-lg-12 col-md-12">
-  			    <div class="course-title">
-  			      <div class="{{course.class}}"></div>
-  			        <div class="text-container">
-  			        <h4  class="hvr-float">{{course.name}}</h4>
-  			        
-  			        <h5>{{course.school}}</h5>
-  			        </div>
-  			      </div>
-  			       
-  			  </div>
-  			</div>  
-  		</div>
-  			 
-  	
-  			 
-  		</div>
-  	</div>
+        </div>
+        
+      
+      
+      <div class="col-lg-4 col-sm-12 padding-r-0" style="background: #f2f2f2;padding: 10px 0px 20px 35px;">
+      <h2 class="section-header">Know More</h2>
+      <div class="contact-us-links">
+        <ul>
+
+          <li ><a href="http://www.vit.ac.in/admissions/ug" target="_blank">UG Overview</a></li>
+          <li ><a href="http://www.vit.ac.in/admissions/viteee" target="_blank">VITEEE</a></li>
+          <ul>
+          <li ><a href="http://www.vit.ac.in/admissions/ug/eligibility" target="_blank">Eligibility</a></li>
+          <li ><a href="http://www.vit.ac.in/admissions/ug/procedure" target="_blank">Procedure</a></li>
+          <li ><a href="http://www.vit.ac.in/admissions/ug/feeStructure" target="_blank">Fee Structure</a></li>
+          </ul>
+          <li ><a href="http://www.vit.ac.in/admissions/pg" target="_blank">PG Admissions</a></li>
+          <li ><a href="http://www.vit.ac.in/admissions/research" target="_blank">Research Admissions</a></li>
+          <li ><a href="http://www.vit.ac.in/admissions/international" target="_blank">International Admissions</a></li>
+        </ul>
+        <div class="address">
+        
+          <h2 class="section-header">UG Programmes</h2>
+              <h3><b>Dr. K. Manivannan</b></h3><br>
+              <b>Director</b> - UG Admissions<br><br>
+              <address>
+              <i class="fa fa-map-marker"></i>&nbsp;VIT University<br>
+              Vellore - 632014<br>
+              Tamil Nadu, India<br><br>
+              </address>
+              <i class="fa fa-phone"></i>&nbsp;Phone : +91-416-220 2157/2168<br>
+              <i class="fa fa-fax"></i>&nbsp;Fax : +91-416-224 5544<br>
+              <i class="fa fa-envelope"></i>&nbsp;Email : ugadmission@vit.ac.in<br>
+        </div>
+      </div>
+         
+    
+         
+      </div>
+    </div>
   </div>
   </div>
 
