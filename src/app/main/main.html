@@ -23,7 +23,6 @@
 
         
     <div class="hero-section">
-    <img src="assets/images/logo.png">
         <h1 class="hero-caption">VIT Admissions '17</h1>
     </div>
     <div ng-controller="VideoCtrl">
@@ -55,7 +54,7 @@
                <h2 >About VIT University</h2><br>
                <p>VIT university is a progressive educational institution that is dedicated to the pursuit of excellence. Students here are encouraged on this journey by our committed faculty, world-class facilities and student-friendly educational systems. 
 VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentarian and minister in the Tamil Nadu Government, as a self-financing institution called the ‘Vellore Engineering College’. Since then the institution has grown from strength to strength. </p>
-                <a ng-href="#/about-us" class="hvr-blob link-theme">Read More</a>
+                <a ng-href="#/about-us" class=" link-theme">Read More</a>
             </div>
             <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-12 " style="border-right: 1px solid #ddd;">
@@ -68,6 +67,7 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
                     
                     <div class="play" ng-click="open('lg')"><i class="fa fa-play"></i></div>
                 </div>
+                <h2 style="text-align:center;font-weight:400;">Watch a Video about VIT</h2>
                     <script type="text/ng-template"  id="myModalContent.html">
                         <div class="modal-header modal-header-new">
                             <a style="position: absolute;right: 0;" href="#" ng-click="cancel()"><i class="fa fa-times fa-2x white" ></i></a>
@@ -91,13 +91,13 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
                     <div onclick="window.open('https://www.google.co.in/maps/@12.9682339,79.1557941,3a,75y,64.03h,107.02t/data=!3m7!1e1!3m5!1sVPqerQbHD_EAAAQfDn4XfQ!2e0!3e2!7i13312!8i6656','_blank')" class="play"><img src="assets/images/360-icon.png" class="img-responsive"></div>
                     
                 </div>
+                <h2 style="text-align:center;font-weight:400;">Explore VIT in 360</h2>
                 </div>
             </div>
             
         </div>
         <div class="col-lg-4 col-sm-12 col-md-4 padding-lr-0">
           <div class="side-stats">
-          <div class="col-lg-12 col-sm-12 col-md-12 padding-lr-0">
                      <div class="stats-container normal-blue">
                          <h4>Our Achievements</h4>
                       <div ng-controller="CarouselCtrl" >
@@ -122,8 +122,6 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
                          <a href="http://www.vit.ac.in/about/raac">Know More ></a>
                         </div>
                      </div>
-                    </div>
-                    <div class="col-lg-12 col-sm-12 col-md-12 padding-lr-0">
                      <div class="stats-container dark-blue carousel-students">
                          <h4>From our Students</h4>
                      <div ng-controller="CarouselCtrl" >
@@ -146,11 +144,9 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
                          </div> 
                         <div>
                                        
-                                    <a href="http://www.vit.ac.in/academics/internationalRelations/partnerUniversities/irtestimonial">Know More ></a>
-                                  </div>
+                          <a href="http://www.vit.ac.in/academics/internationalRelations/partnerUniversities/irtestimonial">Know More ></a>
+                        </div>
                      </div>
-                    </div>
-                    <div class="col-lg-12 col-sm-12 col-md-12  padding-lr-0">
                     <div class="stats-container normal-blue">
                         <h4>From Placement Cell</h4>
                         <div ng-controller="CarouselCtrl" >
@@ -173,7 +169,6 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
                         <a href="http://www.vit.ac.in/placement">Know More ></a>
                         </div>
                     </div>
-                    </div>
                      
                      
             </div>
@@ -184,6 +179,8 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
     </div>
     <div class="courses-offered">
     <div class="container-fluid">
+      <h2>Courses Offered</h2><br>
+      <p>Read More about the courses here. Lorem Ipsum </p>
     <div class="row">
     <div  ng-controller="CourseModalCtrl" > 
      
@@ -205,7 +202,7 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
         <div class="course-short-description">
             {{program.shortdescription}}
         </div>
-         <button type="button" class="btn hvr-shutter-out-horizontal btn-theme"  >Apply Now</button>
+         <button type="button" class="btn hvr-back-pulse btn-theme"  >Apply Now</button>
            <img src="{{program.image}}" class="img-responsive vector-main-home">
         </div>
         
@@ -229,7 +226,7 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
         <div class="course-short-description">
             {{postgrad.shortdescription}}
         </div>
-         <button type="button" class="btn hvr-shutter-out-horizontal btn-theme"  >Apply Now</button>
+         <button type="button" class="btn hvr-back-pulse btn-theme"  >Apply Now</button>
            <img src="{{postgrad.image}}" class="img-responsive vector-main-home">
            </div>
       </div>
@@ -253,7 +250,7 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
         <div class="course-short-description">
             {{research.shortdescription}}
         </div>
-         <button type="button" class="btn hvr-shutter-out-horizontal btn-theme"  >Apply Now</button>
+         <button type="button" class="btn hvr-fade btn-theme"  >Apply Now</button>
            <img src="{{research.image}}" class="img-responsive vector-main-home">
            </div>
       </div>

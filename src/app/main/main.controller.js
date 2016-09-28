@@ -6,7 +6,9 @@
   var app = angular.module('viteee');
   /*Video*/
   app.controller('VideoCtrl', function($scope){
-     $scope.resources = [
+
+            /*'https://www.jhu.edu/assets/uploads/2016/04/JHU-Loop-17.webmhd.webm',*/
+        $scope.resources = [
             'assets/images/vit.webm',
             '*.ogv',
             '*.mp4',
@@ -48,7 +50,7 @@
       {
         number: "201-250",
         text: "BRICS Ranking"
-      }]
+      }];
       $scope.slides = [
     {
       image: 'assets/images/bernhard.jpg',
@@ -208,7 +210,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       programtype : "Research",
       language: "English",
       duration: "4 Years",
-      image : "assets/images/vectors-08.png",
+      image : "assets/images/vectors-11.png",
       imagehome : "assets/images/btech.jpg",
       anchor : "integratedprogram",
       link : "http://www.vit.ac.in/admissions/international/integrated"
@@ -327,7 +329,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       programtype : "Postgraduate",
       language: "English",
       duration: "5 Years",
-      image : "assets/images/vectors-05.png",
+      image : "assets/images/vectors-11.png",
       imagehome : "assets/images/mtech.jpg",
       anchor : "integratedprogram",
       link : "http://www.vit.ac.in/admissions/pg"
@@ -341,7 +343,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       programtype : "Research",
       language: "English",
       duration: "5 Years",
-      image : "assets/images/vectors-05.png",
+      image : "assets/images/vectors-10.png",
       imagehome : "assets/images/research.jpg",
       anchor : "mphil",
       link : "http://www.vit.ac.in/admissions/research"
@@ -354,8 +356,8 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       programtype : "Research",
       language: "English",
       duration: "5 Years",
-      image : "assets/images/vectors-05.png",
-      imagehome : "assets/images/btech.jpg",
+      image : "assets/images/vectors-10.png",
+      imagehome : "assets/images/research.jpg",
       anchor : "mtech",
       link : "http://www.vit.ac.in/admissions/research"
     },
@@ -367,8 +369,8 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       programtype : "Research",
       language: "English",
       duration: "5 Years",
-      image : "assets/images/vectors-05.png",
-      imagehome : "assets/images/btech.jpg",
+      image : "assets/images/vectors-10.png",
+      imagehome : "assets/images/research.jpg",
       anchor : "phd",
       link : "http://www.vit.ac.in/admissions/research"
     }]
