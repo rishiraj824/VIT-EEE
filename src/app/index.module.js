@@ -20,20 +20,20 @@
       })
        .state('infrastructure', {
 
-        url: '/about/infrastructure',
+        url: '/about-us/infrastructure',
         templateUrl: 'app/about/infrastructure.html'
       })
-      .state('about/placements', {
+      .state('placements', {
 
-        url: '/placements',
+        url: '/about-us/placements',
         templateUrl: 'app/about/placements.html'
       })
-      .state('about/internatinal-relations', {
+      .state('international-relations', {
 
-        url: '/about-us/internatinal-relations',
-        templateUrl: 'app/about/internatinal-relations.html'
+        url: '/about-us/international-relations',
+        templateUrl: 'app/about/international-relations.html'
       })
-      .state('about/campus-life', {
+      .state('campus-life', {
 
         url: '/about-us/campus-life',
         templateUrl: 'app/about/campus-life.html'
@@ -43,15 +43,55 @@
         url: '/undergrad',
         templateUrl: 'app/ugcourses/undergrad.html'
       })
-      .state('undergrad/viteee', {
+      .state('engineering', {
 
-        url: '/undergrad/viteee',
+        url: '/undergrad/engineering',
         templateUrl: 'app/ugcourses/viteee.html'
+      })
+      .state('architecture', {
+
+        url: '/undergrad/architecture',
+        templateUrl: 'app/ugcourses/architecture.html'
+      })
+      .state('arts', {
+
+        url: '/undergrad/arts',
+        templateUrl: 'app/ugcourses/arts.html'
+      })
+      .state('fashion', {
+
+        url: '/undergrad/fashion',
+        templateUrl: 'app/ugcourses/fashion.html'
+      })
+      .state('hotelmanagement', {
+
+        url: '/undergrad/hotelmanagement',
+        templateUrl: 'app/ugcourses/hotelmanagement.html'
+      })
+      .state('law', {
+
+        url: '/undergrad/law',
+        templateUrl: 'app/ugcourses/law.html'
       })
       .state('postgrad', {
 
         url: '/postgrad',
         templateUrl: 'app/pgcourses/postgrad.html'
+      })
+      .state('pgmtech', {
+
+        url: '/postgrad/mtech',
+        templateUrl: 'app/pgcourses/mtech.html'
+      })
+      .state('pgbusiness', {
+
+        url: '/postgrad/business',
+        templateUrl: 'app/pgcourses/business.html'
+      })
+      .state('pgintegrated', {
+
+        url: '/postgrad/integrated',
+        templateUrl: 'app/pgcourses/integrated.html'
       })
       .state('research', {
 

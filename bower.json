@@ -12,7 +12,8 @@
     "angular-marquee": "*",
     "font-awesome": "fontawesome#^4.6.3",
     "components-font-awesome": "^4.6.3",
-    "angular-vidbg": "angular-video-background#^0.0.12"
+    "angular-vidbg": "angular-video-background#^0.0.12",
+    "ngSmoothScroll": "^2.0.0"
   },
   "overrides": {
     "bootstrap": {

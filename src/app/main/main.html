@@ -23,7 +23,9 @@
 
         
     <div class="hero-section">
-        <h1 class="hero-caption">VIT Admissions '17</h1>
+        <h1 class="hero-caption">
+        <img src="assets/images/home-logo.png" />
+        </h1>
     </div>
     <div ng-controller="VideoCtrl">
 
@@ -48,7 +50,7 @@
  <div class="introduction">
      <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-8 col-sm-12 col-md-8 ">
+        <div class="col-lg-8  col-sm-12 col-md-8 ">
             <div class="about-section-home " >
             <br>
                <h2 >About VIT University</h2><br>
@@ -57,17 +59,18 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
                 <a ng-href="#/about-us" class=" link-theme">Read More</a>
             </div>
             <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-12 " style="border-right: 1px solid #ddd;">
+              <div class="col-lg-6 col-md-6 col-sm-12 " >
                 
                <div ng-controller="ModalCtrl" >
                   <div class="information-center" >
                     <div class="img-container"  ng-click="open('lg')" >
                         <img src="assets/images/video-image.JPG"  />
+
+                        <h2 ><span style="font-weight:700">VIT</span> in action</h2>
                     </div>
-                    
                     <div class="play" ng-click="open('lg')"><i class="fa fa-play"></i></div>
                 </div>
-                <h2 style="text-align:center;font-weight:400;">Watch a Video about VIT</h2>
+                
                     <script type="text/ng-template"  id="myModalContent.html">
                         <div class="modal-header modal-header-new">
                             <a style="position: absolute;right: 0;" href="#" ng-click="cancel()"><i class="fa fa-times fa-2x white" ></i></a>
@@ -83,15 +86,16 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
               <div class="col-lg-6 col-md-6 col-sm-12 ">
                 <div class="information-center">
                   <a href="https://www.google.co.in/maps/@12.9682339,79.1557941,3a,75y,64.03h,107.02t/data=!3m7!1e1!3m5!1sVPqerQbHD_EAAAQfDn4XfQ!2e0!3e2!7i13312!8i6656" target="_blank">
-                      <div class="img-container">
+                      <div class="img-container" id="#img-container">
                         <img src="assets/images/360-image.JPG"/>
+                        <h2 >Explore<span style="font-weight:700"> VIT</span> in 360</h2>
                     </div>
                   </a>
                   
                     <div onclick="window.open('https://www.google.co.in/maps/@12.9682339,79.1557941,3a,75y,64.03h,107.02t/data=!3m7!1e1!3m5!1sVPqerQbHD_EAAAQfDn4XfQ!2e0!3e2!7i13312!8i6656','_blank')" class="play"><img src="assets/images/360-icon.png" class="img-responsive"></div>
                     
                 </div>
-                <h2 style="text-align:center;font-weight:400;">Explore VIT in 360</h2>
+                
                 </div>
             </div>
             

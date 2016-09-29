@@ -9,12 +9,12 @@
 
             /*'https://www.jhu.edu/assets/uploads/2016/04/JHU-Loop-17.webmhd.webm',*/
         $scope.resources = [
-            'assets/images/vit.webm',
+            'https://www.jhu.edu/assets/uploads/2016/04/JHU-Loop-17.webmhd.webm',
             '*.ogv',
             '*.mp4',
             '*.swf'
         ];
-        $scope.poster = 'assets/images/placeholder.jpg';
+        $scope.poster = 'assets/images/placeholder.jpg  ';
         $scope.fullScreen = true;
         $scope.muted = true;
         $scope.zIndex = '22';
@@ -30,7 +30,7 @@
 });
   /*CArousel*/
     app.controller('CarouselCtrl', function($scope){
-      $scope.myInterval = 3000;
+      $scope.myInterval = 4000;
       $scope.achievements = [{
         number: "1st",
         text: "Among all Private Engineering Institutions of India by MHRD, Govt. of India Ranking 2016"
@@ -170,11 +170,8 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
     };
   });
   
-   app.controller('CourseModalCtrl',  function ($scope, $location, $anchorScroll) {
-    $scope.scrollTo = function(id) {
-         $location.hash(id);
-         $anchorScroll();
-    }
+   app.controller('CourseModalCtrl',  function ($scope) {
+    
     /*International Programs*/
     $scope.internationals = [{
       name: "Undergaduate Programs",
@@ -193,7 +190,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       name: "Postgaduate Programs",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
       shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-      class : "blue-small",
+      class : "pink-small",
       programtype : "Postgraduate",
       language: "English",
       duration: "3 Years",
@@ -233,7 +230,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       name: "B.Arch",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
       shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-      class : "orange-small",
+      class : "pink-small",
       programtype : "Undergraduate",
       language: "English",
       duration: "4 Years",
@@ -246,20 +243,20 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       name: "Law School ",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
       shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-      class : "blue-small",
+      class : "green-small",
       programtype : "Undergraduate",
       language: "English",
       duration: "4 Years",
       image : "assets/images/vectors-08.png",
       imagehome : "assets/images/law.jpg",
       anchor : "law",
-      link : "http://www.vit.ac.in/admissions/ug"
+      link : "http://www.vit.ac.in/files/llb/index.html"
     },
     {
       name: "Hotel Management ",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
       shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-      class : "pink-small",
+      class : "yellow-small",
       programtype : "Undergraduate",
       language: "English",
       duration: "4 Years",
@@ -272,7 +269,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       name: "Fashion Technology ",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
       shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-      class : "green-small",
+      class : "orange-small",
       programtype : "Undergraduate",
       language: "English",
       duration: "4 Years",
@@ -299,7 +296,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       name: "M.Tech/MSc/MCA",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
       shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-      class : "blue-small",
+      class : "orange-small",
       programtype : "Postgraduate",
       language: "English",
       duration: "5 Years",
@@ -325,7 +322,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       name: "Integrated Programs",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
       shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-      class : "blue-small",
+      class : "orange-small",
       programtype : "Postgraduate",
       language: "English",
       duration: "5 Years",
@@ -339,7 +336,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       name: "M.Phil",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
       shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-      class : "blue-small",
+      class : "green-small",
       programtype : "Research",
       language: "English",
       duration: "5 Years",
@@ -352,11 +349,11 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       name: "M.Tech by Research",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
       shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-      class : "pink-small",
+      class : "green-small",
       programtype : "Research",
       language: "English",
       duration: "5 Years",
-      image : "assets/images/vectors-10.png",
+      image : "assets/images/vectors-27.png",
       imagehome : "assets/images/research.jpg",
       anchor : "mtech",
       link : "http://www.vit.ac.in/admissions/research"
@@ -365,15 +362,290 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       name: "Ph.D.",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
       shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-      class : "blue-small",
+      class : "green-small",
       programtype : "Research",
       language: "English",
       duration: "5 Years",
-      image : "assets/images/vectors-10.png",
+      image : "assets/images/vectors-28.png",
       imagehome : "assets/images/research.jpg",
       anchor : "phd",
       link : "http://www.vit.ac.in/admissions/research"
     }]
 
 });
+  app.controller('CourseListCtrl',function($scope) {
+    $scope.data = {
+     availableOptions: [
+       {
+      name : "School of Computer Engineering (SCOPE)",
+      id : "scope",
+      course : [
+            {
+              name: "B.Tech. Computer Science and Engineering *",
+              duration : "4 Years",
+              class: "blue",
+              curriculumlink : "http://"
+            },{
+
+              name: "B.Tech. Computer Science and Engg (Spec. in Bioinformatics)",
+              duration : "4 Years",
+               class: "blue",
+              curriculumlink : "http://"
+            },{
+              name: "B.Tech. Computer Science and Engineering with Spec. in Information Security",
+              duration : "4 Years",
+               class: "blue",
+              curriculumlink : "http://"
+            
+      }]
+      },
+       {
+      name : "School of Civil and Chemical Engineering (SCALE)",
+      id : "scale",
+      course : [
+            {
+              name: "B.Tech - Civil Engineering *",
+              duration : "4 Years",
+              curriculumlink : "http://"
+            },{
+
+              name: "B.Tech - Chemical Engineering",
+              duration : "4 Years",
+              curriculumlink : "http://"
+            }]
+      },
+      {
+      name : "School of Mechanical Engineering(SMEC)",
+      id : "smec",
+      course : [
+            {
+              name: "B.Tech - Mechanical Engineering *",
+              duration : "4 Years",
+              curriculumlink : "http://"
+            },{
+
+              name: "B.Tech - Mechanical with specialization in Energy Engineering",
+              duration : "4 Years",
+              curriculumlink : "http://"
+            },{
+              name: "B.Tech - Mechanical with specialization in Automotive Engineering",
+              duration : "4 Years",
+              curriculumlink : "http://"
+            
+      },{
+        name: "B.Tech - Production and Industrial Engineering",
+        duration : "4 Years",
+        curriculumlink : "http://"
+      }]
+      },{
+      name : "School of Bio Sciences and Technology ( SBST )",
+      id : "sbst",
+      course : [
+        {
+          name: "B. Tech. Biotechnology",
+          duration : "4 Years",
+          curriculumlink : "http://"
+        }
+      ]
+    },{
+      name : "School of Electrical Engineering (SELECT)",
+      id : "select",
+      course : [{
+        name: "B.Tech. Electrical and Electronics Engineering *",
+        duration : "4 Years",
+        curriculumlink : "http://"
+        },{
+        name: "B.Tech. Electronics and Instrumentation Engineering",
+        duration : "4 Years",
+        curriculumlink : "http://"
+      }]
+    },{
+      name : "School of Information Technology and Engineering (SITE)",
+      id : "site",
+      course : [{
+        name : "B.Tech. Information Technology",
+        duration : "4 Years",
+        curriculumlink : "http://"
+
+      }]
+    },{
+      name : "School of Electronics Engineering (SENSE)",
+      id : "sense",
+      course : [{
+        name: "B.Tech. Biomedical Engineering",
+        duration: "4 Years",
+        curriculumlink: "http://"
+      },
+      {
+        name: "B.Tech. Electronics and Communication Engineering",
+        duration: "4 Years",
+        curriculumlink: "http://"
+      },
+      {
+        name: "B.Tech. Electronics and Communication Engineering with Spec. in Internet of Things and Sensor",
+        duration: "4 Years",
+        curriculumlink: "http://"
+      }]
+    } ],
+     selectedOption: 
+       {
+      name : "School of Computer Engineering (SCOPE)",
+      id : "scope",
+      course : [
+            {
+              name: "B.Tech. Computer Science and Engineering *",
+              duration : "4 Years",
+              curriculumlink : "http://"
+            },{
+
+              name: "B.Tech. Computer Science and Engg (Spec. in Bioinformatics)",
+              duration : "4 Years",
+              curriculumlink : "http://"
+            },{
+              name: "B.Tech. Computer Science and Engineering with Spec. in Information Security",
+              duration : "4 Years",
+              curriculumlink : "http://"
+            
+      }]
+      }//This sets the default value of the select in the ui
+     };
+
+
+     $scope.cluster = {
+     availableOptions: [
+       {
+      name : "School of Computer Engineering (SCOPE)",
+      id : "scope",
+      course : [
+            {
+              name: "M.Tech. Computer Science and Engineering *",
+              duration : "5 Years",
+              class: "blue",
+              curriculumlink : "http://"
+            },{
+
+              name: "M.Tech. Computer Science and Engg (Spec. in Bioinformatics)",
+              duration : "5 Years",
+               class: "blue",
+              curriculumlink : "http://"
+            },{
+              name: "M.Tech. Computer Science and Engineering with Spec. in Information Security",
+              duration : "5 Years",
+               class: "blue",
+              curriculumlink : "http://"
+            
+      }]
+      },
+       {
+      name : "School of Civil and Chemical Engineering (SCALE)",
+      id : "scale",
+      course : [
+            {
+              name: "M.Tech - Civil Engineering *",
+              duration : "5 Years",
+              curriculumlink : "http://"
+            },{
+
+              name: "M.Tech - Chemical Engineering",
+              duration : "5 Years",
+              curriculumlink : "http://"
+            }]
+      },
+      {
+      name : "School of Mechanical Engineering(SMEC)",
+      id : "smec",
+      course : [
+            {
+              name: "M.Tech - Mechanical Engineering *",
+              duration : "5 Years",
+              curriculumlink : "http://"
+            },{
+
+              name: "M.Tech - Mechanical with specialization in Energy Engineering",
+              duration : "5 Years",
+              curriculumlink : "http://"
+            },{
+              name: "M.Tech - Mechanical with specialization in Automotive Engineering",
+              duration : "5 Years",
+              curriculumlink : "http://"
+            
+      },{
+        name: "M.Tech - Production and Industrial Engineering",
+        duration : "5 Years",
+        curriculumlink : "http://"
+      }]
+      },{
+      name : "School of Bio Sciences and Technology ( SBST )",
+      id : "sbst",
+      course : [
+        {
+          name: "B. Tech. Biotechnology",
+          duration : "5 Years",
+          curriculumlink : "http://"
+        }
+      ]
+    },{
+      name : "School of Electrical Engineering (SELECT)",
+      id : "select",
+      course : [{
+        name: "M.Tech. Electrical and Electronics Engineering *",
+        duration : "5 Years",
+        curriculumlink : "http://"
+        },{
+        name: "M.Tech. Electronics and Instrumentation Engineering",
+        duration : "5 Years",
+        curriculumlink : "http://"
+      }]
+    },{
+      name : "School of Information Technology and Engineering (SITE)",
+      id : "site",
+      course : [{
+        name : "M.Tech. Information Technology",
+        duration : "5 Years",
+        curriculumlink : "http://"
+
+      }]
+    },{
+      name : "School of Electronics Engineering (SENSE)",
+      id : "sense",
+      course : [{
+        name: "M.Tech. Biomedical Engineering",
+        duration: "5 Years",
+        curriculumlink: "http://"
+      },
+      {
+        name: "M.Tech. Electronics and Communication Engineering",
+        duration: "5 Years",
+        curriculumlink: "http://"
+      },
+      {
+        name: "M.Tech. Electronics and Communication Engineering with Spec. in Internet of Things and Sensor",
+        duration: "5 Years",
+        curriculumlink: "http://"
+      }]
+    } ],
+     selectedOption: 
+       {
+      name : "School of Computer Engineering (SCOPE)",
+      id : "scope",
+      course : [
+            {
+              name: "M.Tech. Computer Science and Engineering *",
+              duration : "5 Years",
+              curriculumlink : "http://"
+            },{
+
+              name: "M.Tech. Computer Science and Engg (Spec. in Bioinformatics)",
+              duration : "5 Years",
+              curriculumlink : "http://"
+            },{
+              name: "M.Tech. Computer Science and Engineering with Spec. in Information Security",
+              duration : "5 Years",
+              curriculumlink : "http://"
+            
+      }]
+      }//This sets the default value of the select in the ui
+     };
+ })
+
 })();

@@ -20,9 +20,6 @@ body{
   font-family: 'Montserrat' , sans-serif;
 
 }
-.container-fluid{
-  padding-left: 20px !important;
-}
 .bold{
   font-weight: 900;
   font-size: 2.4em;
@@ -53,8 +50,7 @@ body{
   color: #333 !important;
   font-weight: 600 !important;
   background: #fff;
-
-  text-transform: uppercase;
+  font-size: 1.3em;
 }
 .dropdown-menu{
    z-index: 2222222222222;
@@ -125,7 +121,8 @@ body{
 }
 .hero-section img{
   position: relative;
-    width: 100%;
+    width: 50%;
+    margin: auto;
     height: auto;
 }
   
@@ -135,7 +132,7 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    z-index: 100;
+    z-index: 24;
     -webkit-transform: translate(-50%,-50%);
     -moz-transform: translate(-50%,-50%);
     -o-transform: translate(-50%,-50%);
@@ -238,7 +235,7 @@ body{
 .noticecontainer{
   position: absolute;
   right: 1%;
-  z-index: 999;
+  z-index: 24;
   top: 25%;
 
 }
@@ -259,6 +256,7 @@ body{
   width: 40%;
   text-align: center;
   margin: 0 auto;
+  margin-top: -10%;
 }
 .modal-content{
   text-align: center;
@@ -292,11 +290,24 @@ body{
 
 }
 .img-container{
-  padding: 0 20px;
   position: relative;
   cursor: pointer;
   overflow: hidden;
   height: 480px;
+}
+.img-container h2{
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    width: 100%;
+    bottom: 0%;
+    margin: 0 auto;
+    font-weight: 400;
+    position: absolute;
+    /* left: 0; */
+    /* right: 0; */
+    line-height: 60px;
+    height: 60px;
+    text-align: center;
 }
 .img-container img{
  position: absolute;
@@ -316,7 +327,7 @@ body{
   filter:brightness(80%);
   -webkit-filter: brightness(80%);
 }
-.play:hover + .img-container img{
+.play:hover + #img-container img{
   filter:brightness(80%);
   -webkit-filter: brightness(80%);
 }
@@ -439,7 +450,6 @@ body{
 
 .course-title{
   position: relative;
-  height: 52px;
   margin-left: -10px;
   margin-bottom:10px;
 }
@@ -640,8 +650,6 @@ footer{
   height: auto;
   position: relative;
   width: 100%;
-  border-bottom: 1px solid #CCCCCC;
-  border-top: 1px solid #DDDDDD;
 }
 .footer p {
   margin: 0;
@@ -868,15 +876,16 @@ line-height: 22px;
 
 
 .course-intro{
-  background: #e6e6e6;
+  background: #00457c;
   padding-top: 100px;
+  color: #fff;
 }
 
 .course-intro h2{
   font-weight: 700;
-  color: #303030;
+  color: #fff;
 }
-.course-intrp h5{
+.course-intro h5{
   font-size: 16px;
   font-weight: 400;
 }
@@ -928,6 +937,9 @@ line-height: 22px;
   font-weight: 700;
   text-transform: uppercase;
 }
+.section-lower-header{
+  font-weight: 700;
+}
 .address{
   font-size: 1.3em;
 }
@@ -951,12 +963,34 @@ line-height: 22px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
+.tabs-left{
+  margin-bottom: 20px;
+  background: #f2f2f2;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
 .tabs-below > .nav-tabs,
 .tabs-right > .nav-tabs,
 .tabs-left > .nav-tabs {
     border-bottom: 0;
 }
-
+.tabs-left>.nav-tabs{
+  background: #00457c;
+    color: #fff;
+    padding-left: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.tabs-left> .tab-content{
+  font-size: 1.3em;
+  min-height: 525px;
+  padding: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
 .tab-content > .tab-pane,
 .pill-content > .pill-pane {
     display: none;
@@ -972,40 +1006,45 @@ line-height: 22px;
     float: none;
 }
 
-.tabs-left > .nav-tabs > li > a,
-.tabs-right > .nav-tabs > li > a {
-    min-width: 180px;
+.tabs-left > .nav-tabs > li > a, .tabs-right > .nav-tabs > li > a {
+    /* min-width: 180px; */
     margin-right: 0;
-    font-size: 1.2em;
-    color: #0071c1;
+    font-size: 1.3em;
+    color: #fff;
+    transition: all linear 0.2s;
 }
 
 .tabs-left > .nav-tabs {
     float: left;
     margin-right: 19px;
-    border-right: 1px solid #ddd;
+    border: none;
 }
 
 .tabs-left > .nav-tabs > li > a {
-    border-bottom: 1px solid #ddd;
+    border: none;
+    background: transparent !important;
 }
-
-.tabs-left > .nav-tabs > li > a:hover,
-.tabs-left > .nav-tabs > li > a:focus {
-    border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+.tabs-left> .nav-tabs > li > a:hover{
+  background: none !important;
+  background: transparent !important;
+  padding-left: 25px; 
+  text-decoration: underline;
+}
+.tabs-left > .nav-tabs .active > a, .tabs-left > .nav-tabs .active > a:hover, .tabs-left > .nav-tabs .active > a:focus {
+    background: transparent !important;
+    text-decoration: underline !important;
 }
 
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover,
 .tabs-left > .nav-tabs .active > a:focus {
-    border-color: #ddd transparent #ddd #ddd;
-    *border-right-color: #ffffff;
-    background: #f2f2f2;
+    border : none !important;
+    background: transparent !important;
+    padding-left: 25px;
+    text-decoration: underline !important;
+    border: none !important;
+    color: #f2f2f2 !important;
 
-}
-.tab-section{
-  margin-top: 40px;
-  margin-bottom: 40px;
 }
 .viteee-guidelines{
   padding-top: 40px;
@@ -1016,7 +1055,7 @@ line-height: 22px;
 }
 .tab-section{
   padding-top: 20px;
-  padding-bottom: 40px
+  padding-bottom: 20px
 }
 .contact-us-links ul li a{
   color: #0071c1;
@@ -1063,3 +1102,60 @@ line-height: 22px;
   float: right;
   position: relative;
 }
+.know-more-section{
+  height: 100%;
+  background: #f2f2f2;
+  padding: 10px 0px 20px 35px;
+}
+.course-option-list{
+  background: #00457c;
+  padding-top: 12px;
+  padding-left: 15px;
+  color: #fff;
+  border-radius: 24px;
+  width: 75%;
+  height: 50px;
+  font-size: 1.3em;
+}
+.course-option-list select{
+  line-height: 50px;
+  min-width: 420px;
+  text-align: center;
+  background: #00457c;
+  outline: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+}
+.courses-table thead th{
+  color: #666666;
+  font-size: 1.4em;
+}
+.courses-table tbody tr td{
+  color: #666666;
+  margin-top: 10px;
+}
+.btn-blue-theme{
+  font-size: 1.1em;
+    color: #fff;
+    background: #00457c;
+    border: 2px solid;
+    padding: 8px 22px 8px 22px !important;
+    text-transform: uppercase;
+}
+.courses-table{
+  margin-top: 10px;
+}
+.section-top{
+  min-height: 200px;
+  position: relative;
+  width: 100%;
+
+}
+.section-top img{
+  background-size: cover;
+  width: 100%;
+}
+.content-main p, .content-main ul li{
+  font-size: 1.3em;
+}
+.conten
