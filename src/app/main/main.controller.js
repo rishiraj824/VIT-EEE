@@ -51,6 +51,20 @@
         number: "201-250",
         text: "BRICS Ranking"
       }];
+      $scope.stats = [{
+        number: "3277",
+        text: "Placements in Wipro",
+        date : "20/08/2016"
+      },{
+        number: "3277",
+        text: "Placements in TCS",
+        date : "20/08/2016"
+      },
+      {
+        number: "3277",
+        text: "Placements in Cognizant",
+        date : "20/08/2016"
+      }];
       $scope.slides = [
     {
       image: 'assets/images/bernhard.jpg',

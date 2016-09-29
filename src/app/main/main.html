@@ -156,12 +156,14 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
                         <div ng-controller="CarouselCtrl" >
                         <div>
                         <uib-carousel interval="myInterval">
-                               <uib-slide ng-repeat="slide in slides" active="slide.active">
+                               <uib-slide ng-repeat="stat in stats" active="stat.active">
                                 <div class="stats-number">
-                                    3277
+                                    {{stat.numer}}
                                 </div>
                                 <div class="stats-text">
-                                    Offers from Wipro, Cognizant, TCS, Accenture and many more.
+                                    {{stat.text}}<br>
+                                    <b>Date: - {{stat.date}}
+
                                 </div>
                                </uib-slide>
                              </uib-carousel>
