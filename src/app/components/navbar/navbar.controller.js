@@ -1,7 +1,5 @@
 (function() {
   'use strict';
-
-  
   /* app.controller('NavbarCtrl', function($scope){
      $scope.logo = "assets/images/logo-blue.png";
      $scope.menu = function(){
