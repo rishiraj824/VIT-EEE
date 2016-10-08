@@ -7,9 +7,10 @@
   /*Video*/
   app.controller('VideoCtrl', function($scope){
 
-            /*'https://www.jhu.edu/assets/uploads/2016/04/JHU-Loop-17.webmhd.webm',*/
+            /*'https://www.jhu.edu/assets/uploads/2016/04/JHU-Loop-17.webmhd.webm',
+            https://www.jhu.edu/assets/uploads/2016/08/Homepage-Loop-20.webmhd.webm*/
         $scope.resources = [
-            'https://www.jhu.edu/assets/uploads/2016/04/JHU-Loop-17.webmhd.webm',
+            '',
             '*.ogv',
             '*.mp4',
             '*.swf'
@@ -30,7 +31,7 @@
 });
   /*CArousel*/
     app.controller('CarouselCtrl', function($scope){
-      $scope.myInterval = 4000;
+      $scope.myInterval = 8000;
       $scope.achievements = [{
         number: "1st",
         text: "Among all Private Engineering Institutions of India by MHRD, Govt. of India Ranking 2016"
@@ -65,7 +66,7 @@
         text: "Placements in Cognizant",
         date : "20/08/2016"
       }];
-      $scope.slides = [
+      /*$scope.slides = [
     {
       image: 'assets/images/bernhard.jpg',
       testimonial: 'VIT has numerous opportunities for pursuing your sports interests. ',
@@ -91,7 +92,35 @@
       testimonial: "Education aside, VIT has also opened up the world to me",
       name : 'Pearl A. Hazel, B.Sc. Multimedia and Animation, Rwanda'
     }
+  ];*/
+  $scope.slides = [
+    {
+      image: 'assets/images/placement-home.jpg',
+      testimonial: 'VIT has numerous opportunities for pursuing your sports interests. ',
+      name : 'Bernhard Sahungwa, B.Tech. Electrical & Electronics Engineering, Namibia'
+    },
+    {
+      image: 'assets/images/placement-home.jpg',
+      testimonial: "VIT University has been one of the best decisions in my life. ",
+      name : 'Zhao Lu, B.Com. Computer Applications, China'
+    },
+    {
+      image: 'assets/images/international-home.jpg',
+      testimonial: 'VIT has offered me a lot of opportunities to develop my career and personal skills. ',
+      name : 'Hu Xiaoyu, B.Sc.Computer Science, China'
+    },
+    {
+      image: 'assets/images/international-home.jpg',
+      testimonial: ' One thing that VIT has taught me is to be independent. ',
+      name : 'Long Yi, M.Sc. Computer Science, China'
+    },
+    {
+      image: 'assets/images/placement-home.jpg',
+      testimonial: "Education aside, VIT has also opened up the world to me",
+      name : 'Pearl A. Hazel, B.Sc. Multimedia and Animation, Rwanda'
+    }
   ];
+
 });
 app.controller('NoticeCtrl', function($scope){
   $scope.notices = [
@@ -229,8 +258,8 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
     /* B.Tech*/
     $scope.programs = [{
       name: "B.Tech ",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
-      shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+      description: "One of the major specializations of VIT University is engineering with various courses under B.Tech. Electrical Engineering, Mechanical Engineering, Civil Engineering, Aerospace Engineering?, Industrial Engineering only to mention a few. The Engineering courses offer hands on projects with well equipped laboratories for the same. ",
+      shortdescription: "Admissions to all B.Tech courses are strictly based on the VITEEE exam held in April every year. Forms are available from November of the application year.",
       class : "blue-small",
       programtype : "Undergraduate",
       language: "English",
@@ -242,8 +271,8 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
     },
     {
       name: "B.Arch",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
-      shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+      description: "B.Arch program at VIT - Vellore campus comes with a new preposition, for the students who are aspiring to become Architects. There are student exchange programs with leading universities from Europe, USA, Australia and Asia.  A unique Architectural Studio is present in the Architecture department giving students, the practical aspect of the program.",
+      shortdescription: "Students are admitted on the basis of their NATA scores. Application dates and details are available each year.",
       class : "pink-small",
       programtype : "Undergraduate",
       language: "English",
@@ -255,8 +284,8 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
     },
     {
       name: "Law School ",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
-      shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+      description: "This program is meant to provide a practical introspection of the justice and legal systems of India and the world. A 5-year curriculum of the Arts subjects such as Economics, Sociology and Political Science. The program is available at VIT-Chennai campus. The curriculum also offers a practical session on how it actually is in the legal system. The Law School offers B.A, BBA and LL.B (honors)",
+      shortdescription: "An admission into Law school at VIT is based on SAT scores and application dates are posted on the website each year.",
       class : "green-small",
       programtype : "Undergraduate",
       language: "English",
@@ -268,8 +297,8 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
     },
     {
       name: "Hotel Management ",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
-      shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+      description: "This department deals with mainly management at almost all levels and organizations. It offers a Bachelor of Business Administration and Hotel Management as well. The course duration is 3 years and most opt for the exclusive MBA soon after. Graduates can opt for careers in banking, trade, financial services and accountancy firms. They can also go for sales jobs in retailing, insurance, media and so on. They can choose to become an entrepreneur and careers are also possible in small and large organizations. ",
+      shortdescription: "Students can apply using their 10+2 results and application dates are announced on the website each year",
       class : "yellow-small",
       programtype : "Undergraduate",
       language: "English",
@@ -280,9 +309,9 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       link : "http://www.vit.ac.in/admissions/ug"
     },
     {
-      name: "Fashion Technology ",
+      name: "Fashion and Technology",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
-      shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+      shortdescription: "Admissions to all B.Tech courses are strictly based on the VITEEE exam held in April every year. Forms are available from November of the application year.",
       class : "orange-small",
       programtype : "Undergraduate",
       language: "English",
@@ -293,9 +322,9 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       link : "http://www.vit.ac.in/admissions/ug"
     },
     {
-      name: "Arts & Science",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
-      shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+      name: "Arts & Sciences",
+      description: "In this field it deals with languages to computer sciences to commerce. Languages include German, English, French, Chinese, Hindi, Tamil and Spanish. The teaching and research of the department are broadly structured around five divisions: Commerce, Computer Applications, Social Sciences, English (I & II), and other languages. These are value added courses with advanced and trending technology.",
+      shortdescription: "Admissions are based on the students’ 10+2 scores. Application periods are displayed on the website each year",
       class : "pink-small",
       programtype : "Undergraduate",
       language: "English",
@@ -308,8 +337,8 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
     /*PostGrad*/
     $scope.postgrads = [{
       name: "M.Tech/MSc/MCA",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
-      shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+      description: "The department has over 20 Engineering 2 year- Masters programmes in fields of Civil, Mechanical, Electronics, Electrical, Computer Science, Sensor Systems, only to mention a few. The programmes involve hands on and project based learning. The M.Tech programmes at VIT are one of the best in top Engineering colleges in India. Exchange programmes that are offered also give students an opportunity to learn internationally.",
+      shortdescription: "Students should present an average score above 60% or CGPA above 7 in their bachelor degree for admission to this programme.",
       class : "orange-small",
       programtype : "Postgraduate",
       language: "English",
@@ -322,7 +351,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
     {
       name: "Management",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
-      shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+      shortdescription: "Students can apply using their 10+2 results and application dates are announced on the website each year.",
       class : "orange-small",
       programtype : "Postgraduate",
       language: "English",
@@ -349,7 +378,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
     $scope.researches = [{
       name: "M.Phil",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
-      shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+      shortdescription: "Master’s degree in relevant subject with a first class or minimum 60% marks (CGPA 6.5 on a 10 – point scale).",
       class : "green-small",
       programtype : "Research",
       language: "English",
@@ -361,8 +390,8 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
     },
     {
       name: "M.Tech by Research",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
-      shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+      description: "This program offers 3 categories which students can study and these are Internal full time candidates (e.g. VIT professors), internal part time candidates (Professors on a part-time basis) and external part time candidates (professors from other colleges, working students e.t.c. Selection is based on the overall merit index of the candidate which will be arrived at by taking into account the candidate’s performance in the previous university examinations at Bachelor’s and Master’s level and the performance in the written test and / the interview. As the name of the program states it is almost entirely based on research. ",
+      shortdescription: "An M.Tech programme that is based on research. Admissions to the program are strictly based on the VITMEE exam.",
       class : "green-small",
       programtype : "Research",
       language: "English",
@@ -374,8 +403,8 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
     },
     {
       name: "Ph.D.",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
-      shortdescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+      description: "Selection is based on the overall merit index of the candidate which will be arrived at by taking into account the candidate’s performance in the previous university examinations at Bachelor’s and Master’s level and the performance in the written test and / the interview. As the name of the program states it is almost entirely based on research. The research has a wide scope from Engineering to Management to Social Sciences to Humanities. The duration of a PhD at VIT is a minimum of 3 years.",
+      shortdescription: " Ph.D. in Engineering: Master’s degree in Engineering / Technology / Business Administration with a first class or a minimum 60% marks (CGPA 6.5 on a 10 – point scale). Ph.D. in Sciences / Humanities / Languages: Master’s degree with a minimum 60% in Sciences.",
       class : "green-small",
       programtype : "Research",
       language: "English",

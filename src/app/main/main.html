@@ -45,147 +45,193 @@
           </uib-slide>
         </uib-carousel>
       </div>
-    </div>  -->
+    </div>  
+                <div class="stats-container carousel-students">
+                     <h4>From our Students</h4>
+                 <div ng-controller="CarouselCtrl" >
+                       <div>
+                         <uib-carousel interval="myInterval">
+                           <uib-slide ng-repeat="slide in slides" active="slide.active">
+                            <div class="row">
+                              <div class="student-img col-sm-12 col-lg-4">
+                                   <img src="{{slide.image}}" class="img-circle">
+                               </div>
+                               <div class="stats-text-carousel col-sm-12 col-lg-8">
+                                  "{{slide.testimonial}}"<br><br><em>-{{slide.name}}</em>
+                               </div>
+                            </div>
+                             
+                               
+                           </uib-slide>
+                         </uib-carousel>
+                       </div>
+                     </div> 
+                    <div>
+                                   
+                      <a href="http://www.vit.ac.in/academics/internationalRelations/partnerUniversities/irtestimonial">Know More ></a>
+                    </div>
+                 </div>-->
   </div>
  <div class="introduction">
-     <div class="container-fluid">
+     <div class="container">
     <div class="row">
-        <div class="col-lg-8  col-sm-12 col-md-8 ">
+        <div class="col-lg-12  col-sm-12 col-md-12 ">
             <div class="about-section-home " >
             <br>
-               <h2 >About VIT University</h2><br>
+               <h2 >Why Choose VIT</h2><br>
                <p>VIT university is a progressive educational institution that is dedicated to the pursuit of excellence. Students here are encouraged on this journey by our committed faculty, world-class facilities and student-friendly educational systems. 
 VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentarian and minister in the Tamil Nadu Government, as a self-financing institution called the ‘Vellore Engineering College’. Since then the institution has grown from strength to strength. </p>
-                <a ng-href="#/about-us" class=" link-theme">Read More</a>
             </div>
             <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-12 " >
-                
-               <div ng-controller="ModalCtrl" >
-                  <div class="information-center" >
-                    <div class="img-container"  ng-click="open('lg')" >
-                        <img src="assets/images/video-image.JPG"  />
-
-                        <h2 ><span style="font-weight:700">VIT</span> in action</h2>
-                    </div>
-                    <div class="play" ng-click="open('lg')"><i class="fa fa-play"></i></div>
-                </div>
-                
-                    <script type="text/ng-template"  id="myModalContent.html">
-                        <div class="modal-header modal-header-new">
-                            <a style="position: absolute;right: 0;" href="#" ng-click="cancel()"><i class="fa fa-times fa-2x white" ></i></a>
-                        </div>
-                        <div class="modal-body modal-body-new">
-                           <iframe width="760" height="760" src="https://www.youtube.com/embed/IcK3uck76J0?enablejsapi=1&amp;iv_load_policy=3&amp;playerapiid=v1_youtube_api&amp;disablekb=1&amp;wmode=transparent&amp;controls=0&amp;showinfo=0&amp;modestbranding=0&amp;rel=0&amp;loop=0&amp;cc_load_policy=1&amp;fs=0&amp;html5=1&amp;autoplay=0" frameborder="0" allowfullscreen></iframe>
-                        </div> 
-                    </script>
-                
-
-              </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 ">
-                <div class="information-center">
-                  <a href="https://www.google.co.in/maps/@12.9682339,79.1557941,3a,75y,64.03h,107.02t/data=!3m7!1e1!3m5!1sVPqerQbHD_EAAAQfDn4XfQ!2e0!3e2!7i13312!8i6656" target="_blank">
-                      <div class="img-container" id="#img-container">
-                        <img src="assets/images/360-image.JPG"/>
-                        <h2 >Explore<span style="font-weight:700"> VIT</span> in 360</h2>
-                    </div>
-                  </a>
-                  
-                    <div onclick="window.open('https://www.google.co.in/maps/@12.9682339,79.1557941,3a,75y,64.03h,107.02t/data=!3m7!1e1!3m5!1sVPqerQbHD_EAAAQfDn4XfQ!2e0!3e2!7i13312!8i6656','_blank')" class="play"><img src="assets/images/360-icon.png" class="img-responsive"></div>
+              <div class="col-lg-3 col-sm-12 col-md-3">
+                 <div class="stats-container ">
+                    <div style="text-align:center"><img src="assets/images/4.png" style="width:80%;"></div>
+                        
+                           <div class="stats-number">
+                               2
+                           </div>
+                           <div class="stats-text">
+                               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                           </div>
+                             
+                               
+                     </div> 
                     
-                </div>
+                    <div>
+                    </div>
+                 </div>
                 
-                </div>
+              <div class="col-lg-3 col-sm-12 col-md-3">
+                <div class="stats-container ">
+                    <div style="text-align:center"><img src="assets/images/3.png" style="width:80%;"></div>
+                            <div class="stats-number">
+                                34
+                            </div>
+                            <div class="stats-text">
+                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+
+                            </div>
+                     </div>
+                    
+                        <!-- 
+                    <a href="http://www.vit.ac.in/placement">Know More ></a> -->
+                    </div>
+              <div class="col-lg-3 col-sm-12 col-md-3">
+                 <div class="stats-container ">
+                    <div style="text-align:center"><img src="assets/images/1.png" style="width:80%;"></div>
+                           <div class="stats-number">
+                               2
+                           </div>
+                           <div class="stats-text">
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                           </div>
+                             
+                               
+                     </div> 
+                    
+                    <div><!-- 
+                        
+                     <a href="http://www.vit.ac.in/about/raac">Know More ></a> -->
+                    </div>
+                 </div>
+                
+               <div class="col-lg-3 col-sm-12 col-md-3">
+                 <div class="stats-container ">
+                    <div style="text-align:center"><img src="assets/images/2.png" style="width:80%;"></div>
+                           <div class="stats-number">
+                               2
+                           </div>
+                           <div class="stats-text">
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                           </div>
+                             
+                               
+                     </div> 
+                    
+                    <div><!-- 
+                        
+                     <a href="http://www.vit.ac.in/about/raac">Know More ></a> -->
+                    </div>
+                 </div>
+                
+              </div>
             </div>
             
-        </div>
-        <div class="col-lg-4 col-sm-12 col-md-4 padding-lr-0">
-          <div class="side-stats">
-                     <div class="stats-container normal-blue">
-                         <h4>Our Achievements</h4>
-                      <div ng-controller="CarouselCtrl" >
-                           <div>
-                             <uib-carousel interval="myInterval">
-                               <uib-slide ng-repeat="achievement in achievements" active="achievement.active">
-                               <div class="stats-number">
-                                   {{achievement.number}}
-                               </div>
-                               <div class="stats-text">
-                                   {{achievement.text}}
-                               </div>
-                                 
-                                   
-                               </uib-slide>
-                             </uib-carousel>
-                           </div>
-                         </div> 
-                        
-                        <div>
-                            
-                         <a href="http://www.vit.ac.in/about/raac">Know More ></a>
-                        </div>
-                     </div>
-                     <div class="stats-container dark-blue carousel-students">
-                         <h4>From our Students</h4>
-                     <div ng-controller="CarouselCtrl" >
-                           <div>
-                             <uib-carousel interval="myInterval">
-                               <uib-slide ng-repeat="slide in slides" active="slide.active">
-                                <div class="row">
-                                  <div class="student-img col-sm-12 col-lg-4">
-                                       <img src="{{slide.image}}" class="img-circle">
-                                   </div>
-                                   <div class="stats-text-carousel col-sm-12 col-lg-8">
-                                      "{{slide.testimonial}}"<br><br><em>-{{slide.name}}</em>
-                                   </div>
-                                </div>
-                                 
-                                   
-                               </uib-slide>
-                             </uib-carousel>
-                           </div>
-                         </div> 
-                        <div>
-                                       
-                          <a href="http://www.vit.ac.in/academics/internationalRelations/partnerUniversities/irtestimonial">Know More ></a>
-                        </div>
-                     </div>
-                    <div class="stats-container normal-blue">
-                        <h4>From Placement Cell</h4>
-                        <div ng-controller="CarouselCtrl" >
-                        <div>
-                        <uib-carousel interval="myInterval">
-                               <uib-slide ng-repeat="stat in stats" active="stat.active">
-                                <div class="stats-number">
-                                    {{stat.number}}
-                                </div>
-                                <div class="stats-text">
-                                    {{stat.text}}<br>
-                                    <b>Date: - {{stat.date}}
-
-                                </div>
-                               </uib-slide>
-                             </uib-carousel>
-                         </div>
-                         </div>
-                        
-                        <div>
-                            
-                        <a href="http://www.vit.ac.in/placement">Know More ></a>
-                        </div>
-                    </div>
-                     
-                     
-            </div>
         </div>
         
     </div>
     </div>
+    <div class="testimonials">
+                     
+                 <div ng-controller="CarouselCtrl" >
+                       <div>
+                         <uib-carousel interval="myInterval">
+                           <uib-slide ng-repeat="slide in slides" active="slide.active">
+                            <div class="row">
+                                <div class="container">
+                                 <div class="student-text-carousel ">
+                                  <p>"{{slide.testimonial}}"<br><br><span>-{{slide.name}}</span></p>
+                               </div>
+                               </div>
+                              <div class="student-img ">
+                                   <img src="{{slide.image}}">
+                               </div>
+                               
+                               
+                            </div>
+                             
+                               
+                           </uib-slide>
+                         </uib-carousel>
+                       </div>
+                     </div> 
     </div>
     <div class="courses-offered">
+    <div class="container">
+      <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 " >
+              
+             <div ng-controller="ModalCtrl" >
+                <div class="information-center" >
+                  <div class="img-container"  ng-click="open('lg')" >
+                      <img src="assets/images/video-image.JPG"  />
+
+                      <h2 ><span style="font-weight:700">VIT</span> in action</h2>
+                  </div>
+                  <div class="play" ng-click="open('lg')"><i class="fa fa-play"></i></div>
+              </div>
+              
+                  <script type="text/ng-template"  id="myModalContent.html">
+                      <div class="modal-header modal-header-new">
+                          <a style="position: absolute;right: 0;" href="#" ng-click="cancel()"><i class="fa fa-times fa-2x white" ></i></a>
+                      </div>
+                      <div class="modal-body modal-body-new">
+                         <iframe width="760" height="760" src="https://www.youtube.com/embed/IcK3uck76J0?enablejsapi=1&amp;iv_load_policy=3&amp;playerapiid=v1_youtube_api&amp;disablekb=1&amp;wmode=transparent&amp;controls=0&amp;showinfo=0&amp;modestbranding=0&amp;rel=0&amp;loop=0&amp;cc_load_policy=1&amp;fs=0&amp;html5=1&amp;autoplay=0" frameborder="0" allowfullscreen></iframe>
+                      </div> 
+                  </script>
+              
+
+            </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="information-center">
+                <a href="https://www.google.co.in/maps/@12.9682339,79.1557941,3a,75y,64.03h,107.02t/data=!3m7!1e1!3m5!1sVPqerQbHD_EAAAQfDn4XfQ!2e0!3e2!7i13312!8i6656" target="_blank">
+                    <div class="img-container" id="#img-container">
+                      <img src="assets/images/360-image.JPG"/>
+                      <h2 >Explore<span style="font-weight:700"> VIT</span> in 360</h2>
+                  </div>
+                </a>
+                
+                  <div onclick="window.open('https://www.google.co.in/maps/@12.9682339,79.1557941,3a,75y,64.03h,107.02t/data=!3m7!1e1!3m5!1sVPqerQbHD_EAAAQfDn4XfQ!2e0!3e2!7i13312!8i6656','_blank')" class="play"><img src="assets/images/360-icon.png" class="img-responsive"></div>
+                  
+              </div>
+              
+              </div> 
+      </div>
+    </div>
     <div class="container-fluid">
-      <h2>Courses Offered</h2><br>
+        
+      <h2>Undergraduate Courses</h2><br>
       <p>Read More about the courses here. Lorem Ipsum </p>
     <div class="row">
     <div  ng-controller="CourseModalCtrl" > 
@@ -208,13 +254,15 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
         <div class="course-short-description">
             {{program.shortdescription}}
         </div>
-         <button type="button" class="btn hvr-back-pulse btn-theme"  >Apply Now</button>
+         <button type="button" class="btn hvr-back-pulse main-btn-theme"  >Apply Now</button>
            <img src="{{program.image}}" class="img-responsive vector-main-home">
         </div>
         
       </div>
       </div>
     </div>  
+    <h2 >Post Graduate Courses</h2><br>
+      <p>Read More about the courses here. Lorem Ipsum </p>
      <div ng-repeat="postgrad in postgrads">
         <div class=" col-sm-12 col-lg-4 col-md-4">
         <div class="course">
@@ -232,12 +280,14 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
         <div class="course-short-description">
             {{postgrad.shortdescription}}
         </div>
-         <button type="button" class="btn hvr-back-pulse btn-theme"  >Apply Now</button>
+         <button type="button" class="btn hvr-back-pulse main-btn-theme"  >Apply Now</button>
            <img src="{{postgrad.image}}" class="img-responsive vector-main-home">
            </div>
       </div>
     </div> 
     </div>
+    <h2 >Research Courses</h2><br>
+      <p>Read More about the courses here. Lorem Ipsum </p>
      <div ng-repeat="research in researches">
         <div class=" col-sm-12 col-lg-4 col-md-4">
         <div class="course">
@@ -256,7 +306,7 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
         <div class="course-short-description">
             {{research.shortdescription}}
         </div>
-         <button type="button" class="btn hvr-fade btn-theme"  >Apply Now</button>
+         <button type="button" class="btn hvr-fade main-btn-theme"  >Apply Now</button>
            <img src="{{research.image}}" class="img-responsive vector-main-home">
            </div>
       </div>

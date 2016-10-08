@@ -51,6 +51,13 @@
 		margin-bottom: 10px;	
 		font-size: 1.27em;
 	}
+	.section-top img{
+  height: 300px;
+  width: auto;
+}
+	.section-overlay{
+		height: 300px;
+	}
 	.noticecontainer{
 		top: 20%;
 	}
@@ -89,6 +96,17 @@
 	}
 	#slides{
 		min-height: 100vh;
+	}
+	.section-top img{
+  	height: 300px;
+  width: auto;
+}
+	.section-overlay{
+		height: 300px;
+	}
+	.section-overlay h1 {
+		font-size: 3.2em;
+		margin-left: 10px;
 	}
 	.hero-caption{
 	font-weight: 700;
