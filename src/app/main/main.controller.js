@@ -10,7 +10,7 @@
             /*'https://www.jhu.edu/assets/uploads/2016/04/JHU-Loop-17.webmhd.webm',
             https://www.jhu.edu/assets/uploads/2016/08/Homepage-Loop-20.webmhd.webm*/
         $scope.resources = [
-            '',
+            'https://www.jhu.edu/assets/uploads/2016/04/JHU-Loop-17.webmhd.webm',
             '*.ogv',
             '*.mp4',
             '*.swf'
@@ -95,22 +95,22 @@
   ];*/
   $scope.slides = [
     {
-      image: 'assets/images/placement-home.jpg',
+      image: 'assets/images/placement-home.JPG',
       testimonial: 'VIT has numerous opportunities for pursuing your sports interests. ',
       name : 'Bernhard Sahungwa, B.Tech. Electrical & Electronics Engineering, Namibia'
     },
     {
-      image: 'assets/images/placement-home.jpg',
+      image: 'assets/images/placement-home.JPG',
       testimonial: "VIT University has been one of the best decisions in my life. ",
       name : 'Zhao Lu, B.Com. Computer Applications, China'
     },
     {
-      image: 'assets/images/international-home.jpg',
+      image: 'assets/images/international-home.JPG',
       testimonial: 'VIT has offered me a lot of opportunities to develop my career and personal skills. ',
       name : 'Hu Xiaoyu, B.Sc.Computer Science, China'
     },
     {
-      image: 'assets/images/international-home.jpg',
+      image: 'assets/images/international-home.JPG',
       testimonial: ' One thing that VIT has taught me is to be independent. ',
       name : 'Long Yi, M.Sc. Computer Science, China'
     },
