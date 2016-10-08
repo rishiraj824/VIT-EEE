@@ -105,12 +105,12 @@
       name : 'Zhao Lu, B.Com. Computer Applications, China'
     },
     {
-      image: 'assets/images/international-home.JPG',
+      image: 'assets/images/international-home.jpg',
       testimonial: 'VIT has offered me a lot of opportunities to develop my career and personal skills. ',
       name : 'Hu Xiaoyu, B.Sc.Computer Science, China'
     },
     {
-      image: 'assets/images/international-home.JPG',
+      image: 'assets/images/international-home.jpg',
       testimonial: ' One thing that VIT has taught me is to be independent. ',
       name : 'Long Yi, M.Sc. Computer Science, China'
     },
