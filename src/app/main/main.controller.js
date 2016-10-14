@@ -350,7 +350,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
     },
     {
       name: "Management",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
+      description: "This department deals with mainly management at almost all levels and organizations. It offers a Bachelor of Business Administration and Hotel Management as well. The course duration is 3 years and most opt for the exclusive MBA soon after. Graduates can opt for careers in banking, trade, financial services and accountancy firms. They can also go for sales jobs in retailing, insurance, media and so on. They can choose to become an entrepreneur and careers are also possible in small and large organizations. ",
       shortdescription: "Students can apply using their 10+2 results and application dates are announced on the website each year.",
       class : "orange-small",
       programtype : "Postgraduate",

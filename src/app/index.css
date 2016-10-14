@@ -1303,11 +1303,8 @@ line-height: 22px;
   
   width: 100%;
 }
-.content-main p, .content-main ul li{
-  font-size: 1.3em;
-
-}
 .content-main p {
    margin-top: 50px;
+   font-size: 1.3em;
    margin-bottom: 50px;
 }
