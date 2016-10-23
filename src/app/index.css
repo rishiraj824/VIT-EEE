@@ -615,7 +615,7 @@ body{
 .overlay{
   position: absolute;
     width: 100%;
-    background: rgba(0,0,0,0.2);
+    background: url('../assets/images/black-dots.png');
     height: auto;
     top: 0;
     bottom: 0;
