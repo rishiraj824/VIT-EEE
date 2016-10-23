@@ -10,7 +10,7 @@
             /*'https://www.jhu.edu/assets/uploads/2016/04/JHU-Loop-17.webmhd.webm',
             https://www.jhu.edu/assets/uploads/2016/08/Homepage-Loop-20.webmhd.webm*/
         $scope.resources = [
-            'https://www.jhu.edu/assets/uploads/2016/04/JHU-Loop-17.webmhd.webm',
+            'assets/images/vit.webm',
             '*.ogv',
             '*.mp4',
             '*.swf'

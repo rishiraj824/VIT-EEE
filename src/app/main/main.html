@@ -24,7 +24,7 @@
         
     <div class="hero-section">
         <h1 class="hero-caption">
-        <img src="assets/images/home-logo.png" />
+        <img src="assets/images/home.png" />
         </h1>
     </div>
     <div ng-controller="VideoCtrl">
@@ -85,7 +85,7 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
             <div class="row">
               <div class="col-lg-3 col-sm-12 col-md-3">
                  <div class="stats-container ">
-                    <div style="text-align:center"><img src="assets/images/2.png" style="width:80%;"></div>
+                    <div style="text-align:center"><img src="assets/images/2.png" class="hvr-grow" style="width:80%;"></div>
                         
                            <div class="stats-number">
                                2 Campuses
@@ -103,7 +103,7 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
                 
               <div class="col-lg-3 col-sm-12 col-md-3">
                 <div class="stats-container ">
-                    <div style="text-align:center"><img src="assets/images/3.png" style="width:80%;"></div>
+                    <div style="text-align:center"><img src="assets/images/3.png" class="hvr-grow" style="width:80%;"></div>
                             <div class="stats-number">
                                 Ranked 201
                             </div><br>
@@ -118,7 +118,7 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
                     </div>
               <div class="col-lg-3 col-sm-12 col-md-3">
                  <div class="stats-container ">
-                    <div style="text-align:center"><img src="assets/images/4.png" style="width:80%;"></div>
+                    <div style="text-align:center"><img src="assets/images/4.png" class="hvr-grow" style="width:80%;"></div>
                            <div class="stats-number">
                                40 MoUs
                            </div><br>
@@ -137,7 +137,7 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
                 
                <div class="col-lg-3 col-sm-12 col-md-3">
                  <div class="stats-container ">
-                    <div style="text-align:center"><img src="assets/images/1.png" style="width:80%;"></div>
+                    <div style="text-align:center"><img src="assets/images/1.png" class="hvr-grow" style="width:80%;"></div>
                            <div class="stats-number">
                                12000 Placed
                            </div><br>
@@ -169,9 +169,13 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
                            <uib-slide ng-repeat="slide in slides" active="slide.active">
                             <div class="row">
                                 <div class="container">
-                                 <div class="student-text-carousel ">
+                                <a href="">
+                                  <div class="student-text-carousel ">
                                   <p>"{{slide.testimonial}}"<br><br><span>-{{slide.name}}</span></p>
                                </div>
+                                  
+                                </a>
+                                 
                                </div>
                               <div class="student-img ">
                                    <img src="{{slide.image}}">
@@ -196,6 +200,7 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
      
     <div ng-repeat="program in programs">
         <div class=" col-sm-12 col-lg-4 col-md-4">
+        <a href="">
         <div class="course">
         <div class="course-img"> 
           <img src="{{program.imagehome}}" >
@@ -212,16 +217,18 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
         <div class="course-short-description">
             {{program.shortdescription}}
         </div>
-         <button type="button" class="btn hvr-back-pulse main-btn-theme"  >Apply Now</button>
+         <button type="button" class="btn hvr-back-pulse main-btn-theme"   >Apply Now</button>
            <img src="{{program.image}}" class="img-responsive vector-main-home">
         </div>
         
       </div>
+      </a>
       </div>
     </div>  <br>
     <h2 >Post Graduate Courses</h2><br>
      <div ng-repeat="postgrad in postgrads">
         <div class=" col-sm-12 col-lg-4 col-md-4">
+        <a href="">
         <div class="course"> 
         <div class="course-img"> 
           <img src="{{postgrad.imagehome}}">
@@ -241,11 +248,13 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
            <img src="{{postgrad.image}}" class="img-responsive vector-main-home">
            </div>
       </div>
+      </a>
     </div> 
     </div><br>
     <h2 >Research Courses</h2><br>
      <div ng-repeat="research in researches">
         <div class=" col-sm-12 col-lg-4 col-md-4">
+        <a href="">
         <div class="course">
         <div class="course-img"> 
           <img src="{{research.imagehome}}">
@@ -266,6 +275,7 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
            <img src="{{research.image}}" class="img-responsive vector-main-home">
            </div>
       </div>
+      </a>
     </div> 
     </div> 
     </div>
