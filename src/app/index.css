@@ -94,8 +94,9 @@ body{
   height: 100px;
   width: auto;
 }
-
-
+.table{
+  width: auto !important; 
+}
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
     color: #fff;
     background-color: transparent;
@@ -103,7 +104,7 @@ body{
 #slides{
   min-height: 100vh; 
 
-    background: url('../../assets/images/about-home.jpg') center;
+    background: url('../../assets/images/about-home.JPG') center;
     background-position-x: -1050px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -128,7 +129,14 @@ body{
     margin: auto;
     height: auto;
 }
-  
+  .select-content{
+    background: #f2f2f2;
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
  .hero-section {
     width: 70%;
     height: auto;
@@ -386,8 +394,17 @@ body{
   background: #ffad5c;
  
 }
+.red{
+  background: #c1272d;
+  height: 80px;
+      position: absolute;
+      left: 11px;
+      top: 12%;
+      bottom: 0;
+      width: 6px;
+}
 .blue-small{
-    background: #29abe2;
+    background: #0071bc;
     position: absolute;
     left: 11px;
     top: 14%;
@@ -412,13 +429,45 @@ body{
   background: #ffad5c;
  
 }
+.integrated-small{
+  background: #22b573;
+   position: absolute;
+      left: 11px;
+      top: 14%;
+      bottom: 0;
+      width: 4px;
+}
+.hotel-small{
+  background: #c69c6d;
+  position: absolute;
+      left: 11px;
+      top: 14%;
+      bottom: 0;
+      width: 4px;
+}
+.law-small{
+  background: #00a99d;
+  position: absolute;
+      left: 11px;
+      top: 14%;
+      bottom: 0;
+      width: 4px;
+}
+.magenta-small{
+  background: #9e005d;
+  position: absolute;
+      left: 11px;
+      top: 14%;
+      bottom: 0;
+      width: 4px;
+}
 .green-small{
    position: absolute;
       left: 11px;
       top: 14%;
       bottom: 0;
       width: 4px;
-  background: #38b64a;
+  background: #39b54a;
   
 }
 .orange-small{
@@ -427,8 +476,16 @@ body{
       top: 14%;
       bottom: 0;
       width: 4px;
-  background: #ed9a1a;
+  background: #fbb03b;
   
+}
+.red-small{
+  background: #c1272d;
+   position: absolute;
+      left: 11px;
+      top: 14%;
+      bottom: 0;
+      width: 4px;
 }
 .purple-small{
   position: absolute;
@@ -1037,7 +1094,7 @@ line-height: 22px;
   right: 5%;
   top: 5%;
   z-index: -5;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 .vector-main-home{
   position: absolute;
@@ -1100,6 +1157,8 @@ line-height: 22px;
 .tabs-left{
   margin-bottom: 20px;
   background: #f2f2f2;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -1114,12 +1173,13 @@ line-height: 22px;
     padding-left: 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 300px;
 }
 .tabs-left> .tab-content{
   font-size: 1.3em;
-  min-height: 594px;
+  min-height: 597px;
   padding: 20px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;

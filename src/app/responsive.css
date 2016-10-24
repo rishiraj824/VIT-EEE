@@ -149,8 +149,8 @@
 		text-overflow: ellipsis;
 		overflow: hidden;
 	}
-	.course-option-list select option{
-		width: 230px;
+	.course-option-list{
+	    width: 100%;
 	}
 	.section-top img{
   	height: 300px;
@@ -174,6 +174,9 @@
 }	
 .noticecontainer{
 	top:15% !important;
+	right: 20% !important;
+}	.text-container h4 {
+    font-size: 1.3em;
 }
 	.notice a li {
     position: relative;
@@ -202,6 +205,15 @@
 	}
 	.carousel-students{
 		min-height: 430px;
+	}
+	.about-section-home p, .admission-section-home p{
+		font-size: 1.2em;
+	}
+	.content-main p {
+		font-size: 1.2em;
+	}
+	.stats-text{
+		font-size: 1.2em;
 	}
 	.student-img,.stats-text-carousel{
 		text-align: center;

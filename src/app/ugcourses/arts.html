@@ -26,7 +26,7 @@
   	
   	<div class=" col-lg-7 col-lg-offset-1 col-sm-4">
   	<div class="courses" ng-controller="CourseModalCtrl">
-  	<div ng-repeat="program in programs.slice(0,1)" class="program" id="#{{program.anchor}}">
+  	<div ng-repeat="program in programs.slice(5,6)" class="program" id="#{{program.anchor}}">
             <div class="course-main ">
             <div class="course-title">
               <div class="{{program.class}}"></div>
@@ -74,8 +74,8 @@
   			    <label for="school" class="col-sm-2 control-label">School</label>
   			    <div class="col-sm-10">
   			      <select  name="mySelect" id="mySelect"
-      ng-options="option.name for option in data.availableOptions track by option.id"
-      ng-model="data.selectedOption" >
+      ng-options="option.name for option in arts.availableOptions track by option.id"
+      ng-model="arts.selectedOption" >
 
                     </select>
   			    </div>
@@ -86,7 +86,7 @@
 		  		<th class="col-md-6">Curriculum</th>
 	  		</thead>
 	  		<tbody >
-		  	  <tr ng-repeat="x in data.selectedOption.course">
+		  	  <tr ng-repeat="x in arts.selectedOption.course">
 		  	    <td class="col-md-6" >
 		  	    <div class="course-main ">
             		<div class="course-title">
@@ -103,9 +103,7 @@
 		  	    <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{x.link}}" target="_blank">Download</a></td>
 		  	  </tr>
 	  	  	</tbody>
-		  	</table>
-		  	<h4>*Programmes are offered at <b>Chennai Campus</b> also.<br>
-			**Programmes are offered at <b>Chennai Campus</b> only.</h4>
+		  	</table><br><br>
   		</div>
   	</div>
   	<div class="col-lg-3 col-lg-offset-1 col-sm-12 padding-r-0" style="background: #f2f2f2;padding: 10px 0px 20px 35px;">
@@ -118,9 +116,19 @@
         <li><a href="#/international" target="_blank">International Admissions</a></li>
         <li><a href="#/undergrad" target="_blank">VITEEE</a></li>
         </ul>
-        <div class="address">
-          <h2 class="section-header">Important Dates</h2>
-          <h4><b>31st December 2016</b></h4>
+         <div class="address">
+        
+          <h2 class="section-header">UG Programmes</h2>
+              <h3><b>Dr. K. Manivannan</b></h3><br>
+              <b>Director</b> - UG Admissions<br><br>
+              <address>
+              <i class="fa fa-map-marker"></i>&nbsp;VIT University<br>
+              Vellore - 632014<br>
+              Tamil Nadu, India<br><br>
+              </address>
+              <i class="fa fa-phone"></i>&nbsp;Phone : +91-416-220 2157/2168<br>
+              <i class="fa fa-fax"></i>&nbsp;Fax : +91-416-224 5544<br>
+              <i class="fa fa-envelope"></i>&nbsp;Email : ugadmission@vit.ac.in<br>
         </div>
   		</div>
   	</div>
