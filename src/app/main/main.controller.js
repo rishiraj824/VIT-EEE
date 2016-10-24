@@ -24,12 +24,45 @@
   });
 
   /*VITEEE Tabs*/
-  app.controller('TabCtrl', function($scope){
-    $scope.changeTab = function(tab) {
-    $scope.view_tab = tab;
-}
-});
-  /*CArousel*/
+  app.controller('PhoneCtrl',  function($scope){
+    $scope.selectedTab = 0; //set selected tab to the 1st by default.
+        
+            /** Function to set selectedTab **/
+            $scope.selectTab = function(index){
+                $scope.selectedTab = index;
+            } 
+  });
+ app.controller('TabsCtrl', function($scope){
+   var tabClasses;
+   
+   function initTabs() {
+     tabClasses = ["","","",""];
+   }
+   
+   $scope.getTabClass = function (tabNum) {
+     return tabClasses[tabNum];
+   };
+   
+   $scope.getTabPaneClass = function (tabNum) {
+     return "tab-pane " + tabClasses[tabNum];
+   }
+   
+   $scope.setActiveTab = function (tabNum) {
+     initTabs();
+     tabClasses[tabNum] = "active";
+   };
+   
+   $scope.tab1 = "This is first section";
+   $scope.tab2 = "This is SECOND section";
+   $scope.tab3 = "This is THIRD section";
+   $scope.tab4 = "This is FOUTRH section";
+   
+   //Initialize 
+   initTabs();
+   $scope.setActiveTab(1);
+ });
+
+  /*Testimonial Carousel*/
     app.controller('CarouselCtrl', function($scope){
       $scope.myInterval = 8000;
       $scope.achievements = [{
@@ -266,7 +299,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       duration: "4 Years",
       image : "assets/images/vectors-01.png",
       imagehome : "assets/images/btech.jpg",
-      anchor : "btech",
+      anchor : "#/undergrad/engineering",
       link : "http://www.vit.ac.in/admissions/ug"
     },
     {
@@ -278,7 +311,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       language: "English",
       duration: "4 Years",
       image : "assets/images/vectors-02.png",
-      anchor : "arch",
+      anchor : "#/undergrad/architecture",
       imagehome : "assets/images/architecture.jpg",
       link : "http://www.vit.ac.in/admissions/ug"
     },
@@ -292,7 +325,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       duration: "4 Years",
       image : "assets/images/vectors-08.png",
       imagehome : "assets/images/law.jpg",
-      anchor : "law",
+      anchor : "#/undergrad/law",
       link : "http://www.vit.ac.in/files/llb/index.html"
     },
     {
@@ -305,7 +338,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       duration: "4 Years",
       image : "assets/images/vectors-05.png",
       imagehome : "assets/images/btech.jpg",
-      anchor : "hotel",
+      anchor : "#/undergrad/hotelmanagement",
       link : "http://www.vit.ac.in/admissions/ug"
     },
     {
@@ -318,7 +351,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       duration: "4 Years",
       image : "assets/images/vectors-04.png",
       imagehome : "assets/images/btech.jpg",
-      anchor : "fashion",
+      anchor : "#/undergrad/fashion",
       link : "http://www.vit.ac.in/admissions/ug"
     },
     {
@@ -331,7 +364,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       duration: "4 Years",
       image : "assets/images/vectors-09.png",
       imagehome : "assets/images/btech.jpg",
-      anchor : "arts",
+      anchor : "#/undergrad/arts",
       link : "http://www.vit.ac.in/admissions/ug"
     }];
     /*PostGrad*/
@@ -345,7 +378,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       duration: "5 Years",
       image : "assets/images/vectors-01.png",
       imagehome : "assets/images/mtech.jpg",
-      anchor : "mtech",
+      anchor : "#/postgrad/mtech",
       link : "http://www.vit.ac.in/admissions/pg"
     },
     {
@@ -358,7 +391,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       duration: "5 Years",
       image : "assets/images/vectors-06.png",
       imagehome : "assets/images/btech.jpg",
-      anchor : "management",
+      anchor : "#/postgrad/business",
       link : "http://www.vit.ac.in/admissions/pg"
     },
     {
@@ -371,7 +404,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       duration: "5 Years",
       image : "assets/images/vectors-11.png",
       imagehome : "assets/images/mtech.jpg",
-      anchor : "integratedprogram",
+      anchor : "#/postgrad/integrated",
       link : "http://www.vit.ac.in/admissions/pg"
     }];
     /*Research*/
@@ -385,7 +418,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       duration: "5 Years",
       image : "assets/images/vectors-10.png",
       imagehome : "assets/images/research.jpg",
-      anchor : "mphil",
+      anchor : "#/research",
       link : "http://www.vit.ac.in/admissions/research"
     },
     {
@@ -398,7 +431,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       duration: "5 Years",
       image : "assets/images/vectors-27.png",
       imagehome : "assets/images/research.jpg",
-      anchor : "mtech",
+      anchor : "#/research",
       link : "http://www.vit.ac.in/admissions/research"
     },
     {
@@ -411,7 +444,7 @@ app.controller('ModalCtrl',  function ($scope, $uibModal, $log) {
       duration: "5 Years",
       image : "assets/images/vectors-28.png",
       imagehome : "assets/images/research.jpg",
-      anchor : "phd",
+      anchor : "#/research",
       link : "http://www.vit.ac.in/admissions/research"
     }]
 

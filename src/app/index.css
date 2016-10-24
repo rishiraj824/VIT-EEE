@@ -101,9 +101,12 @@ body{
     background-color: transparent;
 }
 #slides{
-  min-height: 100vh;
-  background: #333333;
-  position: relative;
+  min-height: 100vh; 
+
+    background: url('../../assets/images/about-home.jpg') center;
+    background-position-x: -1050px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .hero-caption{
   margin: auto;
@@ -156,10 +159,13 @@ body{
 }
 
 .course-short-description{
+  font-size: 1.2em;
 
 }
 .course-details .course-short-description{
-  height: 75px;
+      color: #666 !important;
+  height: 80px;
+  font-size: 1.1em;
     overflow: hidden;
     text-overflow: ellipsis;
     display: block;
@@ -479,7 +485,7 @@ body{
 }
 .testimonials{
     z-index: 24;
-    min-height: 350px;
+    height: 350px;
     position: relative;
 }
 .student-img img{
@@ -532,7 +538,7 @@ body{
   -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
   -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
-  height: 250px;
+  height: 230px;
 }
 .course .text-container{
   margin-left: 25px;
@@ -1113,7 +1119,7 @@ line-height: 22px;
 }
 .tabs-left> .tab-content{
   font-size: 1.3em;
-  min-height: 525px;
+  min-height: 594px;
   padding: 20px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -1137,18 +1143,19 @@ line-height: 22px;
 .tabs-left > .nav-tabs > li > a, .tabs-right > .nav-tabs > li > a {
     /* min-width: 180px; */
     margin-right: 0;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: #fff;
     transition: all linear 0.2s;
 }
 
 .tabs-left > .nav-tabs {
     float: left;
-    margin-right: 19px;
+    margin-right: 35px;
     border: none;
 }
 
 .tabs-left > .nav-tabs > li > a {
+    cursor: pointer;
     border: none;
     background: transparent !important;
 }
@@ -1174,6 +1181,11 @@ line-height: 22px;
     color: #f2f2f2 !important;
 
 }
+.courses-tab{
+    font-size: 1.1em;
+    color: #fff;
+    cursor: pointer;
+  }
 .viteee-guidelines{
   padding-top: 40px;
 
@@ -1201,7 +1213,7 @@ line-height: 22px;
   left: 0;
   right: 0;
   transition: all linear 0.2s;
-  height: 250px;
+  height: 230px;
   margin-left: -50px;
   width: auto; 
   -webkit-filter: brightness(80%); /* Chrome, Safari, Opera */
@@ -1242,13 +1254,12 @@ line-height: 22px;
   padding-left: 15px;
   color: #fff;
   border-radius: 24px;
-  width: 75%;
+  width: 85%;
   height: 50px;
   font-size: 1.3em;
 }
 .course-option-list select{
   line-height: 50px;
-  min-width: 420px;
   text-align: center;
   background: #00457c;
   outline: 0 !important;

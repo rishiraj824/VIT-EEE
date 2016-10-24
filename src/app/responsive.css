@@ -11,6 +11,11 @@
   height: 220px;
   
 }
+	.course-option-list select{
+		width: 330px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
 .course-img{
   width: 40%;
 }
@@ -46,9 +51,9 @@
     	margin-bottom: 5px;
     	font-size: 0.93em;
 	}
-	.notice  h3{
-		margin-top: 10px;
-		margin-bottom: 10px;	
+	.notice h3{
+		margin-top: 6px;
+		margin-bottom: 6px;	
 		font-size: 1.27em;
 	}
 	.section-top img{
@@ -80,15 +85,77 @@
 }
 @media screen and (max-width: 990px){
 	.text-container{
-		margin-bottom: 20px;
+		margin-bottom: 10px;
+	}
+	.navbar-dark > li > a {
+    margin-top: 0px;
+    font-size: 1.2em;
+	}
+	.dropdown-menu li a {
+		font-size: 1.2em;
+	}
+	.float-left{
+		float: left !important;
+	}
+	.dropdown-menu{
+	    min-width: 150px;
+	    border-radius: 0 !important;
+	    border: none !important;
+	    box-shadow: none !important;
+	    margin: 0 !important;
+	    padding: 0 !important;
+	    position: relative !important;
+	    width: 100% !important;
+	}
+	.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+	    border-color: transparent !important;
+	    background: #fff !important;
+	}
+	.navbar-nav {
+	    background: #fff;
+	 }
+	.navbar-dark{
+		margin-right: 35px;
+	    transition: all linear 0.2s;
+	    -moz-transition: all linear 0.2s;
+	    -webkit-transition: all linear 0.2s;
+	}
+	.navbar-dark .navbar-toggle .icon-bar {
+		background: #000 !important;
+	}
+	.navbar-dark .navbar-toggle{
+		    margin-top: 28px;
+	}
+	 .dropdown-menu {
+    background-color: #fff !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    width: 100% !important;
 	}
 	#slides{
 		min-height: 100vh;
 	}
+	.main-header-section img{
+		max-width: 200px;
+		height: auto;
+		margin: 0 auto;
+	}
+	.course-option-list select{
+		width: 230px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	.course-option-list select option{
+		width: 230px;
+	}
 	.section-top img{
   	height: 300px;
-  width: auto;
-}
+  	width: auto;
+	}
 	.section-overlay{
 		height: 300px;
 	}
@@ -117,7 +184,7 @@
     background: rgba(0,0,0,0.4);
     color: #f2f2f2;
     height: 80px !important;
-    width: auto !important;
+    width: 260px !important;
     padding: 8px;
     display: block;
     margin-bottom: 8px;
@@ -129,8 +196,8 @@
     	font-size: 0.83em;
 	}
 	.notice  h3{
-		margin-top: 10px;
-		margin-bottom: 10px;
+		margin-top: 5px;
+		margin-bottom: 5px;
 		font-size: 1.17em;
 	}
 	.carousel-students{
@@ -139,7 +206,6 @@
 	.student-img,.stats-text-carousel{
 		text-align: center;
 		margin: auto;
-		margin-bottom: 10px;
 	}
 
 	.pink , .blue, .yellow{
@@ -164,11 +230,17 @@
 
 }
 	.navbar-nav{
-		background:#03558c;
 	    border-radius: 0px 0px 10px 10px;
 	}
+	.navbar-nav li a {
+		color: #000 !important;
+	}
 	.navbar-inverse .navbar-nav > li > a {
-    	margin-top: 0px; 
+    margin-top: 0px;
+    color: #000 !important;
+    font-weight: 400 !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
 	}
 	.navbar-brand-new {
     margin-top: 18px;
@@ -177,9 +249,10 @@
     max-width: 35%;
     height: auto !important;
 }
-	.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-     border-color: transparent !important; 
-     background: none !important; 
+	
+.nav > li > a {
+	padding-left: 12px;
+	padding-right: 12px;
 }
 	.information-center{
 		margin-bottom: 10px;
@@ -190,5 +263,36 @@
 	}
 	.course h3{
 		font-size: 0.77em;
+	}
+	.main-testimonial{
+		font-size: 1.3em;
+	}
+	.testimonials {
+    max-height: 250px !important;
+	}
+	.student-text-carousel p{
+	  font-size: 1em;
+	}
+	.student-text-carousel span{
+	  font-size: 1.2em;
+	}
+.student-img{
+  height: 250px;
+}
+.student-img img{
+	height: 250px !important;
+	width: auto !important;
+}
+.student-text-carousel{
+    
+    top:25%;
+    left: 10%;
+}
+
+
+.course-details .course-short-description {
+	font-size: 1em;
+	-webkit-line-clamp: 3;
+	height: 45px;
 	}
 }
