@@ -104,7 +104,7 @@ body{
 #slides{
   min-height: 100vh; 
 
-    background: url('../../assets/images/about-home.JPG') center;
+    background: url('../assets/images/about-home.JPG') center;
     background-position-x: -1050px;
     background-repeat: no-repeat;
     background-size: cover;
