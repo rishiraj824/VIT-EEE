@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('viteee', ['ui.bootstrap', 'ui.router', 'ngAnimate','ngVidBg' ])
+    .module('viteee', ['ui.bootstrap', 'ui.router', 'ngAnimate','ngVidBg','bootstrapLightbox' ])
     .config(config);
 
   function config($stateProvider, $urlRouterProvider) {
@@ -83,6 +83,16 @@
         url: '/postgrad/mtech',
         templateUrl: 'app/pgcourses/mtech.html'
       })
+      .state('pgmsc', {
+
+        url: '/postgrad/msc',
+        templateUrl: 'app/pgcourses/msc.html'
+      })
+      .state('pgmca', {
+
+        url: '/postgrad/mca',
+        templateUrl: 'app/pgcourses/mca.html'
+      })
       .state('pgbusiness', {
 
         url: '/postgrad/business',
@@ -97,6 +107,21 @@
 
         url: '/research',
         templateUrl: 'app/research/research.html'
+      })
+      .state('mtechresearch', {
+
+        url: '/research/mtechresearch',
+        templateUrl: 'app/research/mtechresearch.html'
+      })
+      .state('phd', {
+
+        url: '/research/phd',
+        templateUrl: 'app/research/phd.html'
+      })
+      .state('mphil', {
+
+        url: '/research/mphil',
+        templateUrl: 'app/research/mphil.html'
       })
       .state('international', {
 

@@ -27,7 +27,7 @@
     <div class=" col-lg-7 col-lg-offset-1 col-sm-4">
     <br>
     <div class="courses" ng-controller="CourseModalCtrl">
-    <div ng-repeat="postgrad in postgrads.slice(3,4)" class="postgrad" id="#{{postgrad.anchor}}">
+    <div ng-repeat="postgrad in postgrads.slice(4,5)" class="postgrad" id="#{{postgrad.anchor}}">
             <div class="course-main ">
             <div class="course-title">
               <div class="{{postgrad.class}}"></div>
@@ -68,6 +68,23 @@
               
             </div>
               
+           <uib-accordion close-others="oneAtATime">
+                <div uib-accordion-group class="panel-default accordian-theme"  is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" >
+                <uib-accordion-heading>
+                <div style="text-decoration: none;">
+                    Procedure<i class="pull-right fa" ng-class="{'fa-chevron-down': status.isCustomHeaderOpen, 'fa-chevron-right': !status.isCustomHeaderOpen}"></i>
+                  </div>
+                  </uib-accordion-heading>
+                  There will be no entrance examination for admissions.<br>
+                    <br>
+                    <strong>Candidates will be called for an counselling in the order of merit based on:</strong>
+                    <ul >
+                      <li>The aggregate of total marks secured in the +2 / Higher Secondary Examination for UG / M.Sc. Biotechnology (5 year integrated) programmes.</li>
+                      <li>The aggregate marks secured in Physics, Chemistry and Mathematics in the +2 / Higher Secondary Examination for M.Tech. (Software Engineering).</li>
+                    </ul>
+                </div>
+              </uib-accordion>
+                     
 
             </div>
              <a href="{{postgrad.link}}" target="_blank" type="button" class="btn hvr-fade btn-theme"  >Apply Now</a>
@@ -90,13 +107,29 @@
                                   <div class="text-container">
                                     <p>Programme</p>
                              
-                                    <h4 class="hvr-float">Integrated Course*</h4>
+                                    <h4 class="hvr-float">M.Tech Software Engineering (5 Year Integrated Programme)</h4>
                                 
                                  </div>
                               </div>
                             </div>
                             </td>
-                          <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="http://www.vit.ac.in/admissions/pg" target="_blank">Download</a></td>
+                          <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="http://www.vit.ac.in/files/academics/schools/SITE/Courses/M.TECH%20SOFTWARE%20ENGINEERING%20CURRICULUM%20.pdf" target="_blank">Download</a></td>
+                        </tr>
+                        <tr >
+                          <td class="col-md-6" >
+                          <div class="course-main ">
+                              <div class="course-title">
+                                <div class="blue-small"></div> 
+                                  <div class="text-container">
+                                    <p>Programme</p>
+                             
+                                    <h4 class="hvr-float">M. Sc. Biotechnology (5 Year Integrated Programme)</h4>
+                                
+                                 </div>
+                              </div>
+                            </div>
+                            </td>
+                          <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="http://www.vit.ac.in/files/academics/schools/SBST/Courses/MSc_BIOTECHNOLOGY_5%20year%20Integrated.pdf" target="_blank">Download</a></td>
                         </tr>
                         </tbody>
                       </table><br><br>
@@ -104,19 +137,16 @@
     
     </div>
     <div class="col-lg-3 col-lg-offset-1 col-sm-12 padding-r-0" style="background: #f2f2f2;padding: 10px 0px 20px 35px;">
-      <h2 class="section-header">Know More</h2>
-    <div class="contact-us-links">
-        <ul>
-                <li><a href="#/undergrad" target="_blank">UG Admissions</a></li>
-                <li><a href="#/postgrad" target="_blank">PG Admissions</a></li>
-                <li><a href="#/research" target="_blank">Research Admissions</a></li>
-                <li><a href="#/international" target="_blank">International Admissions</a></li>
-                <li><a href="#/undergrad" target="_blank">VITEEE</a></li>
-                </ul>
-                 <div class="address">
+      <h2 class="section-header"><i class="fa fa-calendar"></i>&nbsp;Important Dates</h2>
+            <ul>
+              <li>VITEEE Form-31st December</li>
+              <li>VITEEE Exam 31st December</li>
+            </ul>
+        <div class="address">
+          <h2 class="section-header"><i class="fa fa-home"></i>&nbsp;Contact us</h2>
                 
-                  <h2 class="section-header">PG Programmes</h2>
-                      <h3><b>Dr.G.Kalaichelvan</b></h3><br>
+                  <h3 class="section-header">PG Programmes</h3>
+                      <h5><b>Dr.G.Kalaichelvan</b></h5><br>
                       <b>Director</b> - PG Admissions<br><br>
                       <address>
                       <i class="fa fa-map-marker"></i>&nbsp;VIT University<br>

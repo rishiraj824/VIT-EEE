@@ -1,0 +1,155 @@
+
+
+<div ng-include="'app/components/navbar/navbar-dark.html'"></div>
+<div class="course-intro">
+  <div class="container-fluid">
+  	<div class="row">
+  		<div class="col-lg-2 col-lg-offset-1 col-md-3 col-sm-12">
+  			<div class="main-header-section">
+        <img src="assets/images/vectors-13.png" class="img-responsive undergrad-icon">
+      </div>
+  		</div>
+  		<div class="col-lg-8 col-md-8 col-sm-12">
+  		
+  		<div class="main-header-section">
+  			<h2 class="main-header">Masters in Science</h2>
+  			<h4>VIT University offers 30+ postgraduate and research programmes, these include M.Tech, MSc, MCA, MBA, PhD, M.Phil and Research based Masters Degrees. VITMEE and GMAT are the exams used for admissions to M.Tech and MBA programmes respectively. Being placed 3rd among the top 30 research-oriented institutes speaks volumes about how VIT has managed to achieve a lot in a short span of time. Not only that but it has also secured sponsorship for 50 research projects and offers consultancy services worth more than Rs. 2.2 million. </h4>
+  		</div>
+  			
+  		</div>
+  	</div>
+  </div>
+  		
+  </div>
+  <div class="container-fluid">
+  	<div class="row">
+  	
+  	<div class=" col-lg-7 col-lg-offset-1 col-sm-4">
+    <br>
+  	<div class="courses" ng-controller="CourseModalCtrl">
+  	<div ng-repeat="postgrad in postgrads.slice(1,2)" class="program" id="#{{postgrad.anchor}}">
+            <div class="course-main ">
+            <div class="course-title">
+              <div class="{{postgrad.class}}"></div>
+                <div class="text-container">
+                <p >Programme</p>
+               
+                  <h4  class="hvr-float">
+                  {{postgrad.name}}</h4>
+                  
+              </div>
+                  
+                
+
+                <!-- 
+                <h5>{{course.school}}</h5> -->
+            </div>
+            </div>
+            
+            <div class="course-short-description">
+               
+               {{postgrad.description}}
+            </div>
+            <div class="more-description">
+            <div class="inline">
+              <h4 ><i class="fa fa-graduation-cap"></i>&nbsp;Program</h4>
+              <h5>
+              {{postgrad.programtype}}</h5>
+            </div>
+            <div class="inline">
+              <h4><i class="fa fa-globe"></i>&nbsp;Language</h4>
+              <h5>
+              {{postgrad.language}}</h5>
+            </div>
+            <div class="inline">
+              <h4><i class="fa fa-clock-o"></i>&nbsp;Duration</h4>
+              <h5>
+              {{postgrad.duration}}</h5>
+              
+            </div>
+              <uib-accordion close-others="oneAtATime">
+                <div uib-accordion-group class="panel-default accordian-theme"  is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" >
+                <uib-accordion-heading>
+                <div style="text-decoration: none;">
+                    Procedure<i class="pull-right fa" ng-class="{'fa-chevron-down': status.isCustomHeaderOpen, 'fa-chevron-right': !status.isCustomHeaderOpen}"></i>
+                  </div>
+                  </uib-accordion-heading>
+                    Candidates will be called for a counselling in the order of merit of their aggregate marks secured in their undergraduate degree programmes calculated upto the fourth semester or second year, whichever is applicable (This is inclusive of Languages / EOP and all the subjects they have studied upto pre-final year). <ul ><li>Candidates for admission to Integrated PG programmes will be selected based on the performance in the H.Sc., / Intermediate. For other PG programmes selection is based on the performance in Under Graduate programme..</li><li>Eligible candidates shall be called for counselling and the admission is decided based on the marks in the qualifying examination.</li></ul>
+                </div>
+              </uib-accordion>
+
+            </div>
+             <a href="{{postgrad.link}}" target="_blank" type="button" class="btn hvr-fade btn-theme"  >Apply Now</a><br><br>
+               <img src="{{postgrad.image}}" class="img-responsive vector-main">
+          </div>
+          </div>
+  	<div class="courses-listing" ng-controller="CourseListCtrl">
+  			<h2 class="section-lower-header">Courses Offered</h2>
+  			<div class="form-group course-option-list">
+  			    <label for="school" class="col-sm-2 control-label">School</label>
+  			    <div class="col-sm-10">
+  			      <select  name="mySelect" id="mySelect"
+      ng-options="option.name for option in mscs.availableOptions track by option.id"
+      ng-model="mscs.selectedOption" >
+
+                    </select>
+  			    </div>
+		  	</div>
+		  	<table class="courses-table" >
+	  		<thead>
+		  		<th class="col-md-6">Programs</th>	
+		  		<th class="col-md-6">Curriculum</th>
+	  		</thead>
+	  		<tbody >
+		  	  <tr ng-repeat="x in mscs.selectedOption.course">
+		  	    <td class="col-md-6" >
+		  	    <div class="course-main ">
+            		<div class="course-title">
+              		<div class="blue-small"></div> 
+                		<div class="text-container">
+                			<p >Programme</p>
+               
+              				<h4  class="hvr-float">{{x.name}}</h4>
+                  
+              			</div>
+            		</div>
+            	</div>
+            	</td>
+		  	    <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{x.link}}" target="_blank">Download</a></td>
+		  	  </tr>
+	  	  	</tbody>
+		  	</table><br><br>
+  		</div>
+  	
+  	</div>
+  	<div class="col-lg-3 col-lg-offset-1 col-sm-12 padding-r-0" style="background: #f2f2f2;padding: 10px 0px 20px 35px;">
+  		
+		<div class="contact-us-links">
+  		  <h2 class="section-header"><i class="fa fa-calendar"></i>&nbsp;Important Dates</h2>
+            <ul>
+              <li>VITEEE Form-31st December</li>
+              <li>VITEEE Exam 31st December</li>
+            </ul>
+        <div class="address">
+          <h2 class="section-header"><i class="fa fa-home"></i>&nbsp;Contact us</h2>
+                  <h3 class="section-header">PG Programmes</h3>
+                      <h5><b>Dr.G.Kalaichelvan</b></h5><br>
+                      <b>Director</b> - PG Admissions<br><br>
+                      <address>
+                      <i class="fa fa-map-marker"></i>&nbsp;VIT University<br>
+                      Vellore - 632014<br>
+                      Tamil Nadu, India<br><br>
+                      </address>
+                      <i class="fa fa-phone"></i>&nbsp;Phone : +91-416-220 4600 / 4700 /4800<br>
+                      <i class="fa fa-fax"></i>&nbsp;Fax : +91-416-224 5544<br>
+                      <i class="fa fa-envelope"></i>&nbsp;Email : pgadmission@vit.ac.in<br>
+                </div>
+  	</div>
+  	</div>
+  	
+  
+  </div>
+  </div>
+  
+
+   <div ng-include="'app/components/footer/footer.html'"></div>

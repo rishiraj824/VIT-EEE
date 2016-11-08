@@ -1,0 +1,155 @@
+
+
+<div ng-include="'app/components/navbar/navbar-dark.html'"></div>
+<div class="course-intro">
+  <div class="container-fluid">
+  	<div class="row">
+  		<div class="col-lg-2 col-lg-offset-1 col-md-3 col-sm-12">
+  			<div class="main-header-section">
+        <img src="assets/images/vectors-13.png" class="img-responsive undergrad-icon">
+      </div>
+  		</div>
+  		<div class="col-lg-8 col-md-8 col-sm-12">
+  		
+  		<div class="main-header-section">
+  			<h2 class="main-header">Masters in Computer Applications</h2>
+  			<h4>VIT University offers 30+ postgraduate and research programmes, these include M.Tech, MSc, MCA, MBA, PhD, M.Phil and Research based Masters Degrees. VITMEE and GMAT are the exams used for admissions to M.Tech and MBA programmes respectively. Being placed 3rd among the top 30 research-oriented institutes speaks volumes about how VIT has managed to achieve a lot in a short span of time. Not only that but it has also secured sponsorship for 50 research projects and offers consultancy services worth more than Rs. 2.2 million. </h4>
+  		</div>
+  			
+  		</div>
+  	</div>
+  </div>
+  		
+  </div>
+  <div class="container-fluid">
+  	<div class="row">
+  	
+  	<div class=" col-lg-7 col-lg-offset-1 col-sm-4">
+    <br>
+  	<div class="courses" ng-controller="CourseModalCtrl">
+  	<div ng-repeat="postgrad in postgrads.slice(2,3)" class="program" id="#{{postgrad.anchor}}">
+            <div class="course-main ">
+            <div class="course-title">
+              <div class="{{postgrad.class}}"></div>
+                <div class="text-container">
+                <p >Programme</p>
+               
+                  <h4  class="hvr-float">
+                  {{postgrad.name}}</h4>
+                  
+              </div>
+                  
+                
+
+                <!-- 
+                <h5>{{course.school}}</h5> -->
+            </div>
+            </div>
+            
+            <div class="course-short-description">
+               
+               {{postgrad.description}}
+            </div>
+            <div class="more-description">
+            <div class="inline">
+              <h4 ><i class="fa fa-graduation-cap"></i>&nbsp;Program</h4>
+              <h5>
+              {{postgrad.programtype}}</h5>
+            </div>
+            <div class="inline">
+              <h4><i class="fa fa-globe"></i>&nbsp;Language</h4>
+              <h5>
+              {{postgrad.language}}</h5>
+            </div>
+            <div class="inline">
+              <h4><i class="fa fa-clock-o"></i>&nbsp;Duration</h4>
+              <h5>
+              {{postgrad.duration}}</h5>
+              
+            </div>
+              <uib-accordion close-others="oneAtATime">
+                <div uib-accordion-group class="panel-default accordian-theme"  is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" >
+                <uib-accordion-heading>
+                <div style="text-decoration: none;">
+                    Procedure<i class="pull-right fa" ng-class="{'fa-chevron-down': status.isCustomHeaderOpen, 'fa-chevron-right': !status.isCustomHeaderOpen}"></i>
+                  </div>
+                  </uib-accordion-heading>
+                    Admission to MCA and M.Tech. Programmes is based on VIT Masters Entrance Examination (VITMEE) conducted by VIT in major cities across India.<br><br><strong>Procedure of Admission</strong><ul ><li>Advertisement published in leading newspapers regarding the issue of application forms, important dates etc.,</li><li>Application forms can be purchased at select post offices / or obtained through post.</li><li>Entrance examination conducted in major cities all over India.</li><li>Selection is through counselling based on the rank secured in the Entrance Examination. Preference is given to the candidates with GATE score for M.Tech. admission.</li></ul>
+                </div>
+              </uib-accordion>
+
+            </div>
+             <a href="{{postgrad.link}}" target="_blank" type="button" class="btn hvr-fade btn-theme"  >Apply Now</a><br><br>
+               <img src="{{postgrad.image}}" class="img-responsive vector-main">
+          </div>
+          </div>
+  	<div class="courses-listing" ng-controller="CourseListCtrl">
+  			<h2 class="section-lower-header">Course Offered</h2>
+  		
+		  	<table class="courses-table" >
+	  		<thead>
+		  		<th class="col-md-6">Programs</th>	
+		  		<th class="col-md-6">Curriculum</th>
+	  		</thead>
+	  		<tbody >
+		  	  <tr >
+		  	    <td class="col-md-6" >
+		  	    <div class="course-main ">
+            		<div class="course-title">
+              		<div class="blue-small"></div> 
+                		<div class="text-container">
+                			<p >Programme</p>
+               
+              				<h4  class="hvr-float">Masters in Computer Applications</h4>
+                  
+              			</div>
+            		</div>
+            	</div>
+            	</td>
+		  	    <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="#" target="_blank">Download</a></td>
+		  	  </tr>
+	  	  	</tbody>
+		  	</table><br>
+         <uib-accordion close-others="oneAtATime">
+    <div uib-accordion-group class="panel-default accordian-theme"  is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" >
+    <uib-accordion-heading>
+    <div style="text-decoration: none;">
+        Eligibility<i class="pull-right fa" ng-class="{'fa-chevron-down': status.isCustomHeaderOpen, 'fa-chevron-right': !status.isCustomHeaderOpen}"></i>
+      </div>
+      </uib-accordion-heading>
+      Recognized Bachelor’s Degree of Minimum 3 Yrs duration in BCA, B.Sc (IT/Computer Science) with Mathematics as a course at 10+2 level or at Graduate Level. Obtained at least 60% at the qualifying Examination.
+    </div>
+  </uib-accordion>
+  		</div>
+  	
+  	</div>
+  	<div class="col-lg-3 col-lg-offset-1 col-sm-12 padding-r-0" style="background: #f2f2f2;padding: 10px 0px 20px 35px;">
+  		<h2 class="section-header"><i class="fa fa-calendar"></i>&nbsp;Important Dates</h2>
+            <ul>
+              <li>VITEEE Form-31st December</li>
+              <li>VITEEE Exam 31st December</li>
+            </ul>
+        <div class="address">
+          <h2 class="section-header"><i class="fa fa-home"></i>&nbsp;Contact us</h2>
+                
+                  <h3 class="section-header">PG Programmes</h3>
+                      <h5><b>Dr.G.Kalaichelvan</b></h5><br>
+                      <b>Director</b> - PG Admissions<br><br>
+                      <address>
+                      <i class="fa fa-map-marker"></i>&nbsp;VIT University<br>
+                      Vellore - 632014<br>
+                      Tamil Nadu, India<br><br>
+                      </address>
+                      <i class="fa fa-phone"></i>&nbsp;Phone : +91-416-220 4600 / 4700 /4800<br>
+                      <i class="fa fa-fax"></i>&nbsp;Fax : +91-416-224 5544<br>
+                      <i class="fa fa-envelope"></i>&nbsp;Email : pgadmission@vit.ac.in<br>
+                </div>
+  	</div>
+  	</div>
+  	
+  
+  </div>
+  </div>
+  
+
+   <div ng-include="'app/components/footer/footer.html'"></div>

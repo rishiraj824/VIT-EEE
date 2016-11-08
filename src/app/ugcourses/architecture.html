@@ -61,16 +61,26 @@
               <h5>{{program.duration}}</h5>
               
             </div>
-              
+                <uib-accordion close-others="oneAtATime">
+                <div uib-accordion-group class="panel-default accordian-theme"  is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" >
+                <uib-accordion-heading>
+                <div style="text-decoration: none;">
+                    Procedure<i class="pull-right fa" ng-class="{'fa-chevron-down': status.isCustomHeaderOpen, 'fa-chevron-right': !status.isCustomHeaderOpen}"></i>
+                  </div>
+                  </uib-accordion-heading>
+                  Selection is based on merit. Marks secured in higher secondary school examination and eligible NATA score. <br><br><strong>Note :</strong><ul ><li>In order to pass an Aptitude Test in Architecture, a candidate must obtain a minimum of 40% marks. NATA score shall be valid for a period of two years from the year in which one appeared.</li></ul>
+                </div>
+              </uib-accordion>
 
             </div>
              <a href="{{program.link}}" target="_blank" type="button" class="btn hvr-fade btn-theme"  >Apply Now</a>
                <img src="{{program.image}}" class="img-responsive vector-main">
           </div>
+          
           </div>
   	<div class="courses-listing" ng-controller="CourseListCtrl">
   			<h2 class="section-lower-header">Courses Offered</h2>
-  			
+  			<br>
 		  	<table class="courses-table" >
 	  		<thead>
 		  		<th class="col-md-6">Programs</th>	
@@ -94,25 +104,39 @@
 		  	    <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="http://www.vit.ac.in/files/academics/schools/barch/B_Arch_CurriculumandSyllabi.pdf" target="_blank">Download</a></td>
 		  	  </tr>
 	  	  	</tbody>
-		  	</table>
-		  	
+		  	</table><br>
+ <uib-accordion close-others="oneAtATime">
+    <div uib-accordion-group class="panel-default accordian-theme"  is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" >
+    <uib-accordion-heading>
+    <div style="text-decoration: none;">
+        Eligibility<i class="pull-right fa" ng-class="{'fa-chevron-down': status.isCustomHeaderOpen, 'fa-chevron-right': !status.isCustomHeaderOpen}"></i>
+      </div>
+      </uib-accordion-heading>
+      <ul>
+                      <li>Candidates who have studied in regular, full time and formal education alone are eligible to apply.</li>
+                      <li>Total aggregate of 70% marks in 10+2 scheme of Senior School Certificate Examination or equivalent with Mathematics as a subject of examinations at the 10+2 level And </li>
+                      <li> Candidate must have a minimum of 40% marks i.e., 80/200, in the All India National Aptitude Test in Architecture (NATA) conducted by Council of Architecture (COA) </li>
+               <strong>Age Limit:</strong><br>
+               <li> Candidates whose date of birth falls on or after 1st July 1995 are eligible to apply for B.ARCH. The date of birth as recorded in the High School / SSC / X Certificate will be considered authentic. Candidates should produce this certificate in original as a proof of their age at the time of counselling, failing for which they will be disqualified. </li>
+                        
+                    </ul>
+    </div>
+  </uib-accordion>
   		</div>
   	
   	</div>
   	<div class="col-lg-3 col-lg-offset-1 col-sm-12 padding-r-0" style="background: #f2f2f2;padding: 10px 0px 20px 35px;">
-  		<h2 class="section-header">Know More</h2>
-		<div class="contact-us-links">
-  		  <ul>
-        <li><a href="#/undergrad" target="_blank">UG Admissions</a></li>
-        <li><a href="#/postgrad" target="_blank">PG Admissions</a></li>
-        <li><a href="#/research" target="_blank">Research Admissions</a></li>
-        <li><a href="#/international" target="_blank">International Admissions</a></li>
-        <li><a href="#/undergrad" target="_blank">VITEEE</a></li>
-        </ul>
-         <div class="address">
+  		<div class="contact-us-links">
         
-          <h2 class="section-header">UG Programmes</h2>
-              <h3><b>Dr. K. Manivannan</b></h3><br>
+            <h2 class="section-header"><i class="fa fa-calendar"></i>&nbsp;Important Dates</h2>
+            <ul>
+              <li>VITEEE Form-31st December</li>
+              <li>VITEEE Exam 31st December</li>
+            </ul>
+        <div class="address">
+          <h2 class="section-header"><i class="fa fa-home"></i>&nbsp;Contact us</h2>
+          <h3 >UG Programmes</h3>
+              <h5><b>Dr. K. Manivannan</b></h5>
               <b>Director</b> - UG Admissions<br><br>
               <address>
               <i class="fa fa-map-marker"></i>&nbsp;VIT University<br>
@@ -123,7 +147,7 @@
               <i class="fa fa-fax"></i>&nbsp;Fax : +91-416-224 5544<br>
               <i class="fa fa-envelope"></i>&nbsp;Email : ugadmission@vit.ac.in<br>
         </div>
-  		</div>
+      </div>
   	</div>
   	</div>
   	

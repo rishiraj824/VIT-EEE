@@ -61,7 +61,16 @@
               <h5>{{program.duration}}</h5>
               
             </div>
-              
+              <uib-accordion close-others="oneAtATime">
+                <div uib-accordion-group class="panel-default accordian-theme"  is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" >
+                <uib-accordion-heading>
+                <div style="text-decoration: none;">
+                    Procedure<i class="pull-right fa" ng-class="{'fa-chevron-down': status.isCustomHeaderOpen, 'fa-chevron-right': !status.isCustomHeaderOpen}"></i>
+                  </div>
+                  </uib-accordion-heading>
+                  There will be no entrance examination for admissions.<br><br><strong>Candidates will be called for an counselling in the order of merit based on:</strong><ul ><li>The aggregate of total marks secured in the +2 / Higher Secondary Examination.</li></ul>
+                </div>
+              </uib-accordion>
 
             </div>
              <a href="{{program.link}}" target="_blank" type="button" class="btn hvr-fade btn-theme"  >Apply Now</a>
@@ -69,7 +78,7 @@
           </div>
           </div>
   	<div class="courses-listing" ng-controller="CourseListCtrl">
-  			<h2 class="section-lower-header">Courses Offered</h2>
+  			<h2 class="section-lower-header">Course Offered</h2>
 		  	       <table class="courses-table" >
                 <thead>
                   <th class="col-md-6">Programs</th>  
@@ -93,23 +102,34 @@
                     <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="http://www.vit.ac.in/admissions/ug" target="_blank">Download</a></td>
                   </tr>
                   </tbody>
-                </table><br><br>
+                </table><br>
+                <uib-accordion close-others="oneAtATime">
+                   <div uib-accordion-group class="panel-default accordian-theme"  is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" >
+                   <uib-accordion-heading>
+                   <div style="text-decoration: none;">
+                       Eligibility<i class="pull-right fa" ng-class="{'fa-chevron-down': status.isCustomHeaderOpen, 'fa-chevron-right': !status.isCustomHeaderOpen}"></i>
+                     </div>
+                     </uib-accordion-heading>
+                     Candidates should have secured an aggregate of 60% and above in their +2 examination to be eligible to apply. 
+The aggregate marks obtained in the subjects in +2 (or its equivalent) put together should be 50% for the following categories: 
+Candidates belonging to SC/ST 
+Candidates hailing from Jammu & Kashmir and the North Eastern states of Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim and Tripura.
+                   </div>
+                 </uib-accordion>
   		</div>
   	</div>
   	<div class="col-lg-3 col-lg-offset-1 col-sm-12 padding-r-0" style="background: #f2f2f2;padding: 10px 0px 20px 35px;">
-  		<h2 class="section-header">Know More</h2>
-		<div class="contact-us-links">
-  		  <ul>
-        <li><a href="#/undergrad" target="_blank">UG Admissions</a></li>
-        <li><a href="#/postgrad" target="_blank">PG Admissions</a></li>
-        <li><a href="#/research" target="_blank">Research Admissions</a></li>
-        <li><a href="#/international" target="_blank">International Admissions</a></li>
-        <li><a href="#/undergrad" target="_blank">VITEEE</a></li>
-        </ul>
-         <div class="address">
+  		<div class="contact-us-links">
         
-          <h2 class="section-header">UG Programmes</h2>
-              <h3><b>Dr. K. Manivannan</b></h3><br>
+            <h2 class="section-header"><i class="fa fa-calendar"></i>&nbsp;Important Dates</h2>
+            <ul>
+              <li>VITEEE Form-31st December</li>
+              <li>VITEEE Exam 31st December</li>
+            </ul>
+        <div class="address">
+          <h2 class="section-header"><i class="fa fa-home"></i>&nbsp;Contact us</h2>
+          <h3 >UG Programmes</h3>
+              <h5><b>Dr. K. Manivannan</b></h5>
               <b>Director</b> - UG Admissions<br><br>
               <address>
               <i class="fa fa-map-marker"></i>&nbsp;VIT University<br>
@@ -120,7 +140,7 @@
               <i class="fa fa-fax"></i>&nbsp;Fax : +91-416-224 5544<br>
               <i class="fa fa-envelope"></i>&nbsp;Email : ugadmission@vit.ac.in<br>
         </div>
-  		</div>
+      </div>
   	</div>
   	</div>
   	

@@ -62,7 +62,16 @@
               
             </div>
               
-
+             <uib-accordion close-others="oneAtATime">
+                <div uib-accordion-group class="panel-default accordian-theme"  is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" >
+                <uib-accordion-heading>
+                <div style="text-decoration: none;">
+                    Procedure<i class="pull-right fa" ng-class="{'fa-chevron-down': status.isCustomHeaderOpen, 'fa-chevron-right': !status.isCustomHeaderOpen}"></i>
+                  </div>
+                  </uib-accordion-heading>
+                  There will be no entrance examination for admissions.<br><br><strong>Candidates will be called for an counselling in the order of merit based on:</strong><ul ><li>The aggregate of total marks secured in the +2 / Higher Secondary Examination.</li></ul>
+                </div>
+              </uib-accordion>
             </div>
              <a href="{{program.link}}" target="_blank" type="button" class="btn hvr-fade btn-theme"  >Apply Now</a>
                <img src="{{program.image}}" class="img-responsive vector-main">
@@ -104,6 +113,63 @@
 		  	  </tr>
 	  	  	</tbody>
 		  	</table><br><br>
+        <uib-accordion close-others="oneAtATime">
+    <div uib-accordion-group class="panel-default accordian-theme"  is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" >
+    <uib-accordion-heading>
+    <div style="text-decoration: none;">
+        Eligibility<i class="pull-right fa" ng-class="{'fa-chevron-down': status.isCustomHeaderOpen, 'fa-chevron-right': !status.isCustomHeaderOpen}"></i>
+      </div>
+      </uib-accordion-heading>
+      <ul >
+                    <li>Candidates who have studied in Regular, Full time and Formal Education are alone eligible to apply.<br>
+                    </li>
+                    <li> Candidates should have secured an aggregate of 70% and above in their +2 examination to be eligible to apply.<br>
+                    </li>
+                    <li>The aggregate marks obtained in the subjects in +2 (or its equivalent) put together should be 60% for the following categories:
+                    <ul class="list2">
+                      <li>Candidates belonging to SC/ST </li>
+                      <li>Candidates hailing from Jammu &amp; Kashmir and the North Eastern states of Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim and Tripura. </li>
+                    </ul>
+                    </li>
+                    <li>Candidates belonging to SC/ ST category must fill in the proforma which will be available in the information brochure and it has to be attested by competent authority.<br>
+                    </li>
+                    <li> Candidates hailing from Jammu &amp; Kashmir and the North Eastern states of Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim and Tripura should fill in the CERTIFICATE TO PROVE NATIVITY proforma which will be available in the information brochure and it has to be attested by competent authority. </li>
+                    <li>In case the marks statement is not produced by the candidate at the time of admission, the decision of the Management regarding his/her eligibility and admission to the programme shall be final.</li>
+                  </ul>
+                  Age Limit : Candidates whose date of birth falls on or after 1<sup>st</sup> July 1997 are eligible to apply.<br><br>
+                  <table class="table-striped table-bordered table-responsive">
+                  <tbody>
+                  <tr>
+                    <td>
+                      <h6 class="vitblue">PROGRAMMES</h6>
+                    </td>
+                    <td>
+                      <h6 class="vitblue">ELIGIBILITY</h6>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                       B.Sc.(Computer Science) / <br>
+                       B.C.A (Bachelor in Computer Applications)<br>
+                    </td>
+                    <td>
+                       A pass in Higher Secondary Examination conducted by the State / Central Board of Secondary Education or its equivalent examination with Mathematics as one of the subjects with minimum of 70% overall aggregate
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                       B. Sc. Multimedia and Animation<br>
+                    </td>
+                    <td>
+                       A pass in Higher Secondary Examination conducted by the State / Central Board of Secondary Education or its equivalent examination or pass in Diploma (10+3) in any stream with a minimum of 70% overall aggregate.
+                    </td>
+                  </tr>
+                  <tr>
+                  </tr>
+                  </tbody>
+                  </table>
+    </div>
+  </uib-accordion>
   		</div>
   	</div>
   	<div class="col-lg-3 col-lg-offset-1 col-sm-12 padding-r-0" style="background: #f2f2f2;padding: 10px 0px 20px 35px;">

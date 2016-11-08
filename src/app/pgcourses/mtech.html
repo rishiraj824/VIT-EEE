@@ -12,7 +12,7 @@
   		<div class="col-lg-8 col-md-8 col-sm-12">
   		
   		<div class="main-header-section">
-  			<h2 class="main-header">PG Courses</h2>
+  			<h2 class="main-header">Masters in Engineering</h2>
   			<h4>VIT University offers 30+ postgraduate and research programmes, these include M.Tech, MSc, MCA, MBA, PhD, M.Phil and Research based Masters Degrees. VITMEE and GMAT are the exams used for admissions to M.Tech and MBA programmes respectively. Being placed 3rd among the top 30 research-oriented institutes speaks volumes about how VIT has managed to achieve a lot in a short span of time. Not only that but it has also secured sponsorship for 50 research projects and offers consultancy services worth more than Rs. 2.2 million. </h4>
   		</div>
   			
@@ -27,7 +27,7 @@
   	<div class=" col-lg-7 col-lg-offset-1 col-sm-4">
     <br>
   	<div class="courses" ng-controller="CourseModalCtrl">
-  	<div ng-repeat="postgrad in postgrads.slice(0,2)" class="postgrad" id="#{{postgrad.anchor}}">
+  	<div ng-repeat="postgrad in postgrads.slice(0,1)" class="program" id="#{{postgrad.anchor}}">
             <div class="course-main ">
             <div class="course-title">
               <div class="{{postgrad.class}}"></div>
@@ -67,7 +67,16 @@
               {{postgrad.duration}}</h5>
               
             </div>
-              
+                <uib-accordion close-others="oneAtATime">
+                <div uib-accordion-group class="panel-default accordian-theme"  is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" >
+                <uib-accordion-heading>
+                <div style="text-decoration: none;">
+                    Procedure<i class="pull-right fa" ng-class="{'fa-chevron-down': status.isCustomHeaderOpen, 'fa-chevron-right': !status.isCustomHeaderOpen}"></i>
+                  </div>
+                  </uib-accordion-heading>
+                    Admission to MCA and M.Tech. Programmes is based on VIT Masters Entrance Examination (VITMEE) conducted by VIT in major cities across India.<br><br><strong>Procedure of Admission</strong><ul ><li>Advertisement published in leading newspapers regarding the issue of application forms, important dates etc.,</li><li>Application forms can be purchased at select post offices / or obtained through post.</li><li>Entrance examination conducted in major cities all over India.</li><li>Selection is through counselling based on the rank secured in the Entrance Examination. Preference is given to the candidates with GATE score for M.Tech. admission.</li></ul>
+                </div>
+              </uib-accordion>
 
             </div>
              <a href="{{postgrad.link}}" target="_blank" type="button" class="btn hvr-fade btn-theme"  >Apply Now</a><br><br>
@@ -109,24 +118,576 @@
 		  	    <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{x.link}}" target="_blank">Download</a></td>
 		  	  </tr>
 	  	  	</tbody>
-		  	</table><br><br>
+		  	</table>
+        <div class="form-group course-option-list-second">
+            <label for="school" class="col-sm-2 control-label">Course</label>
+            <div class="col-sm-10">
+              <select  name="mySelect" id="mySelect"
+      ng-options="option.name for option in mtechs.availableOptions track by option.id"
+      ng-model="mtechs.selectedOption" >
+
+                    </select>
+            </div>
+        </div>
+        <table class="courses-table" >
+        <thead>
+          <th class="col-md-5">Eligibility</th>  
+          <th class="col-md-3">Curriculum</th>  
+          <th class="col-md-3"></th>
+        </thead>
+        <tbody >
+          <tr >
+            <td class="col-md-5" >
+            {{mtechs.selectedOption.eligibility}}
+              </td>
+              <td class="col-md-3" >
+            <a class="btn hvr-fade btn-blue-theme" href="{{mtechs.selectedOption.link}}" target="_blank">Download</a>
+              </td>
+            <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{mtechs.selectedOption.apply}}" target="_blank">Apply Now</a></td>
+          </tr>
+          </tbody>
+        </table>
   		</div>
-  	
+  	<div ng-controller="PhoneCtrl" class="visible-xs">
+            <div class="viteee-guidelines">
+            <h2 class="section-lower-header">VIT-MEE&nbsp;&nbsp;<span style="color:#999999;">VIT Masters Entrance Exam </span></h2>
+            <p>VITMEE is the VIT Masters Entrance Examination held every year in April to allow an equal opportunity of admission to all students in the B.Tech programmes. Over 200 000 students register for this exam and only 2000-4000 students are selected. The exam is held across 150 centers in India and United Arab Emirates (UAE). Application forms are available online and offline in the month of November every year. The syllabus of the exam includes Physics, Chemistry, Mathematics, Biology and English</p>
+            <p>All questions of the VITEE are multiple choices (MCQ) and a total of 125 questions with 5 questions for English and the rest of the subjects divided equally. There is no negative marking for the examination and top students of the VITEE get tuition waiver at different percentages. Rank 1-50 get 75 % tuition waiver, Rank 51- 100 get 50% tuition waiver and 101-1000 get 25% tuition waiver. All the tuition waivers are valid for four years of study. The online and offline application forms for the VITEE exam cost Rs.970 and Rs.990 respectively.</p>
+            <ul>
+            <li><b>VITMEE – 2017 - Online / Offline Application</b> forms will be available from the Second week of November 2016. </li>
+              <li>No Negative marks for wrong answers. Candidate appearing in PCME is eligible for all the 18 B.Tech. Engineering programmes / Candidates appearing in PCBE is eligible for only 3 B.Tech.Bio-stream Engineering programmes. </li>
+              <li>'NIOS' candidates are eligible to appear for VITMEE-2017. (They should produce Migration cum Transfer Certificate as a proof of student of NIOS Board) </li>
+              <li>NRI candidates are also eligible to apply for VITMEE-2017, apart from applying through direct NRI form. </li>
+              <li>PIO and OCI holder are also eligible to apply for VITMEE-2017. (Foreign Candidates studied/studying in abroad can apply directly through foreign category only).  </li>
+            </ul>
+            </div>
+            <select name="type" class="form-control" ng-model="viteeetab.type" ng-dropdown ng-change="changeme()" >
+            <option ng-option value="tab" ng-selected="true">Schedule</option>
+            <option ng-option value="tab1">Syllabus</option>
+            <option ng-option value="tab2">Pattern<br>of VITMEE Question</option>
+            <option ng-option value="tab3">Equating methodology</option>
+            <option ng-option value="tab4">Eligibility</option>
+            <option ng-option value="tab5">Guidelines<br>VITMEE 2017</option>
+            <option ng-option value="tab6">Test city details</option>
+            <option ng-option value="tab7">Post Office</option>
+            <option ng-option value="tab8">Important Dates & <br> Cost of Application Form</option>
+            <option ng-option value="tab9">GVSDP Scholarship <br>"GV School Development Programme”</option>
+            <option ng-option value="tab10">Admission Helpline</option>
+                          </select>
+          
+                          <div class="select-content" ng-if="viteeetab.type == 'tab'">
+                              <ul>
+                                <li>VIT Masters Entrance Examination will be conducted from 05.04.2017 to 16.04.2017 </li>
+                                <li>The duration of the entrance examination will be of 2 hours 30 minutes. </li>
+                                <li>Exam will be conducted 3 sessions per day.</li> 
+                                <li>Exam Timings (IST):
+                                            I session - 9.00 am – 11.30 am / II session - 12.30 pm – 3 .00 pm / III session - 4.00 pm – 6 .30 pm </li>
+                                 <li>Number of examination days in a particular centre is based on the total number of application registered in that centre.</li>
+                              </ul>
+                          </div>
+                          <div class="select-content" ng-if="viteeetab.type == 'tab1'">
+                              <a href="http://www.vit.ac.in/files/admissions/viteee/VITEEE2017 Physics.pdf" target="_blank"><i class="fa fa-arrow-right"></i>&nbsp;Physics</a><br>
+                              <a href="http://www.vit.ac.in/files/admissions/viteee/VITEEE2017 Chemistry.pdf" target="_blank"><i class="fa fa-arrow-right"></i>&nbsp;Chemistry</a><br>
+                              <a href="http://www.vit.ac.in/files/admissions/viteee/VITEEE2017 Biology.pdf" target="_blank"><i class="fa fa-arrow-right"></i>&nbsp;Biology</a><br>
+                              <a href="http://www.vit.ac.in/files/admissions/viteee/VITEEE2017 Mathematics.pdf" target="_blank"><i class="fa fa-arrow-right"></i>&nbsp;Mathematics</a><br>
+                              <a href="http://www.vit.ac.in/files/admissions/viteee/VITEEE2017 English.pdf" target="_blank"><i class="fa fa-arrow-right"></i>&nbsp;English</a><br><br>
+                          </div>
+                          <div class="select-content" ng-if="viteeetab.type == 'tab2'">
+                              All the questions will be Multiple Choice Questions (MCQ) <br>
+                              <strong>PCM (Physics, Chemistry and Mathematics)</strong>
+                              <i class="fa fa-arrow-right"></i>&nbsp;Total 125 questions <br>
+                              <i class="fa fa-arrow-right"></i>&nbsp;120 questions (Each 40 questions) <br>
+                              <i class="fa fa-arrow-right"></i>&nbsp;English 5 questions <br><br>
+                              <strong>PCB (Physics, Chemistry and Biology)</strong>
+                              <i class="fa fa-arrow-right"></i>&nbsp;Total 125 questions <br>
+                              <i class="fa fa-arrow-right"></i>&nbsp;120 questions ( Each 40 questions) <br>
+                              <i class="fa fa-arrow-right"></i>&nbsp;English 5 questions <br><br>
+                              
+                              
+                              <h3>No Negative marks for wrong answers</h3>
+                              <i class="fa fa-arrow-right"></i>&nbsp;Candidate appearing in PCM is eligible for all the 18 B.Tech. Engineering programmes <br>
+                              <i class="fa fa-arrow-right"></i>&nbsp;Candidates appearing in PCB is eligible for only 3 B.Tech. Bio-stream Engineering programmes 
+                              Refer (Information Brochure)
+                          </div>
+                          <div class="select-content" ng-if="viteeetab.type == 'tab3'">
+                              <p>Equating is a statistical process that is used to adjust scores on test forms (that are approximately equivalent) so that scores on the forms can be used interchangeably. Thus, equating is used to adjust scores of candidates who have taken different forms of a test, in order to facilitate meaningful and fair comparison for merit list and ranking of these candidates. The statistical procedure of Equipercentile Equating would be used by VIT to identify the percentile ranks for candidates, such that scores on different forms with the same percentile rank are considered to be equivalent. Thus, Percentile Rank is a unique and invariant position of the test taker in that group. A percentile Rank, say 90 Percentile Rank denotes that there are 90 percent of test takers scores below this score level and 10 percent above this test score. Candidates are advised not to make assumptions and predictions of their score or rank based on their own estimates of raw scores</p>
+                          </div>
+                          <div class="select-content" ng-if="viteeetab.type == 'tab4'">
+                              <ul>
+                                <li> Candidates whose date of birth falls on or after 1st July 1995  are eligible to apply for VITMEE-2017 </li>
+                                <li> Candidates appearing for the VITEEE in 2017 should have secured an aggregate of 60% in Physics, Chemistry, and Mathematics/Biology in the qualifying examination (+2/Intermediate). </li>
+                                <li> The average marks obtained in the subjects Physics, Chemistry and Mathematics or Biology (PCM / PCB) in +2 (or its equivalent) put together should be 50% for the SC/ST & North Eastern State. </li>
+                                <li> Candidates who have studied in Regular, Full Time and Formal Education are alone eligible to apply. </li>
+                                <li> 'NIOS' candidates are eligible to appear for the VITMEE-2017.    </li>
+                              </ul>
+                          </div>
+                          <div class="select-content" ng-if="viteeetab.type == 'tab5'">
+                           
+              <h3>Online Application Forms</h3>
+              Get ready to submit the application form, after following the below instructions<br>
+              <i class="fa fa-arrow-right"></i>&nbsp;Softcopy (scanned copy) of recently taken passport size colour photograph with 50kb - 100kb (Dimensions -  3.5 cm x 4.5 cm) / Softcopy (scanned copy) of Signature of the Candidate with 20kb – 50kb (Dimensions - 3.5 cm x 1.5 cm ) in JPG / JPEG  format. Selfie photos will not be accepted.<br>
+              <i class="fa fa-arrow-right"></i>&nbsp;Mode of Payment - Internet Banking facility through Net banking / Debit card / Credit card <br>
+              <i class="fa fa-arrow-right"></i>&nbsp;All our correspondence including centre booking and issue of e-admit card details will be through email only. Therefore, the applicant is requested to get ready with valid email id and Mobile number for contact.<br>
+              <h3>Offline Application Forms </h3>
+              <i class="fa fa-arrow-right"></i>&nbsp;<strong> Institutes interested to buy Offline Application forms in Bulk can contact: </strong>
+
+                              <br><i class="fa fa-arrow-right"></i>&nbsp;<strong>Director, UG Admissions</strong><br> 
+                                &nbsp;&nbsp; VIT UNIVERSITY,VELLORE - 632014 <br>
+                                &nbsp;&nbsp;Contact No. 0416-220 2157/ 2168
+                                
+                              <br><br>
+                          </div>
+                          <div class="select-content" ng-if="viteeetab.type == 'tab6'">
+                              
+                              <h3><a href="http://www.vit.ac.in/admissions/testcities">Test Cities</a></h3>
+                          </div>
+                          <div class="select-content" ng-if="viteeetab.type == 'tab7'">
+                              <h3><a href="http://www.vit.ac.in/admissions/postoffices">Post Offices</a></h3>
+                          </div>
+                          <div class="select-content" ng-if="viteeetab.type == 'tab8'">
+                              <table class="table table-bordered table-striped table-responsive">
+            <thead>
+            <tr class="bg-primary">
+              <th style="text-align: center" bgcolor="#003366">
+                <font color="white"> PARTICULARS</font>
+              </th>
+              <th class="text-center" bgcolor="#003366">
+                 <span class="white_rupee"><font color="white"> DATES </font></span> 
+              </th>
+              <th class="text-center" bgcolor="#003366">
+                 <span class="white_rupee"><font color="white"> DAY </font></span> 
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td align="center">
+                &nbsp;&nbsp; Issue of <strong> VITMEE-2017 </strong> Application Forms
+              </td>
+              <td>
+                &nbsp;&nbsp; From the second week of <strong>November 2016</strong>
+              </td>
+              
+              <td>
+                &nbsp;&nbsp;&nbsp;&nbsp; --
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E2E2E2" align="center">
+                &nbsp;&nbsp; Last date for receipt of <strong>VITMEE-2017</strong> Application Forms
+              </td>
+              <td bgcolor="#E2E2E2">
+                &nbsp;&nbsp; Will be updated shortly
+              </td>
+              
+              <td bgcolor="#E2E2E2">
+              &nbsp;&nbsp;&nbsp;&nbsp; -- 
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <td align="center">
+              &nbsp;&nbsp;  <strong>VITMEE-2017</strong>
+              </td>
+              <td>
+              &nbsp;&nbsp;   05.04.2017 to 16.04.2017
+              </td>
+              
+              <td>
+                &nbsp;&nbsp; Wednesday <br>&nbsp;&nbsp;&nbsp;to<br>&nbsp;&nbsp; Sunday
+              </td>
+            </tr>
+            
+            <tr>
+              <td bgcolor="#E2E2E2" align="center">
+              &nbsp;&nbsp;  Declaration of Results (Tentatively)
+              </td>
+              <td bgcolor="#E2E2E2">
+              &nbsp;&nbsp;   On or before 24.04.2017
+              </td>
+              
+              <td bgcolor="#E2E2E2">
+                &nbsp;&nbsp;Monday
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <td align="center">
+              &nbsp;&nbsp;  Cost of OMR Application Form
+              </td>
+              <td>
+              &nbsp;&nbsp;  <strong>Rs. 990/-</strong>
+              </td>
+              
+              <td>
+              &nbsp;&nbsp;&nbsp;&nbsp;  --
+              </td>
+            </tr>
+            
+            <tr>
+              <td bgcolor="#E2E2E2" align="center">
+              &nbsp;&nbsp;  Cost of Online Application Form
+              </td>
+              <td bgcolor="#E2E2E2">
+              &nbsp;&nbsp;  <strong> Rs. 970/-</strong>
+              </td>
+              
+              <td bgcolor="#E2E2E2">
+              &nbsp;&nbsp;&nbsp;&nbsp;--
+              </td>
+            </tr>
+            
+            </tbody>
+            </table>
+                          </div>
+                          <div class="select-content" ng-if="viteeetab.type == 'tab9'">
+                               <table class="table table-bordered table-striped table-responsive">
+            <thead>
+            <tr class="bg-primary">
+              <th style="text-align: center" bgcolor="#003366">
+                <font color="white"> Performance</font>
+              </th>
+              <th class="text-center" bgcolor="#003366">
+                 <span class="white_rupee"><font color="white"> Scholarship* </font></span> 
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>
+                 Toppers of each State Board and Central Board
+              </td>
+              <td>
+                 100% Tuition fee waiver for all the four years.
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E2E2E2">
+                 VITEEE rank holders of 1 to 50
+              </td>
+              <td bgcolor="#E2E2E2">
+                 75% Tuition fee waiver for all the four years.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                VITEEE rank holders of 51 to 100
+              </td>
+              <td>
+                 50% Tuition fee waiver for all the four years.
+              </td>
+            </tr>
+            
+            <tr>
+              <td bgcolor="#E2E2E2">
+                VITEEE rank holders of 101 to 1000
+              </td>
+              <td bgcolor="#E2E2E2">
+                 25% Tuition fee waiver for all the four years. 
+              </td>
+            </tr>
+            
+            </tbody>
+            </table>
+                          </div>
+                          <div class="select-content" ng-if="viteeetab.type == 'tab10'">
+                              <strong>Director - UG Admissions</strong><br>
+                         Office of Admissions, VIT University,<br>
+                          Vellore - 632014<br>
+                          Tamil Nadu, India.<br>
+                          <!--Help line : + 91-416-330 5555<br>-->
+                          Phone : + 91-416-220 2157, 220 2168<br>
+                          Fax : +91-416-224 5544, 224 0411<br>
+                          Email : ugadmission@vit.ac.in<br>
+                          </div>
+          
+        </div>
+        <div ng-controller="DesktopCtrl" class="viteee-guidelines hidden-xs">
+    <h2 class="section-lower-header">VIT-MEE&nbsp;&nbsp;<span style="color:#999999;">VIT Masters Entrance Exam </span></h2>
+    <p>VITEE is the VIT Entrance Examination held every year in April to allow an equal opportunity of admission to all students in the B.Tech programmes. Over 200 000 students register for this exam and only 2000-4000 students are selected. The exam is held across 150 centers in India and United Arab Emirates (UAE). Application forms are available online and offline in the month of November every year. The syllabus of the exam includes Physics, Chemistry, Mathematics, Biology and English</p>
+    <button type="button" class="btn btn-theme hvr-fade" ng-click="isCollapsed = !isCollapsed">About VITMEE&nbsp;<i class="fa fa-chevron-down"></i></button>
+      <hr>
+      <div uib-collapse="isCollapsed">
+        <div class="well well-lg grey-bg">
+          <p>All questions of the VITMEE are multiple choices (MCQ) and a total of 125 questions with 5 questions for English and the rest of the subjects divided equally. There is no negative marking for the examination and top students of the VITEE get tuition waiver at different percentages. Rank 1-50 get 75 % tuition waiver, Rank 51- 100 get 50% tuition waiver and 101-1000 get 25% tuition waiver. All the tuition waivers are valid for four years of study. The online and offline application forms for the VITEE exam cost Rs.970 and Rs.990 respectively.</p>
+          <ul>
+          <li><b>VITEEE – 2017 - Online / Offline Application</b> forms will be available from the Second week of November 2016. </li>
+            <li>No Negative marks for wrong answers. Candidate appearing in PCME is eligible for all the 18 B.Tech. Engineering programmes / Candidates appearing in PCBE is eligible for only 3 B.Tech.Bio-stream Engineering programmes. </li>
+            <li>'NIOS' candidates are eligible to appear for VITMEE-2017. (They should produce Migration cum Transfer Certificate as a proof of student of NIOS Board) </li>
+            <li>NRI candidates are also eligible to apply for VITMEE-2017, apart from applying through direct NRI form. </li>
+            <li>PIO and OCI holder are also eligible to apply for VITMEE-2017. (Foreign Candidates studied/studying in abroad can apply directly through foreign category only).  </li>
+          </ul>
+
+        </div>
+      </div>
+    
+    </div>
+    <div ng-controller='TabsCtrl' class="hidden-xs">
+    <div class="tabbable tabs-left">
+          <ul class="nav nav-tabs">
+             <li ng-class="getTabClass(1)" ng-click="setActiveTab(1)"><a ng-href="">Schedule</a></li>
+             <li ng-class="getTabClass(2)" ng-click="setActiveTab(2)"><a ng-href="">Syllabus</a></li>
+             <li ng-class="getTabClass(3)" ng-click="setActiveTab(3)"><a ng-href="">Pattern<br>of VITMEE Question</a></li>
+             <li ng-class="getTabClass(4)" ng-click="setActiveTab(4)"><a ng-href="">Equating methodology</a></li>
+             <li ng-class="getTabClass(5)" ng-click="setActiveTab(5)"><a ng-href="">Eligibility</a></li>
+             <li ng-class="getTabClass(6)" ng-click="setActiveTab(6)"><a ng-href="">Guidelines<br>VITMEE 2017</a></li>
+             <li ng-class="getTabClass(7)" ng-click="setActiveTab(7)"><a ng-href="">Test city details</a></li>
+             <li ng-class="getTabClass(8)" ng-click="setActiveTab(8)"><a ng-href="">Post Office</a></li>
+             <li ng-class="getTabClass(9)" ng-click="setActiveTab(9)"><a ng-href="">Important Dates & <br> Cost of Application Form</a></li>
+             <li ng-class="getTabClass(10)" ng-click="setActiveTab(10)"><a ng-href="">GVSDP Scholarship <br>"GV School Development Programme”</a></li>
+             <li ng-class="getTabClass(11)" ng-click="setActiveTab(11)"><a ng-href="">Admission Helpline</a></li>
+          </ul>
+          <div class="tab-content">
+            <div ng-class="getTabPaneClass(1)" id="schedule">    
+                <ul>
+                  <li>VIT Masters Entrance Examination will be conducted from 05.04.2017 to 16.04.2017 </li>
+                  <li>The duration of the entrance examination will be of 2 hours 30 minutes. </li>
+                  <li>Exam will be conducted 3 sessions per day.</li> 
+                  <li>Exam Timings (IST):
+                              I session - 9.00 am – 11.30 am / II session - 12.30 pm – 3 .00 pm / III session - 4.00 pm – 6 .30 pm </li>
+                   <li>Number of examination days in a particular centre is based on the total number of application registered in that centre.</li>
+                </ul>
+             </div>       
+            
+            <div ng-class="getTabPaneClass(2)" id="syllabus">     
+              <a href="http://www.vit.ac.in/files/admissions/viteee/VITEEE2017 Physics.pdf" target="_blank"><i class="fa fa-arrow-right"></i>&nbsp;Physics</a><br>
+                              <a href="http://www.vit.ac.in/files/admissions/viteee/VITEEE2017 Chemistry.pdf" target="_blank"><i class="fa fa-arrow-right"></i>&nbsp;Chemistry</a><br>
+                              <a href="http://www.vit.ac.in/files/admissions/viteee/VITEEE2017 Biology.pdf" target="_blank"><i class="fa fa-arrow-right"></i>&nbsp;Biology</a><br>
+                              <a href="http://www.vit.ac.in/files/admissions/viteee/VITEEE2017 Mathematics.pdf" target="_blank"><i class="fa fa-arrow-right"></i>&nbsp;Mathematics</a><br>
+                              <a href="http://www.vit.ac.in/files/admissions/viteee/VITEEE2017 English.pdf" target="_blank"><i class="fa fa-arrow-right"></i>&nbsp;English</a><br><br>
+                              
+
+            </div>
+            
+            <div ng-class="getTabPaneClass(3)" id="pattern">     
+              All the questions will be Multiple Choice Questions (MCQ) <br>
+                              <strong>PCM (Physics, Chemistry and Mathematics)</strong>
+                              <i class="fa fa-arrow-right"></i>&nbsp;Total 125 questions <br>
+                              <i class="fa fa-arrow-right"></i>&nbsp;120 questions (Each 40 questions) <br>
+                              <i class="fa fa-arrow-right"></i>&nbsp;English 5 questions <br><br>
+                              <strong>PCB (Physics, Chemistry and Biology)</strong>
+                              <i class="fa fa-arrow-right"></i>&nbsp;Total 125 questions <br>
+                              <i class="fa fa-arrow-right"></i>&nbsp;120 questions ( Each 40 questions) <br>
+                              <i class="fa fa-arrow-right"></i>&nbsp;English 5 questions <br><br>
+                              
+                              
+                              <h3>No Negative marks for wrong answers</h3>
+                              <i class="fa fa-arrow-right"></i>&nbsp;Candidate appearing in PCM is eligible for all the 18 B.Tech. Engineering programmes <br>
+                              <i class="fa fa-arrow-right"></i>&nbsp;Candidates appearing in PCB is eligible for only 3 B.Tech. Bio-stream Engineering programmes 
+                              Refer (Information Brochure)
+
+            </div>
+            
+            <div ng-class="getTabPaneClass(4)" id="equating">     
+                <p>Equating is a statistical process that is used to adjust scores on test forms (that are approximately equivalent) so that scores on the forms can be used interchangeably. Thus, equating is used to adjust scores of candidates who have taken different forms of a test, in order to facilitate meaningful and fair comparison for merit list and ranking of these candidates. The statistical procedure of Equipercentile Equating would be used by VIT to identify the percentile ranks for candidates, such that scores on different forms with the same percentile rank are considered to be equivalent. Thus, Percentile Rank is a unique and invariant position of the test taker in that group. A percentile Rank, say 90 Percentile Rank denotes that there are 90 percent of test takers scores below this score level and 10 percent above this test score. Candidates are advised not to make assumptions and predictions of their score or rank based on their own estimates of raw scores</p>
+            </div>      
+            <div ng-class="getTabPaneClass(5)" id="eligibility">     
+              <ul>
+            <li> Candidates whose date of birth falls on or after 1st July 1995  are eligible to apply for VITMEE-2017 </li>
+            <li> Candidates appearing for the VITMEEE in 2017 should have secured an aggregate of 60% in Physics, Chemistry, and Mathematics/Biology in the qualifying examination (+2/Intermediate). </li>
+            <li> The average marks obtained in the subjects Physics, Chemistry and Mathematics or Biology (PCM / PCB) in +2 (or its equivalent) put together should be 50% for the SC/ST & North Eastern State. </li>
+            <li> Candidates who have studied in Regular, Full Time and Formal Education are alone eligible to apply. </li>
+            <li> 'NIOS' candidates are eligible to appear for the VITMEE-2017.    </li>
+          </ul>
+            </div> 
+            <div ng-class="getTabPaneClass(6)" id="guidelines">     
+              <h3>Online Application Forms</h3>
+              Get ready to submit the application form, after following the below instructions<br>
+              <i class="fa fa-arrow-right"></i>&nbsp;Softcopy (scanned copy) of recently taken passport size colour photograph with 50kb - 100kb (Dimensions -  3.5 cm x 4.5 cm) / Softcopy (scanned copy) of Signature of the Candidate with 20kb – 50kb (Dimensions - 3.5 cm x 1.5 cm ) in JPG / JPEG  format. Selfie photos will not be accepted.<br>
+              <i class="fa fa-arrow-right"></i>&nbsp;Mode of Payment - Internet Banking facility through Net banking / Debit card / Credit card <br>
+              <i class="fa fa-arrow-right"></i>&nbsp;All our correspondence including centre booking and issue of e-admit card details will be through email only. Therefore, the applicant is requested to get ready with valid email id and Mobile number for contact.<br>
+              <h3>Offline Application Forms </h3>
+              <i class="fa fa-arrow-right"></i>&nbsp;<strong> Institutes interested to buy Offline Application forms in Bulk can contact: </strong>
+
+                              <br><i class="fa fa-arrow-right"></i>&nbsp;<strong>Director, UG Admissions</strong><br> 
+                                &nbsp;&nbsp; VIT UNIVERSITY,VELLORE - 632014 <br>
+                                &nbsp;&nbsp;Contact No. 0416-220 2157/ 2168
+                                
+                              <br><br>
+            </div> 
+            <div ng-class="getTabPaneClass(7)" id="city">     
+              <h3><a href="http://www.vit.ac.in/admissions/testcities">Test Cities</a></h3>
+            </div> 
+            <div ng-class="getTabPaneClass(8)" id="postoffice">     
+              <h3><a href="http://www.vit.ac.in/admissions/postoffices">Post Offices</a></h3>
+            </div> 
+            <div ng-class="getTabPaneClass(9)" id="dates">     
+            <table class="table table-bordered table-striped table-responsive">
+            <thead>
+            <tr class="bg-primary">
+              <th style="text-align: center" bgcolor="#003366">
+                <font color="white"> PARTICULARS</font>
+              </th>
+              <th class="text-center" bgcolor="#003366">
+                 <span class="white_rupee"><font color="white"> DATES </font></span> 
+              </th>
+              <th class="text-center" bgcolor="#003366">
+                 <span class="white_rupee"><font color="white"> DAY </font></span> 
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td align="center">
+                &nbsp;&nbsp; Issue of <strong> VITMEE-2017 </strong> Application Forms
+              </td>
+              <td>
+                &nbsp;&nbsp; From the second week of <strong>November 2016</strong>
+              </td>
+              
+              <td>
+                &nbsp;&nbsp;&nbsp;&nbsp; --
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E2E2E2" align="center">
+                &nbsp;&nbsp; Last date for receipt of <strong>VITMEE-2017</strong> Application Forms
+              </td>
+              <td bgcolor="#E2E2E2">
+                &nbsp;&nbsp; Will be updated shortly
+              </td>
+              
+              <td bgcolor="#E2E2E2">
+              &nbsp;&nbsp;&nbsp;&nbsp; -- 
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <td align="center">
+              &nbsp;&nbsp;  <strong>VITMEE-2017</strong>
+              </td>
+              <td>
+              &nbsp;&nbsp;   05.04.2017 to 16.04.2017
+              </td>
+              
+              <td>
+                &nbsp;&nbsp; Wednesday <br>&nbsp;&nbsp;&nbsp;to<br>&nbsp;&nbsp; Sunday
+              </td>
+            </tr>
+            
+            <tr>
+              <td bgcolor="#E2E2E2" align="center">
+              &nbsp;&nbsp;  Declaration of Results (Tentatively)
+              </td>
+              <td bgcolor="#E2E2E2">
+              &nbsp;&nbsp;   On or before 24.04.2017
+              </td>
+              
+              <td bgcolor="#E2E2E2">
+                &nbsp;&nbsp;Monday
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <td align="center">
+              &nbsp;&nbsp;  Cost of OMR Application Form
+              </td>
+              <td>
+              &nbsp;&nbsp;  <strong>Rs. 990/-</strong>
+              </td>
+              
+              <td>
+              &nbsp;&nbsp;&nbsp;&nbsp;  --
+              </td>
+            </tr>
+            
+            <tr>
+              <td bgcolor="#E2E2E2" align="center">
+              &nbsp;&nbsp;  Cost of Online Application Form
+              </td>
+              <td bgcolor="#E2E2E2">
+              &nbsp;&nbsp;  <strong> Rs. 970/-</strong>
+              </td>
+              
+              <td bgcolor="#E2E2E2">
+              &nbsp;&nbsp;&nbsp;&nbsp;--
+              </td>
+            </tr>
+            
+            </tbody>
+            </table>
+            </div> 
+            <div ng-class="getTabPaneClass(10)" id="scholarship">     
+              <table class="table table-bordered table-striped table-responsive">
+            <thead>
+            <tr class="bg-primary">
+              <th style="text-align: center" bgcolor="#003366">
+                <font color="white"> Performance</font>
+              </th>
+              <th class="text-center" bgcolor="#003366">
+                 <span class="white_rupee"><font color="white"> Scholarship* </font></span> 
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>
+                 Toppers of each State Board and Central Board
+              </td>
+              <td>
+                 100% Tuition fee waiver for all the four years.
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#E2E2E2">
+                 VITEEE rank holders of 1 to 50
+              </td>
+              <td bgcolor="#E2E2E2">
+                 75% Tuition fee waiver for all the four years.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                VITEEE rank holders of 51 to 100
+              </td>
+              <td>
+                 50% Tuition fee waiver for all the four years.
+              </td>
+            </tr>
+            
+            <tr>
+              <td bgcolor="#E2E2E2">
+                VITEEE rank holders of 101 to 1000
+              </td>
+              <td bgcolor="#E2E2E2">
+                 25% Tuition fee waiver for all the four years. 
+              </td>
+            </tr>
+            
+            </tbody>
+            </table>
+            </div> 
+            <div ng-class="getTabPaneClass(11)" id="admission">     
+              <strong>Director - UG Admissions</strong><br>
+                         Office of Admissions, VIT University,<br>
+                          Vellore - 632014<br>
+                          Tamil Nadu, India.<br>
+                          <!--Help line : + 91-416-330 5555<br>-->
+                          Phone : + 91-416-220 2157, 220 2168<br>
+                          Fax : +91-416-224 5544, 224 0411<br>
+                          Email : ugadmission@vit.ac.in<br>
+            </div> 
+          </div>
+        </div>
+        </div>
+        
   	</div>
   	<div class="col-lg-3 col-lg-offset-1 col-sm-12 padding-r-0" style="background: #f2f2f2;padding: 10px 0px 20px 35px;">
-  		<h2 class="section-header">Know More</h2>
+  		
 		<div class="contact-us-links">
-  		  <ul>
-                <li><a href="#/undergrad" target="_blank">UG Admissions</a></li>
-                <li><a href="#/postgrad" target="_blank">PG Admissions</a></li>
-                <li><a href="#/research" target="_blank">Research Admissions</a></li>
-                <li><a href="#/international" target="_blank">International Admissions</a></li>
-                <li><a href="#/undergrad" target="_blank">VITEEE</a></li>
-                </ul>
-                 <div class="address">
-                
-                  <h2 class="section-header">PG Programmes</h2>
-                      <h3><b>Dr.G.Kalaichelvan</b></h3><br>
+  		  <h2 class="section-header"><i class="fa fa-calendar"></i>&nbsp;Important Dates</h2>
+            <ul>
+              <li>VITEEE Form-31st December</li>
+              <li>VITEEE Exam 31st December</li>
+            </ul>
+        <div class="address">
+          <h2 class="section-header"><i class="fa fa-home"></i>&nbsp;Contact us</h2>
+                  <h3 class="section-header">PG Programmes</h3>
+                      <h5><b>Dr.G.Kalaichelvan</b></h5><br>
                       <b>Director</b> - PG Admissions<br><br>
                       <address>
                       <i class="fa fa-map-marker"></i>&nbsp;VIT University<br>

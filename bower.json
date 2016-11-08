@@ -11,7 +11,9 @@
     "angular-animate": "^1.5.8",
     "font-awesome": "fontawesome#^4.6.3",
     "components-font-awesome": "^4.6.3",
-    "angular-vidbg": "angular-video-background#^0.0.12"
+    "angular-vidbg": "angular-video-background#^0.0.12",
+    "angular-bootstrap-lightbox": "^0.12.0",
+    "angular-touch": "^1.5.8"
   },
   "overrides": {
     "bootstrap": {

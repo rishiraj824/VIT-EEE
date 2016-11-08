@@ -61,7 +61,16 @@
               <h5>{{program.duration}}</h5>
               
             </div>
-              
+                    <uib-accordion close-others="oneAtATime">
+                <div uib-accordion-group class="panel-default accordian-theme"  is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" >
+                <uib-accordion-heading>
+                <div style="text-decoration: none;">
+                    Procedure<i class="pull-right fa" ng-class="{'fa-chevron-down': status.isCustomHeaderOpen, 'fa-chevron-right': !status.isCustomHeaderOpen}"></i>
+                  </div>
+                  </uib-accordion-heading>
+                  Admission to B.Tech. Degree Programme is based on VIT Engineering Entrance Examination (VITEEE) conducted all over India and also in abroad.<br><br><strong>Procedure of admission:</strong><ul ><li>Advertisement given regarding issue of application forms, important dates etc., in all leading newspapers all over India and notified in the VIT website.</li><li>Applications can be obtained from selected Post Offices or obtained by post from VIT or obtained through online.</li><li>VITEEE is conducted in major cities all over India and also in abroad.</li><li>Publication of results in leading websites.</li><li>Call for counselling in batches and allotment of branches on the basis of the VITEEE rank.</li></ul>
+                </div>
+              </uib-accordion>
 
             </div>
              <a href="{{program.link}}" target="_blank" type="button" class="btn hvr-fade btn-theme"  >Apply Now</a>
@@ -70,8 +79,8 @@
           </div>
   	<div class="courses-listing" ng-controller="CourseListCtrl">
   			<h2 class="section-lower-header">Courses Offered</h2><br>
-  			<div class="form-group course-option-list">
-        <div class="row">
+  			<!--<div class="form-group course-option-list">
+         <div class="row">
   			    <label for="school" class="col-sm-2 col-lg-2 col-xs-3 control-label">School</label>
   			    <div class="col-sm-10 col-xs-9 col-lg-10">
   			      <select  name="mySelect" id="mySelect" ng-options="option.name for option in data.availableOptions track by option.id"                                            ng-model="data.selectedOption" >
@@ -79,7 +88,7 @@
               </select>
 		    </div>
           </div>
-		  	</div><br>
+		  	</div>
 		  	<table class="courses-table" >
 	  		<thead>
 		  		<th class="col-md-6">Programs</th>	
@@ -103,14 +112,122 @@
 		  	    <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{x.link}}" target="_blank">Download</a></td>
 		  	  </tr>
 	  	  	</tbody>
-		  	</table><br><br>
-		  	<h4>*Programmes are offered at <b>Chennai Campus</b> also.<br><br>
-			**Programmes are offered at <b>Chennai Campus</b> only.</h4>
+		  	</table> --><br>
+        <uib-tabset active="activeJustified" justified="true">
+            <uib-tab index="0" heading="VIT University - Vellore Campus" >
+              <table class="courses-table" >
+              <thead >
+                <th class="col-md-6">Programs</th>  
+                <th class="col-md-6">Curriculum</th>
+              </thead>
+              <tbody >
+                <tr ng-repeat="course in btechs[0].courses">
+                  <td class="col-md-6" >
+                  <div class="course-main ">
+                      <div class="course-title">
+                        <div class="blue-small"></div> 
+                          <div class="text-container">
+                            <p >Programme</p>
+                     
+                            <h4  class="hvr-float">{{course.name}}</h4>
+                        
+                          </div>
+                      </div>
+                    </div>
+                    </td>
+                  <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Download</a></td>
+                </tr>
+                </tbody>
+              </table>
+            </uib-tab>
+            <uib-tab index="1" heading="VIT University - Chennai Campus" >
+              <table class="courses-table" >
+              <thead >
+                <th class="col-md-6">Programs</th>  
+                <th class="col-md-6">Curriculum</th>
+              </thead>
+              <tbody >
+                <tr ng-repeat="course in btechs[1].courses">
+                  <td class="col-md-6" >
+                  <div class="course-main ">
+                      <div class="course-title">
+                        <div class="blue-small"></div> 
+                          <div class="text-container">
+                            <p >Programme</p>
+                     
+                            <h4  class="hvr-float">{{course.name}}</h4>
+                        
+                          </div>
+                      </div>
+                    </div>
+                    </td>
+                  <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Download</a></td>
+                </tr>
+                </tbody>
+              </table>
+            </uib-tab>
+            <uib-tab index="2" heading="VIT University - AP Campus" >
+              <table class="courses-table" >
+              <thead >
+                <th class="col-md-6">Programs</th>  
+                <th class="col-md-6">Curriculum</th>
+              </thead>
+              <tbody >
+                <tr ng-repeat="course in btechs[2].courses">
+                  <td class="col-md-6" >
+                  <div class="course-main ">
+                      <div class="course-title">
+                        <div class="blue-small"></div> 
+                          <div class="text-container">
+                            <p >Programme</p>
+                     
+                            <h4  class="hvr-float">{{course.name}}</h4>
+                        
+                          </div>
+                      </div>
+                    </div>
+                    </td>
+                  <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Download</a></td>
+                </tr>
+                </tbody>
+              </table>
+            </uib-tab>
+            <uib-tab index="3" heading="VIT University - Bhopal Campus" >
+              <table class="courses-table" >
+              <thead >
+                <th class="col-md-6">Programs</th>  
+                <th class="col-md-6">Curriculum</th>
+              </thead>
+              <tbody >
+                <tr ng-repeat="course in btechs[3].courses">
+                  <td class="col-md-6" >
+                  <div class="course-main ">
+                      <div class="course-title">
+                        <div class="blue-small"></div> 
+                          <div class="text-container">
+                            <p >Programme</p>
+                     
+                            <h4  class="hvr-float">{{course.name}}</h4>
+                        
+                          </div>
+                      </div>
+                    </div>
+                    </td>
+                  <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Download</a></td>
+                </tr>
+                </tbody>
+              </table>
+            </uib-tab>
+
+          </uib-tabset>
+       
+
   		</div>
+
         <div ng-controller="PhoneCtrl" class="visible-xs">
             <div class="viteee-guidelines">
             <h2 class="section-lower-header">VIT-EEE&nbsp;&nbsp;<span style="color:#999999;">VIT Engineering Entrance Exam </span></h2>
-            <p>VITEE is the VIT Entrance Examination held every year in April to allow an equal opportunity of admission to all students in the B.Tech programmes. Over 200 000 students register for this exam and only 2000-4000 students are selected. The exam is held across 150 centers in India and United Arab Emirates (UAE). Application forms are available online and offline in the month of November every year. The syllabus of the exam includes Physics, Chemistry, Mathematics, Biology and English</p>
+            <p>VITEEE is the VIT Engineering Entrance Examination held every year in April to allow an equal opportunity of admission to all students in the B.Tech programmes. Over 200 000 students register for this exam and only 2000-4000 students are selected. The exam is held across 150 centers in India and United Arab Emirates (UAE). Application forms are available online and offline in the month of November every year. The syllabus of the exam includes Physics, Chemistry, Mathematics, Biology and English</p>
             <p>All questions of the VITEE are multiple choices (MCQ) and a total of 125 questions with 5 questions for English and the rest of the subjects divided equally. There is no negative marking for the examination and top students of the VITEE get tuition waiver at different percentages. Rank 1-50 get 75 % tuition waiver, Rank 51- 100 get 50% tuition waiver and 101-1000 get 25% tuition waiver. All the tuition waivers are valid for four years of study. The online and offline application forms for the VITEE exam cost Rs.970 and Rs.990 respectively.</p>
             <ul>
             <li><b>VITEEE – 2017 - Online / Offline Application</b> forms will be available from the Second week of November 2016. </li>
@@ -363,48 +480,26 @@
                           </div>
           
         </div>
-      </div>
-      <div class="col-lg-3 col-lg-offset-1 col-sm-12 padding-r-0" style="background: #f2f2f2;padding: 10px 0px 20px 35px;">
-      <h2 class="section-header">Know More</h2>
-    <div class="contact-us-links">
-        <ul>
-        <li><a href="#/undergrad" target="_blank">UG Admissions</a></li>
-        <li><a href="#/postgrad" target="_blank">PG Admissions</a></li>
-        <li><a href="#/research" target="_blank">Research Admissions</a></li>
-        <li><a href="#/international" target="_blank">International Admissions</a></li>
-        <li><a href="#/undergrad" target="_blank">VITEEE</a></li>
-        </ul>
-        <div class="address">
-        
-          <h2 class="section-header">UG Programmes</h2>
-              <h3><b>Dr. K. Manivannan</b></h3><br>
-              <b>Director</b> - UG Admissions<br><br>
-              <address>
-              <i class="fa fa-map-marker"></i>&nbsp;VIT University<br>
-              Vellore - 632014<br>
-              Tamil Nadu, India<br><br>
-              </address>
-              <i class="fa fa-phone"></i>&nbsp;Phone : +91-416-220 2157/2168<br>
-              <i class="fa fa-fax"></i>&nbsp;Fax : +91-416-224 5544<br>
-              <i class="fa fa-envelope"></i>&nbsp;Email : ugadmission@vit.ac.in<br>
+        <div ng-controller="DesktopCtrl" class="viteee-guidelines hidden-xs">
+    <h2 class="section-lower-header">VIT-EEE&nbsp;&nbsp;<span style="color:#999999;">VIT Engineering Entrance Exam </span></h2>
+    <p>VITEE is the VIT Entrance Examination held every year in April to allow an equal opportunity of admission to all students in the B.Tech programmes. Over 200 000 students register for this exam and only 2000-4000 students are selected. The exam is held across 150 centers in India and United Arab Emirates (UAE). Application forms are available online and offline in the month of November every year. The syllabus of the exam includes Physics, Chemistry, Mathematics, Biology and English</p>
+    <button type="button" class="btn btn-theme hvr-fade" ng-click="isCollapsed = !isCollapsed">About VITEEE&nbsp;<i class="fa fa-chevron-down"></i></button>
+      <hr>
+      <div uib-collapse="isCollapsed">
+        <div class="well well-lg grey-bg">
+          <p>All questions of the VITEE are multiple choices (MCQ) and a total of 125 questions with 5 questions for English and the rest of the subjects divided equally. There is no negative marking for the examination and top students of the VITEE get tuition waiver at different percentages. Rank 1-50 get 75 % tuition waiver, Rank 51- 100 get 50% tuition waiver and 101-1000 get 25% tuition waiver. All the tuition waivers are valid for four years of study. The online and offline application forms for the VITEE exam cost Rs.970 and Rs.990 respectively.</p>
+          <ul>
+          <li><b>VITEEE – 2017 - Online / Offline Application</b> forms will be available from the Second week of November 2016. </li>
+            <li>No Negative marks for wrong answers. Candidate appearing in PCME is eligible for all the 18 B.Tech. Engineering programmes / Candidates appearing in PCBE is eligible for only 3 B.Tech.Bio-stream Engineering programmes. </li>
+            <li>'NIOS' candidates are eligible to appear for VITEEE-2017. (They should produce Migration cum Transfer Certificate as a proof of student of NIOS Board) </li>
+            <li>NRI candidates are also eligible to apply for VITEEE-2017, apart from applying through direct NRI form. </li>
+            <li>PIO and OCI holder are also eligible to apply for VITEEE-2017. (Foreign Candidates studied/studying in abroad can apply directly through foreign category only).  </li>
+          </ul>
+
         </div>
       </div>
+    
     </div>
-    </div>
-    <div class="row">
-    <div class=" col-lg-9 col-lg-offset-1">
-  	<div class="viteee-guidelines hidden-xs">
-  	<h2 class="section-lower-header">VIT-EEE&nbsp;&nbsp;<span style="color:#999999;">VIT Engineering Entrance Exam </span></h2>
-    <p>VITEE is the VIT Entrance Examination held every year in April to allow an equal opportunity of admission to all students in the B.Tech programmes. Over 200 000 students register for this exam and only 2000-4000 students are selected. The exam is held across 150 centers in India and United Arab Emirates (UAE). Application forms are available online and offline in the month of November every year. The syllabus of the exam includes Physics, Chemistry, Mathematics, Biology and English</p>
-    <p>All questions of the VITEE are multiple choices (MCQ) and a total of 125 questions with 5 questions for English and the rest of the subjects divided equally. There is no negative marking for the examination and top students of the VITEE get tuition waiver at different percentages. Rank 1-50 get 75 % tuition waiver, Rank 51- 100 get 50% tuition waiver and 101-1000 get 25% tuition waiver. All the tuition waivers are valid for four years of study. The online and offline application forms for the VITEE exam cost Rs.970 and Rs.990 respectively.</p>
-  	<ul>
-		<li><b>VITEEE – 2017 - Online / Offline Application</b> forms will be available from the Second week of November 2016. </li>
-  		<li>No Negative marks for wrong answers. Candidate appearing in PCME is eligible for all the 18 B.Tech. Engineering programmes / Candidates appearing in PCBE is eligible for only 3 B.Tech.Bio-stream Engineering programmes. </li>
-  		<li>'NIOS' candidates are eligible to appear for VITEEE-2017. (They should produce Migration cum Transfer Certificate as a proof of student of NIOS Board) </li>
-  		<li>NRI candidates are also eligible to apply for VITEEE-2017, apart from applying through direct NRI form. </li>
-  		<li>PIO and OCI holder are also eligible to apply for VITEEE-2017. (Foreign Candidates studied/studying in abroad can apply directly through foreign category only).	</li>
-  	</ul>
-  	</div>
     <div ng-controller='TabsCtrl' class="hidden-xs">
     <div class="tabbable tabs-left">
           <ul class="nav nav-tabs">
@@ -656,16 +751,34 @@
         </div>
         </div>
         
-        </div> 
-        </div> 
+      </div>
+      <div class="col-lg-3 col-lg-offset-1 col-sm-12 padding-r-0" style="background: #f2f2f2;padding: 10px 0px 20px 35px;">
+      
+      <div class="contact-us-links">
+        
+            <h2 class="section-header"><i class="fa fa-calendar"></i>&nbsp;Important Dates</h2>
+            <ul>
+              <li>VITEEE Form-31st December</li>
+              <li>VITEEE Exam 31st December</li>
+            </ul>
+        <div class="address">
+          <h2 class="section-header"><i class="fa fa-home"></i>&nbsp;Contact us</h2>
+          <h3 >UG Programmes</h3>
+              <h5><b>Dr. K. Manivannan</b></h5>
+              <b>Director</b> - UG Admissions<br><br>
+              <address>
+              <i class="fa fa-map-marker"></i>&nbsp;VIT University<br>
+              Vellore - 632014<br>
+              Tamil Nadu, India<br><br>
+              </address>
+              <i class="fa fa-phone"></i>&nbsp;Phone : +91-416-220 2157/2168<br>
+              <i class="fa fa-fax"></i>&nbsp;Fax : +91-416-224 5544<br>
+              <i class="fa fa-envelope"></i>&nbsp;Email : ugadmission@vit.ac.in<br>
         </div>
-  	</div>
-  	
-  	</div>
-  	
-  
-  </div>
-  </div>
+      </div>
+    </div>
+    </div>
+        </div>
   
 
    <div ng-include="'app/components/footer/footer.html'"></div>

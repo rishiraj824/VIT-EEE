@@ -22,19 +22,19 @@
       
   </div>
   <div class="container-fluid">
-  <div class="courses" ng-controller="CourseModalCtrl">
     <div class="row">
       <div class="col-lg-7 col-lg-offset-1  col-sm-12">
          
+  <div class="courses" ng-controller="CourseModalCtrl">
           <div ng-repeat="research in researches" class="program" id="#{{research.anchor}}">
             <div class="course-main ">
             <div class="course-title">
               <div class="{{research.class}}"></div>
                 <div class="text-container">
                 <p >Programme</p>
-               
+               <a href="{{research.anchor}}">
                   <h4  class="hvr-float">{{research.name}}</h4>
-                  
+                  </a>
               </div>
                   
                 
@@ -61,33 +61,33 @@
               <h5>{{research.duration}}</h5>
               
             </div>
-              
-
             </div>
-             <a href="{{research.link}}" target="_blank" type="button" class="btn hvr-fade btn-theme"  >Apply Now</a>
+            <a href="{{research.link}}" target="_blank" type="button" class="btn hvr-fade btn-theme"  >Apply Now</a>
                <img src="{{research.image}}" class="img-responsive vector-main">
-          </div>
-
-        </div>
+            </div>
+            </div>
+            </div>
         
       
       
       <div class="col-lg-3 col-lg-offset-1 col-sm-12 padding-r-0" style="background: #f2f2f2;padding: 10px 0px 20px 35px;">
-      <h2 class="section-header">Know More</h2>
+     <h2 class="section-header"><i class="fa fa-lightbulb-o"></i>&nbsp;Know More</h2>
       <div class="contact-us-links">
         <ul>
-        <li><a href="#/undergrad" target="_blank">UG Admissions</a></li>
-        <li><a href="#/postgrad" target="_blank">PG Admissions</a></li>
-        <li><a href="#/research" target="_blank">Research Admissions</a></li>
-        <li><a href="#/international" target="_blank">International Admissions</a></li>
-        <li><a href="#/undergrad" target="_blank">VITEEE</a></li>
-        </ul>
+                        <li><a ng-href="#/research/mphil"  >M.Phil </a></li>
+                        <li><a ng-href="#/research/mtechresearch"  >M.Tech by Research </a></li>
+                        <li><a ng-href="#/research/phd"  >Phd.</a></li>
+                    </ul>
+      <div class="contact-us-links">
+                         <h2 class="section-header"><i class="fa fa-calendar"></i>&nbsp;Important Dates</h2>
+            <ul>
+              <li>VITEEE Form-31st December</li>
+              <li>VITEEE Exam 31st December</li>
+            </ul>
         <div class="address">
-
-          
-          <h2 class="section-header">PG/Research Admissions</h2>
-          <h3><b>Dr.G.Kalaichelvan</b></h3><br>
-          <b>Director</b> - PG Admissions<br><br>
+          <h2 class="section-header"><i class="fa fa-home"></i>&nbsp;Contact us</h2>
+          <h4><b>Dr.G.Kalaichelvan</b></h4>
+          <h5><b>Director</b> - PG Admissions/Research</h5>
           
           <address>
           <i class="fa fa-map-marker"></i>&nbsp;VIT University<br>

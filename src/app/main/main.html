@@ -1,8 +1,23 @@
   
 <div ng-include="'app/components/navbar/navbar.html'"></div>
+<!-- <div ng-controller="ModalDemoCtrl as $ctrl" class="modal-demo">
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
+        </div>
+        <div class="modal-body" id="modal-body">
+            
+        </div>
+        <div class="modal-footer">
+           
+            <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+        </div>
+    </script>
+
+</div> -->
   <div id="slides">
      <div class="noticecontainer">
-               <div ng-controller="NoticeCtrl">
+               <div ng-controller="NoticeCtrl" >
               <ul class="notice" >
                 <a ng-repeat="notice in notices" href="{{notice.link}}">
                   <li  >
@@ -20,57 +35,25 @@
           </ul>
           </div>
     </div>
-
-        
+  
     <div class="hero-section">
-        <h1 class="hero-caption">
-        <img src="assets/images/home.png" class="hidden-xs" />
-        </h1>
+        <div class="hero-caption hidden-xs">
+        <img src="assets/images/home.png"  />
+        <div class="list-header">
+        <ul>
+          <li class=" white-text"><a class="hvr-bob" href="https://www.google.co.in/maps/@12.9682339,79.1557941,3a,75y,64.03h,107.02t/data=!3m7!1e1!3m5!1sVPqerQbHD_EAAAQfDn4XfQ!2e0!3e2!7i13312!8i6656" target="_blank">Explore VIT in 360&deg;</a></li>
+          <li class=" white-text"><a class="hvr-bob" href="https://www.youtube.com/embed/IcK3uck76J0?enablejsapi=1&amp;iv_load_policy=3&amp;playerapiid=v1_youtube_api&amp;disablekb=1&amp;wmode=transparent&amp;controls=0&amp;showinfo=0&amp;modestbranding=0&amp;rel=0&amp;loop=0&amp;cc_load_policy=1&amp;fs=0&amp;html5=1&amp;autoplay=0" target="_blank">Watch Video&nbsp;<i class="fa fa-video-camera"></i></a></li>
+        </ul>
+        </div>
+        
+        
+        </div>
     </div>
     <div class="hidden-xs" ng-controller="VideoCtrl">
 
       <vid-bg resources="resources" poster="poster" full-screen="fullScreen" muted="muted" z-index="zIndex" play-info="playInfo" pause-play="pausePlay"></vid-bg>
       <div class="overlay"></div>
     </div>
-    
-    <!-- <div ng-controller="CarouselCtrl" >
-      <div>
-        <uib-carousel interval="myInterval">
-          <uib-slide ng-repeat="slide in slides" active="slide.active">
-            
-            <div class="overlay"></div>
-            <div class="carousel-caption" >
-              <h1>{{slide.caption}}</h1>
-            </div>
-          </uib-slide>
-        </uib-carousel>
-      </div>
-    </div>  
-                <div class="stats-container carousel-students">
-                     <h4>From our Students</h4>
-                 <div ng-controller="CarouselCtrl" >
-                       <div>
-                         <uib-carousel interval="myInterval">
-                           <uib-slide ng-repeat="slide in slides" active="slide.active">
-                            <div class="row">
-                              <div class="student-img col-sm-12 col-lg-4">
-                                   <img src="{{slide.image}}" class="img-circle">
-                               </div>
-                               <div class="stats-text-carousel col-sm-12 col-lg-8">
-                                  "{{slide.testimonial}}"<br><br><em>-{{slide.name}}</em>
-                               </div>
-                            </div>
-                             
-                               
-                           </uib-slide>
-                         </uib-carousel>
-                       </div>
-                     </div> 
-                    <div>
-                                   
-                      <a href="http://www.vit.ac.in/academics/internationalRelations/partnerUniversities/irtestimonial">Know More ></a>
-                    </div>
-                 </div>-->
   </div>
  <div class="introduction">
      <div class="container">
@@ -88,7 +71,7 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
                     <div style="text-align:center"><img src="assets/images/2.png" class="hvr-grow" style="width:80%;"></div>
                         
                            <div class="stats-number">
-                               2 Campuses
+                               4 Campuses
                            </div><br>
                            <div class="stats-text">
                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -102,15 +85,21 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
                  </div>
                 
               <div class="col-lg-3 col-sm-12 col-md-3">
-                <div class="stats-container ">
-                    <div style="text-align:center"><img src="assets/images/3.png" class="hvr-grow" style="width:80%;"></div>
-                            <div class="stats-number">
-                                Ranked 201
-                            </div><br>
-                            <div class="stats-text">
-                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                <div class="stats-container " ng-controller="CarouselCtrl">
+                    <div style="text-align:center" ><img src="assets/images/3.png" class="hvr-grow" style="width:80%;"></div>
+                            <uib-carousel interval="myInterval" active="active">
+                              <uib-slide ng-repeat="achievement in achievements track by achievement.id" index="achievement.id">
+                                <div class="stats-number">
+                                    {{achievement.number}}
+                                </div><br>
+                                <div class="stats-text">
+                                     {{achievement.text}} 
 
-                            </div>
+                                </div>
+                               
+                              </uib-slide>
+                            </uib-carousel>
+                           
                      </div>
                     
                         <!-- 
@@ -119,6 +108,7 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
               <div class="col-lg-3 col-sm-12 col-md-3">
                  <div class="stats-container ">
                     <div style="text-align:center"><img src="assets/images/4.png" class="hvr-grow" style="width:80%;"></div>
+
                            <div class="stats-number">
                                40 MoUs
                            </div><br>
@@ -136,14 +126,19 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
                  </div>
                 
                <div class="col-lg-3 col-sm-12 col-md-3">
-                 <div class="stats-container ">
-                    <div style="text-align:center"><img src="assets/images/1.png" class="hvr-grow" style="width:80%;"></div>
-                           <div class="stats-number">
-                               12000 Placed
-                           </div><br>
-                           <div class="stats-text">
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                           </div>
+                 <div class="stats-container " ng-controller="CarouselCtrl">
+                    <div style="text-align:center"  ><img src="assets/images/1.png" class="hvr-grow" style="width:80%;"></div>
+                            <uib-carousel  interval="myInterval" active="active">
+                              <uib-slide ng-repeat="stat in stats track by stat.id" index="stat.id">
+                                  <div class="stats-number">
+                                      {{stat.number}}
+                                  </div><br>
+                                  <div class="stats-text">
+                                       {{stat.text}} 
+                                  </div>
+                              </uib-slide>
+                            </uib-carousel>
+                           
                              
                                
                      </div> 
@@ -161,35 +156,27 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
         
     </div>
     </div>
-    <div class="testimonials">
-                     
-                 <div ng-controller="CarouselCtrl" >
-                       <div>
-                         <uib-carousel interval="myInterval">
-                           <uib-slide ng-repeat="slide in slides" active="slide.active">
+    <div class="testimonials" ng-controller="CarouselCtrl">
+                    <div class="container"> 
+                    <div class="row">
+                       <uib-carousel interval="myInterval" active="active">
+                           <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
                             <div class="row">
-                                <div class="container">
-                                <a href="">
-                                  <div class="student-text-carousel ">
+                              <div class="student-img-testimonial col-sm-12 col-lg-4">
+                                   <img src="{{slide.image}}" class="img-circle hvr-ripple-out">
+                               </div>
+                               <div class="stats-text-carousel col-sm-12 col-lg-8">
                                   <p class="main-testimonial">"{{slide.testimonial}}"<br><br><span class="name">-{{slide.name}}</span></p>
                                </div>
-                                  
-                                </a>
-                                 
-                               </div>
-                              <div class="student-img ">
-                                   <img src="{{slide.image}}">
-                               </div>
-                               
-                               
                             </div>
                              
                                
                            </uib-slide>
                          </uib-carousel>
+                           
+                         </div>
+                         </div>
                        </div>
-                     </div> 
-    </div>
     <div class="courses-offered">
     
     <div class="container-fluid">
@@ -301,8 +288,8 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
         </div>
         <div class="hidden-xs">
             <h2>Undergraduate Courses</h2>
-          <div class="row">
           <div  ng-controller="CourseModalCtrl" > 
+          <div class="row">
            
           <div ng-repeat="program in programs">
               <div class=" col-sm-12 col-lg-4 col-md-4">
@@ -330,7 +317,9 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
             </div>
             </a>
             </div>
-          </div>  <br>
+          </div>  
+          </div>
+          <div class="row">
           <h2 >Post Graduate Courses</h2><br>
            <div ng-repeat="postgrad in postgrads">
            
@@ -357,7 +346,9 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
             </div>
             </a>
           </div> 
-          </div><br>
+          </div>
+          </div>
+          <div class="row">
           <h2 >Research Courses</h2><br>
            <div ng-repeat="research in researches">
               <div class=" col-sm-12 col-lg-4 col-md-4">
@@ -385,12 +376,13 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
             </a>
           </div> 
           </div> 
+          </div>
         </div>
      
     </div>
     </div>
  </div>
- <div class="container">
+<!--  <div class="container">
       <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 " >
               
@@ -431,7 +423,7 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
               
               </div> 
       </div>
-    </div>
+    </div> -->
 </div>
 </div>
    <div ng-include="'app/components/footer/footer.html'"></div>

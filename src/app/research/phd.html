@@ -3,37 +3,37 @@
 <div ng-include="'app/components/navbar/navbar-dark.html'"></div>
 <div class="course-intro">
   <div class="container-fluid">
-  	<div class="row">
-  		<div class="col-lg-2 col-md-3 col-sm-12">
-  			<div class="main-header-section">
-        <img src="assets/images/vectors-13.png" class="img-responsive undergrad-icon">
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-1 col-md-3 col-sm-12">
+        <div class="main-header-section">
+        <img src="assets/images/vectors-26.png" class="img-responsive undergrad-icon">
       </div>
-  		</div>
-  		<div class="col-lg-8 col-md-8 col-sm-12">
-  		
-  		<div class="main-header-section">
-  			<h2 class="main-header">Engineering</h2>
-  			<h4>VIT University prides itself in the ability to provide an education that is coveted not only within in India but abroad as well. Proof of this is seen in the increasing number of international students pursuing their higher education in the university. There are currently students from over 54 different countries studying in the university. </h4>
-  		</div>
-  			
-  		</div>
-  	</div>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-12">
+      
+      <div class="main-header-section">
+        <h2 class="main-header">Ph.D.</h2>
+        <h4>VIT University offers 30+ postgraduate and research programmes, these include M.Tech, MSc, MCA, MBA, PhD, M.Phil and Research based Masters Degrees. VITMEE and GMAT are the exams used for admissions to M.Tech and MBA programmes respectively. Being placed 3rd among the top 30 research-oriented institutes speaks volumes about how VIT has managed to achieve a lot in a short span of time. Not only that but it has also secured sponsorship for 50 research projects and offers consultancy services worth more than Rs. 2.2 million.  </h4>
+      </div>
+        
+      </div>
+    </div>
   </div>
-  		
+      
   </div>
   <div class="container-fluid">
-  	<div class="row">
-  	
-  	<div class=" col-lg-8 col-sm-4">
-  	<div class="courses" ng-controller="CourseModalCtrl">
-  	<div ng-repeat="program in programs.slice(0,1)" class="program" id="#{{program.anchor}}">
+    <div class="row">
+    
+    <div class=" col-lg-7 col-lg-offset-1 col-sm-4">
+    <div class="courses" ng-controller="CourseModalCtrl">
+    <div ng-repeat="research in researchs.slice(2,3)" class="program" id="#{{research.anchor}}">
             <div class="course-main ">
             <div class="course-title">
-              <div class="{{program.class}}"></div>
+              <div class="{{research.class}}"></div>
                 <div class="text-container">
                 <p >Programme</p>
                
-                  <h4  class="hvr-float">{{program.name}}</h4>
+                  <h4  class="hvr-float">{{research.name}}</h4>
                   
               </div>
                   
@@ -45,97 +45,142 @@
             </div>
             
             <div class="course-short-description">
-               {{program.description}}
+               {{research.description}}
             </div>
             <div class="more-description">
             <div class="inline">
               <h4 ><i class="fa fa-graduation-cap"></i>&nbsp;Program</h4>
-              <h5>{{program.programtype}}</h5>
+              <h5>{{research.programtype}}</h5>
             </div>
             <div class="inline">
               <h4><i class="fa fa-globe"></i>&nbsp;Language</h4>
-              <h5>{{program.language}}</h5>
+              <h5>{{research.language}}</h5>
             </div>
             <div class="inline">
               <h4><i class="fa fa-clock-o"></i>&nbsp;Duration</h4>
-              <h5>{{program.duration}}</h5>
+              <h5>{{research.duration}}</h5>
               
             </div>
               
+            <uib-accordion close-others="oneAtATime">
+                <div uib-accordion-group class="panel-default accordian-theme"  is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" >
+                <uib-accordion-heading>
+                <div style="text-decoration: none;">
+                    Procedure<i class="pull-right fa" ng-class="{'fa-chevron-down': status.isCustomHeaderOpen, 'fa-chevron-right': !status.isCustomHeaderOpen}"></i>
+                  </div>
+                  </uib-accordion-heading>
+                  <p>a. Applications will be invited by open advertisement in all leading news
 
-            </div>
-             <a href="{{program.link}}" target="_blank" type="button" class="btn hvr-fade btn-theme"  >Apply Now</a>
-               <img src="{{program.image}}" class="img-responsive vector-main">
-          </div>
-          </div>
-  	<div class="courses-listing" ng-controller="CourseListCtrl">
-  			<h2 class="section-lower-header">Courses Offered</h2>
-  			<div class="form-group course-option-list">
-  			    <label for="school" class="col-sm-2 control-label">School</label>
-  			    <div class="col-sm-10">
-  			      <select  name="mySelect" id="mySelect"
-      ng-options="option.name for option in data.availableOptions track by option.id"
-      ng-model="data.selectedOption" >
+                                               papers / local announcement for all categories of candidates 
 
-                    </select>
-  			    </div>
-		  	</div>
-		  	<table class="courses-table" >
-	  		<thead>
-		  		<th class="col-md-6">Programs</th>	
-		  		<th class="col-md-6">Curriculum</th>
-	  		</thead>
-	  		<tbody >
-		  	  <tr ng-repeat="x in data.selectedOption.course">
-		  	    <td class="col-md-6" >
-		  	    <div class="course-main ">
-            		<div class="course-title">
-              		<div class="blue-small"></div> 
-                		<div class="text-container">
-                			<p >Programme</p>
-               
-              				<h4  class="hvr-float">{{x.name}}</h4>
-                  
-              			</div>
-            		</div>
-            	</div>
-            	</td>
-		  	    <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{x.link}}" target="_blank">Download</a></td>
-		  	  </tr>
-	  	  	</tbody>
-		  	</table>
-		  	<h4>*Programmes are offered at <b>Chennai Campus</b> also.<br>
-			**Programmes are offered at <b>Chennai Campus</b> only.</h4>
-  		</div>
-  	</div>
-  	<div class="col-lg-4 col-sm-12 padding-r-0" style="background: #f2f2f2;padding: 10px 0px 20px 35px;">
-  		<h2 class="section-header">Know More</h2>
-		<div class="contact-us-links">
-  		  <ul>
-                <li><a href="#/undergrad" target="_blank">UG Admissions</a></li>
-                <li><a href="#/postgrad" target="_blank">PG Admissions</a></li>
-                <li><a href="#/research" target="_blank">Research Admissions</a></li>
-                <li><a href="#/international" target="_blank">International Admissions</a></li>
-                <li><a href="#/undergrad" target="_blank">VITEEE</a></li>
-                </ul>
-                 <div class="address">
-                
-                  <h2 class="section-header">PG Programmes</h2>
-                      <h3><b>Dr.G.Kalaichelvan</b></h3><br>
-                      <b>Director</b> - PG Admissions<br><br>
-                      <address>
-                      <i class="fa fa-map-marker"></i>&nbsp;VIT University<br>
-                      Vellore - 632014<br>
-                      Tamil Nadu, India<br><br>
-                      </address>
-                      <i class="fa fa-phone"></i>&nbsp;Phone : +91-416-220 4600 / 4700 /4800<br>
-                      <i class="fa fa-fax"></i>&nbsp;Fax : +91-416-224 5544<br>
-                      <i class="fa fa-envelope"></i>&nbsp;Email : pgadmission@vit.ac.in<br>
+                                               mentioned in section 2. </p>
+
+                                               <p>b.  Out of the applications received, the School / Centers will short-list the 
+
+                                               candidates to be called for written and test / interview to be conducted at 
+
+                                               the institute on a pre-announced date.</p>
+
+                                                <p>c. Selection will be based on the overall merit index of the candidate 
+
+                                               which will be arrived at by taking into account the candidate’s 
+
+                                               performance in the previous university examinations at Bachelor’s and 
+
+                                               Master’s level and the performance in the written test and / the interview. 
+
+                                               hvy Page 2 of 13 The weightages for arriving at the overall merit index 
+
+                                               will be as follows: Bachelor’s degree – 20 % Master’s degree – 20 % 
+
+                                               Written test and / Interview – 60 % Candidates qualified in CSIR-UGC 
+
+                                               NET for JRF may be exempted from the written test requirement.</p>
+
                 </div>
-  		</div>
-  	</div>
-  	</div>
-  	
+              </uib-accordion>
+            </div>
+             <a href="{{research.link}}" target="_blank" type="button" class="btn hvr-fade btn-theme"  >Apply Now</a>
+               <img src="{{research.image}}" class="img-responsive vector-main">
+          </div>
+          </div>
+    <div class="courses-listing" ng-controller="CourseListCtrl">
+        <h2 class="section-lower-header">Course Offered</h2>
+             <table class="courses-table" >
+              <thead>
+                <th class="col-md-6">Programs</th>  
+                <th class="col-md-6">Curriculum</th>
+                  </thead>
+                  <tbody >
+                        <tr >
+                          <td class="col-md-6" >
+                          <div class="course-main ">
+                              <div class="course-title">
+                                <div class="blue-small"></div> 
+                                  <div class="text-container">
+                                    <p>Programme</p>
+                             
+                                    <h4 class="hvr-float">Ph.D</h4>
+                                
+                                 </div>
+                              </div>
+                            </div>
+                            </td>
+                          <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="http://www.vit.ac.in/admissions/ug#SOF" target="_blank">Download</a></td>
+                        </tr>
+                        </tbody>
+                      </table><br>
+                      <uib-accordion close-others="oneAtATime">
+    <div uib-accordion-group class="panel-default accordian-theme"  is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" >
+    <uib-accordion-heading>
+    <div style="text-decoration: none;">
+        Eligibility<i class="pull-right fa" ng-class="{'fa-chevron-down': status.isCustomHeaderOpen, 'fa-chevron-right': !status.isCustomHeaderOpen}"></i>
+      </div>
+      </uib-accordion-heading>
+     <p>a. Ph.D. in Engineering: Master’s degree in Engineering / Technology / 
+
+                            Business Administration with a first class or a minimum 60% marks 
+
+                            (CGPA 6.5 on a 10 – point scale) or equivalent like M.Sc (Engineering) / 
+
+                            M.S. by Research. </p>
+
+                           <p> b. Ph.D. in Sciences / Humanities / Languages: Master’s degree with a 
+
+                            minimum 60% in Sciences / Master’s degree with a minimum 55% in 
+
+                            Humanities / Social Sciences / Languages.</p>
+
+    </div>
+  </uib-accordion>
+      </div>
+    </div>
+    <div class="col-lg-3  col-lg-offset-1 col-sm-12 padding-r-0" style="background: #f2f2f2;padding: 10px 0px 20px 35px;">
+      <div class="contact-us-links">
+        
+            <h2 class="section-header"><i class="fa fa-calendar"></i>&nbsp;Important Dates</h2>
+            <ul>
+              <li>VITEEE Form-31st December</li>
+              <li>VITEEE Exam 31st December</li>
+            </ul>
+        <div class="address">
+          <h2 class="section-header"><i class="fa fa-home"></i>&nbsp;Contact us</h2>
+          <h4><b>Dr.G.Kalaichelvan</b></h4>
+          <h5><b>Director</b> - PG Admissions/Research</h5>
+          
+          <address>
+          <i class="fa fa-map-marker"></i>&nbsp;VIT University<br>
+          Vellore - 632014<br>
+          Tamil Nadu, India<br><br>
+          </address>
+          <i class="fa fa-phone"></i>&nbsp;Phone : +91-416-220 4600 / 4700 /4800<br>
+          <i class="fa fa-fax"></i>&nbsp;Fax : +91-416-224 5544<br>
+          <i class="fa fa-envelope"></i>&nbsp;Email : pgadmission@vit.ac.in<br>
+        </div>
+      </div>
+    </div>
+    </div>
+    
   
   </div>
   </div>

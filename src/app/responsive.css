@@ -107,6 +107,9 @@
 	    position: relative !important;
 	    width: 100% !important;
 	}
+	.content-main{
+  margin-bottom: 0px;
+}
 	.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
 	    border-color: transparent !important;
 	    background: #fff !important;
@@ -125,6 +128,9 @@
 	}
 	.navbar-dark .navbar-toggle{
 		    margin-top: 28px;
+	}
+	.course-option-list-second select{
+		width: 230px;
 	}
 	 .dropdown-menu {
     background-color: #fff !important;
@@ -160,7 +166,7 @@
 		height: 300px;
 	}
 	.section-overlay h1 {
-		font-size: 3.2em;
+		font-size: 2.9em;
 		margin-left: 10px;
 	}
 	.hero-caption{
@@ -174,7 +180,7 @@
 }	
 .noticecontainer{
 	top:15% !important;
-	right: 20% !important;
+	right: 5% !important;
 }	.text-container h4 {
     font-size: 1.3em;
 }
@@ -300,11 +306,17 @@
     top:25%;
     left: 10%;
 }
+.course-option-list label{
+	display: none;
+}
 
 
 .course-details .course-short-description {
 	font-size: 1em;
 	-webkit-line-clamp: 3;
 	height: 45px;
+	}
+	.testimonials{
+		display: none;
 	}
 }
