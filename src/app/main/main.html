@@ -55,7 +55,7 @@
                     
                       
                     
-                      <button type="submit" class="hvr-back-pulse main-btn-theme">Submit</button>
+                      <button type="submit" class="btn hvr-back-pulse main-btn-theme">Submit</button>
                     </form>
                   </div>
                   </div>
@@ -213,10 +213,10 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
     </div>
     <div class="testimonials" ng-controller="CarouselCtrl">
                     <div class="container"> 
-                    <div class="row">
-                       <uib-carousel interval="myInterval" active="active">
-                           <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id" ng-click="show(slide)">
-                            <div class="row">
+                    <div class="row ">
+                       <uib-carousel interval="myInterval" active="active"  class="remove-indicator">
+                           <uib-slide ng-repeat="slide in slides track by slide.id"  index="slide.id" ng-click="show(slide)">
+                            <div class="row ">
                               <div class="student-img-testimonial col-sm-12 col-lg-4">
                                    <img src="{{slide.image}}" class="img-circle hvr-ripple-out">
                                </div>
