@@ -4,49 +4,46 @@
  
 
   var app = angular.module('viteee');
+  /*Titles*/
+  app.directive('title', ['$rootScope', '$timeout',
+  function($rootScope, $timeout) {
+    return {
+      link: function() {
 
-/*
-  app.controller('ModalDemoCtrl', function ($uibModal, $log, $document) {
-  var $ctrl = this;
-  
+        var listener = function(event, toState) {
 
-  $ctrl.animationsEnabled = true;
+          $timeout(function() {
+            $rootScope.title = (toState.data && toState.data.pageTitle) 
+            ? toState.data.pageTitle 
+            : 'VIT University Admissions 2017';
+          });
+        };
 
-
-    var modalInstance = $uibModal.open({
-      animation: $ctrl.animationsEnabled,
-      component: 'modalComponent',
-      resolve: {
-        items: function () {
-          return $ctrl.items;
-        }
+        $rootScope.$on('$stateChangeSuccess', listener);
       }
-    });
-
-   
-
-
-  $ctrl.toggleAnimation = function () {
-    $ctrl.animationsEnabled = !$ctrl.animationsEnabled;
-  };
-});
-app.component('modalComponent', {
-  templateUrl: 'myModalContent.html',
-  bindings: {
-    resolve: '<',
-    close: '&',
-    dismiss: '&'
-  },
-  controller: function () {
-    var $ctrl = this;
-
-    
-
-    $ctrl.cancel = function () {
-      $ctrl.dismiss({$value: 'cancel'});
     };
   }
-});*/
+]);
+   app.directive('meta', ['$rootScope', '$timeout',
+  function($rootScope, $timeout) {
+    return {
+      link: function() {
+
+        var listener = function(event, toState) {
+
+          $timeout(function() {
+            $rootScope.meta = (toState.data && toState.data.meta) 
+            ? toState.data.meta 
+            : 'keywords';
+          });
+        };
+
+        $rootScope.$on('$stateChangeSuccess', listener);
+      }
+    };
+  }
+]);
+
   /*Video*/
   app.controller('VideoCtrl', function($scope){
 
@@ -316,16 +313,21 @@ app.controller('NoticeCtrl', function($scope){
 /*Form Capture*/
 app.controller('Controller', function($scope, ModalService) {
     
-  
-        ModalService.showModal({
+    $scope.opened = false;
+      if (!$scope.opened) {
+         ModalService.showModal({
             templateUrl: 'modal.html',
             controller: "ModalController"
         }).then(function(modal) {
             modal.element.modal();
             modal.close.then(function(result) {
+                $scope.opened = true;
+                console.log($scope.opened);
                 $scope.message = "You said " + result;
             });
         });
+      }
+       
   
     
 });

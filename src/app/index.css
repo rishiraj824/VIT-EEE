@@ -305,9 +305,12 @@ body{
 .modal-content{
   text-align: center;
   background: transparent !important;
-  box-shadow: none;
   border: none !important;
-  border-radius: 0px !important;
+  border-radius: 4px;
+
+}
+.lightbox-modal .modal-content{
+  box-shadow: none !important;
 }
 .modal-header-new{
   border: none !important;
@@ -559,7 +562,7 @@ body{
     background-size: contain;
 }
 .testimonials:before{
-    background-image: url('../../assets/images/testimonial-pattern.png');
+    background-image: url('../assets/images/testimonial-pattern.png');
     content: ' ';
     display: block;
     position: absolute;
@@ -1410,6 +1413,18 @@ line-height: 22px;
   height: 50px;
   font-size: 1.2em;
 }
+.course-option-list label{
+  color: white;
+  margin-top: 17px;
+  font-size: 1em;
+
+}
+.course-option-list-second label{
+  color: white;
+  margin-top: 17px;
+  font-size: 1em;
+
+}
 .course-option-list:hover{
   cursor: pointer;  
 }
@@ -1833,7 +1848,8 @@ label {
   width:  35%;
   height: 400px;
   float: left;
-
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 .blue-background img{
   margin-top: 120px;
@@ -1844,6 +1860,8 @@ label {
   height: 400px;
   padding: 20px;
   width: 65%;
+  border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
   float: right;
 }
 .form-capture{
@@ -1865,9 +1883,7 @@ label {
   height: 500px;
 }
 .modal-body{
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
-  -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
   border-radius: 4px;
   padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }

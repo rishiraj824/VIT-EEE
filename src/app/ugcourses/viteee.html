@@ -109,7 +109,7 @@
             		</div>
             	</div>
             	</td>
-		  	    <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{x.link}}" target="_blank">Download</a></td>
+		  	    <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{x.link}}" target="_blank">Apply Now</a></td>
 		  	  </tr>
 	  	  	</tbody>
 		  	</table> --><br>
@@ -118,7 +118,7 @@
               <table class="courses-table" >
               <thead >
                 <th class="col-md-6">Programs</th>  
-                <th class="col-md-6">Curriculum</th>
+                <th class="col-md-6"></th>
               </thead>
               <tbody >
                 <tr ng-repeat="course in btechs[0].courses">
@@ -135,7 +135,7 @@
                       </div>
                     </div>
                     </td>
-                  <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Download</a></td>
+                  <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Apply Now</a></td>
                 </tr>
                 </tbody>
               </table>
@@ -161,7 +161,7 @@
                       </div>
                     </div>
                     </td>
-                  <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Download</a></td>
+                  <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Apply Now</a></td>
                 </tr>
                 </tbody>
               </table>
@@ -187,7 +187,7 @@
                       </div>
                     </div>
                     </td>
-                  <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Download</a></td>
+                  <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Apply Now</a></td>
                 </tr>
                 </tbody>
               </table>
@@ -213,7 +213,7 @@
                       </div>
                     </div>
                     </td>
-                  <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Download</a></td>
+                  <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Apply Now</a></td>
                 </tr>
                 </tbody>
               </table>
@@ -228,14 +228,22 @@
             <div class="viteee-guidelines">
             <h2 class="section-lower-header">VIT-EEE&nbsp;&nbsp;<span style="color:#999999;">VIT Engineering Entrance Exam </span></h2>
             <p>VITEEE is the VIT Engineering Entrance Examination held every year in April to allow an equal opportunity of admission to all students in the B.Tech programmes. Over 200 000 students register for this exam and only 2000-4000 students are selected. The exam is held across 150 centers in India and United Arab Emirates (UAE). Application forms are available online and offline in the month of November every year. The syllabus of the exam includes Physics, Chemistry, Mathematics, Biology and English</p>
-            <p>All questions of the VITEE are multiple choices (MCQ) and a total of 125 questions with 5 questions for English and the rest of the subjects divided equally. There is no negative marking for the examination and top students of the VITEE get tuition waiver at different percentages. Rank 1-50 get 75 % tuition waiver, Rank 51- 100 get 50% tuition waiver and 101-1000 get 25% tuition waiver. All the tuition waivers are valid for four years of study. The online and offline application forms for the VITEE exam cost Rs.970 and Rs.990 respectively.</p>
-            <ul>
-            <li><b>VITEEE – 2017 - Online / Offline Application</b> forms will be available from the Second week of November 2016. </li>
-              <li>No Negative marks for wrong answers. Candidate appearing in PCME is eligible for all the 18 B.Tech. Engineering programmes / Candidates appearing in PCBE is eligible for only 3 B.Tech.Bio-stream Engineering programmes. </li>
-              <li>'NIOS' candidates are eligible to appear for VITEEE-2017. (They should produce Migration cum Transfer Certificate as a proof of student of NIOS Board) </li>
-              <li>NRI candidates are also eligible to apply for VITEEE-2017, apart from applying through direct NRI form. </li>
-              <li>PIO and OCI holder are also eligible to apply for VITEEE-2017. (Foreign Candidates studied/studying in abroad can apply directly through foreign category only).  </li>
-            </ul>
+           
+           <button type="button" class="btn btn-theme hvr-fade" ng-click="isCollapsed = !isCollapsed">About VITEEE&nbsp;<i class="fa fa-chevron-down"></i></button>
+             <hr>
+             <div uib-collapse="isCollapsed">
+               <div class="well well-lg grey-bg">
+                 <p>All questions of the VITEE are multiple choices (MCQ) and a total of 125 questions with 5 questions for English and the rest of the subjects divided equally. There is no negative marking for the examination and top students of the VITEE get tuition waiver at different percentages. Rank 1-50 get 75 % tuition waiver, Rank 51- 100 get 50% tuition waiver and 101-1000 get 25% tuition waiver. All the tuition waivers are valid for four years of study. The online and offline application forms for the VITEE exam cost Rs.970 and Rs.990 respectively.</p>
+                 <ul>
+                 <li><b>VITEEE – 2017 - Online / Offline Application</b> forms will be available from the Second week of November 2016. </li>
+                   <li>No Negative marks for wrong answers. Candidate appearing in PCME is eligible for all the 18 B.Tech. Engineering programmes / Candidates appearing in PCBE is eligible for only 3 B.Tech.Bio-stream Engineering programmes. </li>
+                   <li>'NIOS' candidates are eligible to appear for VITEEE-2017. (They should produce Migration cum Transfer Certificate as a proof of student of NIOS Board) </li>
+                   <li>NRI candidates are also eligible to apply for VITEEE-2017, apart from applying through direct NRI form. </li>
+                   <li>PIO and OCI holder are also eligible to apply for VITEEE-2017. (Foreign Candidates studied/studying in abroad can apply directly through foreign category only).  </li>
+                 </ul>
+
+               </div>
+             </div>
             </div>
             <select name="type" class="form-control" ng-model="viteeetab.type" ng-dropdown ng-change="changeme()" >
             <option ng-option value="tab" ng-selected="true">Schedule</option>
