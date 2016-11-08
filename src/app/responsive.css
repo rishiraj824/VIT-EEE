@@ -1,4 +1,4 @@
-@media screen and (max-width: 1280px) and (min-width: 768px){
+@media screen and (max-width: 1366px) and (min-width: 768px){
 	
 	.hero-caption{
 	font-size: 4em;
@@ -11,10 +11,10 @@
   height: 220px;
   
 }.remove-indicator>.left{
-  left: -2%;
+  left: 0%;
 }
 .remove-indicator>.right{
-  right: -2%;
+  right: 0%;
 }
 	.course-option-list select{
 		width: 330px;
