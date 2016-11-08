@@ -13,7 +13,8 @@
     "components-font-awesome": "^4.6.3",
     "angular-vidbg": "angular-video-background#^0.0.12",
     "angular-bootstrap-lightbox": "^0.12.0",
-    "angular-touch": "^1.5.8"
+    "angular-touch": "^1.5.8",
+    "angular-modal-service": "^0.10.1"
   },
   "overrides": {
     "bootstrap": {
