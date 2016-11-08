@@ -16,10 +16,7 @@
 .remove-indicator>.right{
   right: 0%;
 }
-	.course-option-list select{
-		text-overflow: ellipsis;
-		overflow: hidden;
-	}
+
 .course-img{
   width: 40%;
 }
@@ -131,9 +128,26 @@
 	.navbar-dark .navbar-toggle{
 		    margin-top: 28px;
 	}
-	.course-option-list-second select{
-		width: 100%;
+	.course-option-list select{
+		text-overflow: ellipsis;
+		overflow: hidden;
+		width: 230px;
+		background-position-x : 204px;
 	}
+	.course-option-list-second select{
+		text-overflow: ellipsis;
+		overflow: hidden;
+		width: 230px;
+		background-position-x : 204px;
+	}
+	.btn-blue-theme {
+    font-size: 1.1em;
+    color: #fff;
+    background: #00457c;
+    border: 2px solid;
+    padding: 4px 12px 4px 12px !important;
+    text-transform: uppercase;
+}
 	 .dropdown-menu {
     background-color: #fff !important;
     border-radius: 0 !important;
@@ -151,10 +165,6 @@
 		max-width: 200px;
 		height: auto;
 		margin: 0 auto;
-	}
-	.course-option-list select{
-		text-overflow: ellipsis;
-		overflow: hidden;
 	}
 	.course-option-list{
 	    width: 100%;

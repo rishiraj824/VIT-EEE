@@ -98,7 +98,7 @@
 		  	<table class="courses-table" >
 	  		<thead>
 		  		<th class="col-md-6">Programs</th>	
-		  		<th class="col-md-6">Curriculum</th>
+		  		<th class="col-md-6"></th>
 	  		</thead>
 	  		<tbody >
 		  	  <tr ng-repeat="x in cluster.selectedOption.course">
@@ -115,7 +115,7 @@
             		</div>
             	</div>
             	</td>
-		  	    <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{x.link}}" target="_blank">Download</a></td>
+		  	    <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{x.link}}" target="_blank">Apply Now</a></td>
 		  	  </tr>
 	  	  	</tbody>
 		  	</table>
@@ -123,7 +123,7 @@
             <label for="school" class="col-sm-2 control-label">Course</label>
             <div class="col-sm-10">
               <select  name="mySelect" id="mySelect"
-      ng-options="option.name for option in mtechs.availableOptions track by option.id"
+      ng-options="option.name for option in mtechs.availableOptions track by option.eligibility"
       ng-model="mtechs.selectedOption" >
 
                     </select>
@@ -131,19 +131,19 @@
         </div>
         <table class="courses-table" >
         <thead>
-          <th class="col-md-5">Eligibility</th>  
+          <th class="col-md-5 col-sm-6">Eligibility</th>  
           <th class="col-md-3  hidden-xs">Curriculum</th>  
-          <th class="col-md-3"></th>
+          <th class="col-md-3 col-sm-6"></th>
         </thead>
         <tbody >
           <tr >
             <td class="col-md-5" >
             {{mtechs.selectedOption.eligibility}}
               </td>
-              <td class="col-md-3" >
-            <a class="btn hvr-fade btn-blue-theme hidden-xs" href="{{mtechs.selectedOption.link}}" target="_blank">Download</a>
+              <td class="col-md-3 hidden-xs" >
+            <a class="btn hvr-fade btn-blue-theme " href="{{mtechs.selectedOption.link}}" target="_blank">Download</a>
               </td>
-            <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{mtechs.selectedOption.apply}}" target="_blank">Apply Now</a></td>
+            <td class="col-md-3 col-sm-6"><a class="btn hvr-fade btn-blue-theme" href="{{mtechs.selectedOption.apply}}" target="_blank">Apply Now</a></td>
           </tr>
           </tbody>
         </table>

@@ -89,7 +89,7 @@
 		    </div>
           </div>
 		  	</div>
-		  	<table class="courses-table" >
+		  	<table class="courses-table table-responsive" >
 	  		<thead>
 		  		<th class="col-md-6">Programs</th>	
 		  		<th class="col-md-6">Curriculum</th>
@@ -115,14 +115,14 @@
 		  	</table> --><br>
         <uib-tabset active="activeJustified" justified="true">
             <uib-tab index="0" heading="VIT University - Vellore Campus" >
-              <table class="courses-table" >
+              <table class="courses-table table-responsive" >
               <thead >
-                <th class="col-md-6">Programs</th>  
-                <th class="col-md-6"></th>
+                <th class="col-md-6 col-sm-6">Programs</th>  
+                <th class="col-md-6 col-sm-4">Curriculum</th>
               </thead>
               <tbody >
                 <tr ng-repeat="course in btechs[0].courses">
-                  <td class="col-md-6" >
+                  <td class="col-md-6 col-sm-6" >
                   <div class="course-main ">
                       <div class="course-title">
                         <div class="blue-small"></div> 
@@ -135,20 +135,20 @@
                       </div>
                     </div>
                     </td>
-                  <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Apply Now</a></td>
+                  <td class="col-md-6 col-sm-4"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Apply Now</a></td>
                 </tr>
                 </tbody>
               </table>
             </uib-tab>
             <uib-tab index="1" heading="VIT University - Chennai Campus" >
-              <table class="courses-table" >
+              <table class="courses-table table-responsive" >
               <thead >
-                <th class="col-md-6">Programs</th>  
-                <th class="col-md-6">Curriculum</th>
+                <th class="col-md-6 col-sm-6">Programs</th>  
+                <th class="col-md-6 col-sm-6">Curriculum</th>
               </thead>
               <tbody >
                 <tr ng-repeat="course in btechs[1].courses">
-                  <td class="col-md-6" >
+                  <td class="col-md-6 col-sm-6" >
                   <div class="course-main ">
                       <div class="course-title">
                         <div class="blue-small"></div> 
@@ -161,20 +161,20 @@
                       </div>
                     </div>
                     </td>
-                  <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Apply Now</a></td>
+                  <td class="col-md-6 col-sm-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Apply Now</a></td>
                 </tr>
                 </tbody>
               </table>
             </uib-tab>
             <uib-tab index="2" heading="VIT University - AP Campus" >
-              <table class="courses-table" >
+              <table class="courses-table table-responsive" >
               <thead >
-                <th class="col-md-6">Programs</th>  
-                <th class="col-md-6">Curriculum</th>
+                <th class="col-md-6 col-sm-6">Programs</th>  
+                <th class="col-md-6 col-sm-6">Curriculum</th>
               </thead>
               <tbody >
                 <tr ng-repeat="course in btechs[2].courses">
-                  <td class="col-md-6" >
+                  <td class="col-md-6 col-sm-6" >
                   <div class="course-main ">
                       <div class="course-title">
                         <div class="blue-small"></div> 
@@ -187,20 +187,20 @@
                       </div>
                     </div>
                     </td>
-                  <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Apply Now</a></td>
+                  <td class="col-md-6 col-sm-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Apply Now</a></td>
                 </tr>
                 </tbody>
               </table>
             </uib-tab>
             <uib-tab index="3" heading="VIT University - Bhopal Campus" >
-              <table class="courses-table" >
+              <table class="courses-table table-responsive" >
               <thead >
-                <th class="col-md-6">Programs</th>  
-                <th class="col-md-6">Curriculum</th>
+                <th class="col-md-6 col-sm-6">Programs</th>  
+                <th class="col-md-6 col-sm-6">Curriculum</th>
               </thead>
               <tbody >
                 <tr ng-repeat="course in btechs[3].courses">
-                  <td class="col-md-6" >
+                  <td class="col-md-6 col-sm-6" >
                   <div class="course-main ">
                       <div class="course-title">
                         <div class="blue-small"></div> 
@@ -213,7 +213,7 @@
                       </div>
                     </div>
                     </td>
-                  <td class="col-md-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Apply Now</a></td>
+                  <td class="col-md-6 col-sm-6"><a class="btn hvr-fade btn-blue-theme" href="{{course.link}}" target="_blank">Apply Now</a></td>
                 </tr>
                 </tbody>
               </table>
@@ -245,10 +245,10 @@
                </div>
              </div>
             </div>
-            <select name="type" class="form-control" ng-model="viteeetab.type" ng-dropdown ng-change="changeme()" >
+            <select name="type" class="form-control" ng-model="viteeetab.type " ng-dropdown ng-change="changeme()" >
             <option ng-option value="tab" ng-selected="true">Schedule</option>
             <option ng-option value="tab1">Syllabus</option>
-            <option ng-option value="tab2">Pattern<br>of VITEEE Question</option>
+            <option ng-option value="tab2">Pattern of VITEEE Question</option>
             <option ng-option value="tab3">Equating methodology</option>
             <option ng-option value="tab4">Eligibility</option>
             <option ng-option value="tab5">Guidelines<br>VITEEE 2017</option>
