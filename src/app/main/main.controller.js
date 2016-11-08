@@ -482,7 +482,7 @@ app.controller('GalleryCtrl', function ($scope, Lightbox) {
       link : "http://www.vit.ac.in/admissions/ug"
     },
     {
-      name: "Fashion and Technology",
+      name: "Fashion Technology",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,  sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,   sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
       shortdescription: "Admissions to all B.Tech courses are strictly based on the VITEEE exam held in April every year. Forms are available from November of the application year.",
       class : "orange-small",
