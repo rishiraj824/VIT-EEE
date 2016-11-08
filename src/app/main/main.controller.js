@@ -311,7 +311,7 @@ app.controller('NoticeCtrl', function($scope){
 
 });
 /*Form Capture*/
-app.controller('Controller', function($scope, ModalService) {
+app.controller('Controller', function($scope, ModalService , $cacheFactory) {
     
     $scope.opened = false;
       if (!$scope.opened) {
@@ -342,48 +342,48 @@ app.controller('ModalController', function($scope, close) {
 app.controller('GalleryCtrl', function ($scope, Lightbox) {
   $scope.images = [
     {
-      "url": "/assets/images/gallery/sjt.jpg",
-      "thumbUrl" : "/assets/images/gallery/sjt.jpg"
+      "url": "assets/images/gallery/sjt.jpg",
+      "thumbUrl" : "assets/images/gallery/sjt.jpg"
     },
     {
-      "url": "/assets/images/gallery/main_building.jpg",
-      "thumbUrl" : "/assets/images/gallery/main_building.jpg"
+      "url": "assets/images/gallery/main_building.jpg",
+      "thumbUrl" : "assets/images/gallery/main_building.jpg"
     },
     {
-      "url": "/assets/images/gallery/achitechture.jpg",
-      "thumbUrl" : "/assets/images/gallery/achitechture.jpg"
+      "url": "assets/images/gallery/achitechture.jpg",
+      "thumbUrl" : "assets/images/gallery/achitechture.jpg"
     },
     {
-      "url": "/assets/images/gallery/alm.jpg",
-      "thumbUrl" : "/assets/images/gallery/alm.jpg"
+      "url": "assets/images/gallery/alm.jpg",
+      "thumbUrl" : "assets/images/gallery/alm.jpg"
     },
     {
-      "url": "/assets/images/gallery/annaaudi.jpg",
-      "thumbUrl" : "/assets/images/gallery/annaaudi.jpg"
+      "url": "assets/images/gallery/annaaudi.jpg",
+      "thumbUrl" : "assets/images/gallery/annaaudi.jpg"
     },
     {
-      "url": "/assets/images/gallery/audi1.jpg",
-      "thumbUrl" : "/assets/images/gallery/audi1.jpg"
+      "url": "assets/images/gallery/audi1.jpg",
+      "thumbUrl" : "assets/images/gallery/audi1.jpg"
     },
     {
-      "url": "/assets/images/gallery/audi2.jpg",
-      "thumbUrl" : "/assets/images/gallery/audi2.jpg"
+      "url": "assets/images/gallery/audi2.jpg",
+      "thumbUrl" : "assets/images/gallery/audi2.jpg"
     },
     {
-      "url": "/assets/images/gallery/canteen.jpg",
-      "thumbUrl" : "/assets/images/gallery/canteen.jpg"
+      "url": "assets/images/gallery/canteen.jpg",
+      "thumbUrl" : "assets/images/gallery/canteen.jpg"
     },
     {
-      "url": "/assets/images/gallery/conf.jpg",
-      "thumbUrl" : "/assets/images/gallery/conf.jpg"
+      "url": "assets/images/gallery/conf.jpg",
+      "thumbUrl" : "assets/images/gallery/conf.jpg"
     },
     {
-      "url": "/assets/images/gallery/gym.jpg",
-      "thumbUrl" : "/assets/images/gallery/gym.jpg"
+      "url": "assets/images/gallery/gym.jpg",
+      "thumbUrl" : "assets/images/gallery/gym.jpg"
     },
     {
-      "url": "/assets/images/gallery/sport_facility.jpg",
-      "thumbUrl" : "/assets/images/gallery/sport_facility.jpg"
+      "url": "assets/images/gallery/sport_facility.jpg",
+      "thumbUrl" : "assets/images/gallery/sport_facility.jpg"
     },
     {
       "url": "/assets/images/gallery/gym1.jpg",
