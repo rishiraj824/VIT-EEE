@@ -386,28 +386,28 @@ app.controller('GalleryCtrl', function ($scope, Lightbox) {
       "thumbUrl" : "assets/images/gallery/sport_facility.jpg"
     },
     {
-      "url": "/assets/images/gallery/gym1.jpg",
-      "thumbUrl" : "/assets/images/gallery/gym1.jpg"
+      "url": "assets/images/gallery/gym1.jpg",
+      "thumbUrl" : "assets/images/gallery/gym1.jpg"
     },
     {
-      "url": "/assets/images/gallery/pool.jpg",
-      "thumbUrl" : "/assets/images/gallery/pool.jpg"
+      "url": "assets/images/gallery/pool.jpg",
+      "thumbUrl" : "assets/images/gallery/pool.jpg"
     },
     {
-      "url": "/assets/images/gallery/tt.jpg",
-      "thumbUrl" : "/assets/images/gallery/tt.jpg"
+      "url": "assets/images/gallery/tt.jpg",
+      "thumbUrl" : "assets/images/gallery/tt.jpg"
     },
     {
-      "url": "/assets/images/gallery/vit_auditorium.jpg",
-      "thumbUrl" : "/assets/images/gallery/vit_auditorium.jpg"
+      "url": "assets/images/gallery/vit_auditorium.jpg",
+      "thumbUrl" : "assets/images/gallery/vit_auditorium.jpg"
     },
      {
-      "url": "/assets/images/gallery/SJT-Smart-Class.jpg",
-      "thumbUrl" : "/assets/images/gallery/SJT-Smart-Class.jpg"
+      "url": "assets/images/gallery/SJT-Smart-Class.jpg",
+      "thumbUrl" : "assets/images/gallery/SJT-Smart-Class.jpg"
     },
      {
-      "url": "/assets/images/gallery/smartclass.jpg",
-      "thumbUrl" : "/assets/images/gallery/smartclass.jpg"
+      "url": "assets/images/gallery/smartclass.jpg",
+      "thumbUrl" : "assets/images/gallery/smartclass.jpg"
     }
 
   ];
