@@ -1415,7 +1415,7 @@ line-height: 22px;
   padding-left: 15px;
   color: #fff;
   border-radius: 24px;
-  width: 85%;
+  width:90%;
   height: 50px;
   font-size: 1.2em;
 }
@@ -1442,8 +1442,12 @@ line-height: 22px;
   appearance:none;
   -moz-appearance:none; /* Firefox */
   -webkit-appearance:none; /* Safari and Chrome */
-  background-position-x: 444px;
+  background-position-x: 374px;
   text-align: center;
+  width: 400px;
+    padding:0 30px 0 10px !important;
+    -webkit-padding-end: 30px !important;
+    -webkit-padding-start: 10px !important;
   outline: 0 !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
@@ -1459,7 +1463,7 @@ line-height: 22px;
   padding-left: 15px;
   color: #fff;
   border-radius: 24px;
-  width: 85%;
+  width:90%;
   height: 50px;
   font-size: 1.2em;
 }
@@ -1474,15 +1478,18 @@ line-height: 22px;
   appearance:none;
   -moz-appearance:none; /* Firefox */
   -webkit-appearance:none; /* Safari and Chrome */
-  background-position-x: 314px;
+  background-position-x: 374px;
   text-align: center;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   white-space: nowrap;
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
+  padding:0 30px 0 10px !important;
+    -webkit-padding-end: 30px !important;
+    -webkit-padding-start: 10px !important;
   outline: 0 !important;
-  width: 380px;
+  width: 400px;
   margin: 0 !important;
   border: 0 !important;
 }

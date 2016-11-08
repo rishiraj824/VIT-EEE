@@ -398,7 +398,7 @@ app.controller('GalleryCtrl', function ($scope, Lightbox) {
       "thumbUrl" : "assets/images/gallery/tt.jpg"
     },
     {
-      "url": "assets/images/gallery/vit_auditorium.jpg",
+      "url": "assets/images/gallery/vit_auditorium.JPG",
       "thumbUrl" : "assets/images/gallery/vit_auditorium.jpg"
     },
      {
@@ -406,7 +406,7 @@ app.controller('GalleryCtrl', function ($scope, Lightbox) {
       "thumbUrl" : "assets/images/gallery/SJT-Smart-Class.jpg"
     },
      {
-      "url": "assets/images/gallery/smartclass.jpg",
+      "url": "assets/images/gallery/smartclass.JPG",
       "thumbUrl" : "assets/images/gallery/smartclass.jpg"
     }
 

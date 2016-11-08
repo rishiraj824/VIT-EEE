@@ -17,7 +17,6 @@
   right: 0%;
 }
 	.course-option-list select{
-		width: 330px;
 		text-overflow: ellipsis;
 		overflow: hidden;
 	}
@@ -133,7 +132,7 @@
 		    margin-top: 28px;
 	}
 	.course-option-list-second select{
-		width: 230px;
+		width: 100%;
 	}
 	 .dropdown-menu {
     background-color: #fff !important;
@@ -154,7 +153,6 @@
 		margin: 0 auto;
 	}
 	.course-option-list select{
-		width: 230px;
 		text-overflow: ellipsis;
 		overflow: hidden;
 	}
@@ -310,6 +308,9 @@
     left: 10%;
 }
 .course-option-list label{
+	display: none;
+}
+.course-option-list-second label{
 	display: none;
 }
 
