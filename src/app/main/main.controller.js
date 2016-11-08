@@ -140,7 +140,7 @@ app.component('modalComponent', {
  });
 
   
-    app.controller('CarouselCtrl', function($scope){
+    app.controller('CarouselCtrl', function($scope, ModalService){
        $scope.active = 0;
       $scope.myInterval = 8000;
       $scope.achievements = [{
@@ -186,6 +186,22 @@ app.component('modalComponent', {
         date : "20/08/2016",
         id : 2
       }];
+
+      
+       $scope.show = function(s) { 
+         $scope.slide = s;
+
+          ModalService.showModal({
+            templateUrl: 'testimonial.html',
+            controller: "ModalController",
+            scope: $scope
+        }).then(function(modal) {
+            modal.element.modal();
+            modal.close.then(function(result) {
+                $scope.message = "You said " + result;
+            });
+        });
+      }
 
   /*Testimonial Carousel*/
   $scope.slides = [ 
@@ -297,6 +313,7 @@ app.controller('NoticeCtrl', function($scope){
 
 
 });
+/*Form Capture*/
 app.controller('Controller', function($scope, ModalService) {
     
   
@@ -313,7 +330,7 @@ app.controller('Controller', function($scope, ModalService) {
     
 });
 app.controller('ModalController', function($scope, close) {
-  
+
  $scope.close = function(result) {
   close(result, 500); // close, but give 500ms for bootstrap to animate
  };

@@ -14,7 +14,7 @@
                 
                     <div class="blue-background">
                  
-                    <img src="/assets/images/logo.png" class="img-responsive">
+                    <img src="assets/images/logo.png" class="img-responsive">
                     </div>
                   
                   <div class="form-container">
@@ -215,7 +215,7 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
                     <div class="container"> 
                     <div class="row">
                        <uib-carousel interval="myInterval" active="active">
-                           <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                           <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id" ng-click="show(slide)">
                             <div class="row">
                               <div class="student-img-testimonial col-sm-12 col-lg-4">
                                    <img src="{{slide.image}}" class="img-circle hvr-ripple-out">
@@ -228,7 +228,32 @@ VIT university was founded in 1984 by Dr. G. Viswanathan, a former parliamentari
                                
                            </uib-slide>
                          </uib-carousel>
-                           
+     <script type="text/ng-template" id="testimonial.html">
+         <div class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              
+              <div class="modal-body modal-theme" style="background: #fff;">
+                <div class="row">
+                  <div class="testimonial-container">
+                    <img src="{{slide.image}}" class="img-responsive hvr-ripple-out">
+                    <div class="stats-text-carousel-inside">
+                    <p class="main-testimonial">"{{slide.testimonial}}"<br><br><span class="name">-{{slide.name}}</span></p>
+                   </div>
+                  </div>
+                </div>
+                <div class="row">
+                  
+                   <div class="main-text-testimonial">
+                     <p>"{{slide.detail}}"</p>
+                   </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+     </script>
                          </div>
                          </div>
                        </div>
